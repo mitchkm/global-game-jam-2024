@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://3m6anpx3hnuw"]
+
+[ext_resource type="Script" path="res://src/Game.cs" id="1_0nn4y"]
+[ext_resource type="PackedScene" uid="uid://c4lfi60a8sw8c" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_A.gltf" id="2_n4b2g"]
+
+[node name="TestGame" type="Node3D"]
+script = ExtResource("1_0nn4y")
+
+[node name="GridMap" type="GridMap" parent="."]
+
+[node name="building_A2" parent="GridMap" instance=ExtResource("2_n4b2g")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37099, 2.7983)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.846491, 0.532404, 0, -0.532404, 0.846491, 0, 5.73811, 5.86387)
