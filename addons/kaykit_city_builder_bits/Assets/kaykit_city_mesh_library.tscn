@@ -1,0 +1,127 @@
+[gd_scene load_steps=42 format=3 uid="uid://dh11i4pie2v3"]
+
+[ext_resource type="PackedScene" uid="uid://nbwlowgof2ds" path="res://addons/kaykit_city_builder_bits/Assets/gltf/base.gltf" id="1_4u540"]
+[ext_resource type="PackedScene" uid="uid://bp1wolfhnwnxo" path="res://addons/kaykit_city_builder_bits/Assets/gltf/bench.gltf" id="2_nehot"]
+[ext_resource type="PackedScene" uid="uid://bo6tfv212xpjk" path="res://addons/kaykit_city_builder_bits/Assets/gltf/box_A.gltf" id="3_kdioe"]
+[ext_resource type="PackedScene" uid="uid://p38oprach5ex" path="res://addons/kaykit_city_builder_bits/Assets/gltf/box_B.gltf" id="4_vnrlh"]
+[ext_resource type="PackedScene" uid="uid://c4lfi60a8sw8c" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_A.gltf" id="5_4d43r"]
+[ext_resource type="PackedScene" uid="uid://ccljpocvndif4" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_A_withoutBase.gltf" id="6_wc1c3"]
+[ext_resource type="PackedScene" uid="uid://bq0xy8uw7clkl" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_B.gltf" id="7_jixq5"]
+[ext_resource type="PackedScene" uid="uid://3h8lg1y0ydn7" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_B_withoutBase.gltf" id="8_jigwv"]
+[ext_resource type="PackedScene" uid="uid://cd0wjgtx2iq0v" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_C.gltf" id="9_nhp1u"]
+[ext_resource type="PackedScene" uid="uid://csrtly84m0nrp" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_C_withoutBase.gltf" id="10_ywb21"]
+[ext_resource type="PackedScene" uid="uid://cqoc861qqo4kx" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_D.gltf" id="11_w13hv"]
+[ext_resource type="PackedScene" uid="uid://bvpw4l2wbkx2r" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_D_withoutBase.gltf" id="12_y7por"]
+[ext_resource type="PackedScene" uid="uid://cajpu0b1tft51" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_E.gltf" id="13_3oud1"]
+[ext_resource type="PackedScene" uid="uid://bchnxv8fjkvwn" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_E_withoutBase.gltf" id="14_tyygv"]
+[ext_resource type="PackedScene" uid="uid://bfxhaicc8gk8q" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_F.gltf" id="15_dmcdp"]
+[ext_resource type="PackedScene" uid="uid://b08av1r4mg1g" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_F_withoutBase.gltf" id="16_nnvqi"]
+[ext_resource type="PackedScene" uid="uid://6jig1tdih63c" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_G.gltf" id="17_77aul"]
+[ext_resource type="PackedScene" uid="uid://ts5lh8120w24" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_G_withoutBase.gltf" id="18_v811n"]
+[ext_resource type="PackedScene" uid="uid://bdhes177f4k3a" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_H.gltf" id="19_qd3yn"]
+[ext_resource type="PackedScene" uid="uid://c1tekycw3vgd8" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_H_withoutBase.gltf" id="20_d3go8"]
+[ext_resource type="PackedScene" uid="uid://bm51uyfkrg7b5" path="res://addons/kaykit_city_builder_bits/Assets/gltf/bush.gltf" id="21_75r5n"]
+[ext_resource type="PackedScene" uid="uid://d2dor86l223sh" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_hatchback.gltf" id="22_umt26"]
+[ext_resource type="PackedScene" uid="uid://dc34c4k5vokif" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_police.gltf" id="23_rdf00"]
+[ext_resource type="PackedScene" uid="uid://8p5qwfxau8yt" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_sedan.gltf" id="24_nyd3r"]
+[ext_resource type="PackedScene" uid="uid://ew0vaglin4dd" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_stationwagon.gltf" id="25_ib8ma"]
+[ext_resource type="PackedScene" uid="uid://cc6u03f6vbaad" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_taxi.gltf" id="26_0eyb1"]
+[ext_resource type="PackedScene" uid="uid://bt7kbg234iff8" path="res://addons/kaykit_city_builder_bits/Assets/gltf/dumpster.gltf" id="27_cwhbn"]
+[ext_resource type="PackedScene" uid="uid://cmtyq0585lqpw" path="res://addons/kaykit_city_builder_bits/Assets/gltf/firehydrant.gltf" id="28_fyw1n"]
+[ext_resource type="PackedScene" uid="uid://df22obe3vr7b8" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_corner.gltf" id="29_725cy"]
+[ext_resource type="PackedScene" uid="uid://dm6f6o121tw6v" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_corner_curved.gltf" id="30_qkcnh"]
+[ext_resource type="PackedScene" uid="uid://dpdk0st3jxuj" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_junction.gltf" id="31_53d3y"]
+[ext_resource type="PackedScene" uid="uid://6gekkgn60eds" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_straight.gltf" id="32_i3b48"]
+[ext_resource type="PackedScene" uid="uid://brp8em6jxmm6a" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_straight_crossing.gltf" id="33_23kje"]
+[ext_resource type="PackedScene" uid="uid://cub2lk7y55d0n" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_tsplit.gltf" id="34_1cqtd"]
+[ext_resource type="PackedScene" uid="uid://c5pib7xqfipre" path="res://addons/kaykit_city_builder_bits/Assets/gltf/streetlight.gltf" id="35_q2fuh"]
+[ext_resource type="PackedScene" uid="uid://c86jmvdsnaqvg" path="res://addons/kaykit_city_builder_bits/Assets/gltf/trafficlight_A.gltf" id="36_ndruk"]
+[ext_resource type="PackedScene" uid="uid://e24kdcit8h65" path="res://addons/kaykit_city_builder_bits/Assets/gltf/trafficlight_B.gltf" id="37_6x6b6"]
+[ext_resource type="PackedScene" uid="uid://bb3fd6qya5xq3" path="res://addons/kaykit_city_builder_bits/Assets/gltf/trafficlight_C.gltf" id="38_0rk71"]
+[ext_resource type="PackedScene" uid="uid://y03xpcnqvm2l" path="res://addons/kaykit_city_builder_bits/Assets/gltf/trash_A.gltf" id="39_dc0jg"]
+[ext_resource type="PackedScene" uid="uid://cgdm12rosb5jk" path="res://addons/kaykit_city_builder_bits/Assets/gltf/trash_B.gltf" id="40_xs8xf"]
+[ext_resource type="PackedScene" uid="uid://hg030wj6dr8q" path="res://addons/kaykit_city_builder_bits/Assets/gltf/watertower.gltf" id="41_750b6"]
+
+[node name="KaykitCityMeshLibrary" type="Node3D"]
+
+[node name="base2" parent="." instance=ExtResource("1_4u540")]
+
+[node name="bench2" parent="." instance=ExtResource("2_nehot")]
+
+[node name="box_A2" parent="." instance=ExtResource("3_kdioe")]
+
+[node name="box_B2" parent="." instance=ExtResource("4_vnrlh")]
+
+[node name="building_A2" parent="." instance=ExtResource("5_4d43r")]
+
+[node name="building_A_withoutBase2" parent="." instance=ExtResource("6_wc1c3")]
+
+[node name="building_B2" parent="." instance=ExtResource("7_jixq5")]
+
+[node name="building_B_withoutBase2" parent="." instance=ExtResource("8_jigwv")]
+
+[node name="building_C2" parent="." instance=ExtResource("9_nhp1u")]
+
+[node name="building_C_withoutBase2" parent="." instance=ExtResource("10_ywb21")]
+
+[node name="building_D2" parent="." instance=ExtResource("11_w13hv")]
+
+[node name="building_D_withoutBase2" parent="." instance=ExtResource("12_y7por")]
+
+[node name="building_E2" parent="." instance=ExtResource("13_3oud1")]
+
+[node name="building_E_withoutBase2" parent="." instance=ExtResource("14_tyygv")]
+
+[node name="building_F2" parent="." instance=ExtResource("15_dmcdp")]
+
+[node name="building_F_withoutBase2" parent="." instance=ExtResource("16_nnvqi")]
+
+[node name="building_G2" parent="." instance=ExtResource("17_77aul")]
+
+[node name="building_G_withoutBase2" parent="." instance=ExtResource("18_v811n")]
+
+[node name="building_H2" parent="." instance=ExtResource("19_qd3yn")]
+
+[node name="building_H_withoutBase2" parent="." instance=ExtResource("20_d3go8")]
+
+[node name="bush2" parent="." instance=ExtResource("21_75r5n")]
+
+[node name="car_hatchback2" parent="." instance=ExtResource("22_umt26")]
+
+[node name="car_police2" parent="." instance=ExtResource("23_rdf00")]
+
+[node name="car_sedan2" parent="." instance=ExtResource("24_nyd3r")]
+
+[node name="car_stationwagon2" parent="." instance=ExtResource("25_ib8ma")]
+
+[node name="car_taxi2" parent="." instance=ExtResource("26_0eyb1")]
+
+[node name="dumpster2" parent="." instance=ExtResource("27_cwhbn")]
+
+[node name="firehydrant2" parent="." instance=ExtResource("28_fyw1n")]
+
+[node name="road_corner2" parent="." instance=ExtResource("29_725cy")]
+
+[node name="road_corner_curved2" parent="." instance=ExtResource("30_qkcnh")]
+
+[node name="road_junction2" parent="." instance=ExtResource("31_53d3y")]
+
+[node name="road_straight2" parent="." instance=ExtResource("32_i3b48")]
+
+[node name="road_straight_crossing2" parent="." instance=ExtResource("33_23kje")]
+
+[node name="road_tsplit2" parent="." instance=ExtResource("34_1cqtd")]
+
+[node name="streetlight2" parent="." instance=ExtResource("35_q2fuh")]
+
+[node name="trafficlight_A2" parent="." instance=ExtResource("36_ndruk")]
+
+[node name="trafficlight_B2" parent="." instance=ExtResource("37_6x6b6")]
+
+[node name="trafficlight_C2" parent="." instance=ExtResource("38_0rk71")]
+
+[node name="trash_A2" parent="." instance=ExtResource("39_dc0jg")]
+
+[node name="trash_B2" parent="." instance=ExtResource("40_xs8xf")]
+
+[node name="watertower2" parent="." instance=ExtResource("41_750b6")]
