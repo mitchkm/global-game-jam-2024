@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c2ovfx1kp0f6f"
+path="res://.godot/imported/test-meeple.dialogue-428fe159cde25e3a78619f51b5a7fa32.tres"
+
+[deps]
+
+source_file="res://narrative/test-meeple.dialogue"
+dest_files=["res://.godot/imported/test-meeple.dialogue-428fe159cde25e3a78619f51b5a7fa32.tres"]
+
+[params]
+
+defaults=true

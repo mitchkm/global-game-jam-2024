@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://di530mmvbgpyt"]
+
+[ext_resource type="PackedScene" uid="uid://c3biotlfbklso" path="res://scenes/objects/Meeple.tscn" id="1_dsthi"]
+
+[node name="Meeple" instance=ExtResource("1_dsthi")]
