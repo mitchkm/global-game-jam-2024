@@ -16,7 +16,7 @@ public partial class Main : Node2D {
   #if DEBUG
   public TestEnvironment Environment = default!;
 #endif
-  
+
   public override void _Ready() {
     #if DEBUG
     // If this is a debug build, use GoDotTest to examine the
@@ -27,7 +27,7 @@ public partial class Main : Node2D {
       return;
     }
 #endif
-    
+
     // If we don't need to run tests, we can just switch to the game scene.
     CallDeferred("RunScene");
   }
@@ -36,7 +36,7 @@ public partial class Main : Node2D {
   private void RunTests()
     => _ = GoTest.RunTests(Assembly.GetExecutingAssembly(), this, Environment);
 #endif
-  
+
   private void RunScene()
-    => GetTree().ChangeSceneToFile("res://src/Game.tscn");
+    => GetTree().ChangeSceneToFile("res://scenes/MainMenu.tscn");
 }
