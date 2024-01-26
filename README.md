@@ -12,7 +12,7 @@ C# game template for Godot 4 with debug launch configurations, testing (locally 
 
 ## 🥚 Getting Started
 
-This template allows you to easily create a C# game for Godot 4. Microsoft's `dotnet` tool allows you to easily create, install, and use templates.
+This template allows you to easily create a C# game for Godot 4. Microsoft's `dotnet` tool allows you to easily create, install, and use templates. 
 
 ```sh
 # Install this template
