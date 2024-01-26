@@ -33,6 +33,7 @@ folder_colors={
 "res://addons/": "green",
 "res://narrative/": "purple",
 "res://scenes/": "blue",
+"res://scenes/levels/": "red",
 "res://src/": "yellow",
 "res://test/": "orange"
 }
