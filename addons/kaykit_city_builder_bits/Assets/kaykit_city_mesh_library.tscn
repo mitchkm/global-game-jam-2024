@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://dh11i4pie2v3"]
+[gd_scene load_steps=68 format=3 uid="uid://dh11i4pie2v3"]
 
 [ext_resource type="Texture2D" uid="uid://b1tdsqi6j6hye" path="res://addons/kaykit_city_builder_bits/Assets/gltf/citybits_texture.png" id="1_h3o5u"]
 [ext_resource type="PackedScene" uid="uid://c4lfi60a8sw8c" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_A.gltf" id="5_4d43r"]
@@ -10,11 +10,33 @@
 [ext_resource type="PackedScene" uid="uid://cajpu0b1tft51" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_E.gltf" id="13_3oud1"]
 [ext_resource type="PackedScene" uid="uid://bchnxv8fjkvwn" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_E_withoutBase.gltf" id="14_tyygv"]
 [ext_resource type="PackedScene" uid="uid://bfxhaicc8gk8q" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_F.gltf" id="15_dmcdp"]
+[ext_resource type="PackedScene" uid="uid://buniy815e4beu" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_base.gltf" id="16_f5c2k"]
 [ext_resource type="PackedScene" uid="uid://b08av1r4mg1g" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_F_withoutBase.gltf" id="16_nnvqi"]
 [ext_resource type="PackedScene" uid="uid://6jig1tdih63c" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_G.gltf" id="17_77aul"]
+[ext_resource type="PackedScene" uid="uid://dpegcsxxhfoqj" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_base_decorated_bushes.gltf" id="17_j4s1f"]
+[ext_resource type="PackedScene" uid="uid://dmuqei5ehk0ry" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_base_decorated_trees.gltf" id="18_38dox"]
 [ext_resource type="PackedScene" uid="uid://ts5lh8120w24" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_G_withoutBase.gltf" id="18_v811n"]
+[ext_resource type="PackedScene" uid="uid://b0pya16lso0xe" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_road_corner.gltf" id="19_43qid"]
 [ext_resource type="PackedScene" uid="uid://bdhes177f4k3a" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_H.gltf" id="19_qd3yn"]
 [ext_resource type="PackedScene" uid="uid://c1tekycw3vgd8" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_H_withoutBase.gltf" id="20_d3go8"]
+[ext_resource type="PackedScene" uid="uid://c133p6p4hiuw" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_road_corner_decorated.gltf" id="20_mw1bn"]
+[ext_resource type="PackedScene" uid="uid://f7b6n03ymkg3" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_road_junction.gltf" id="21_8c17w"]
+[ext_resource type="PackedScene" uid="uid://bm2jxliq5cer7" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_road_junction_decorated_A.gltf" id="22_tnxfn"]
+[ext_resource type="PackedScene" uid="uid://bk1y273yg40ay" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_road_junction_decorated_B.gltf" id="23_54awe"]
+[ext_resource type="PackedScene" uid="uid://citq6ftb06nq8" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_road_junction_decorated_C.gltf" id="24_ef3f5"]
+[ext_resource type="PackedScene" uid="uid://r5vji0qaa2g1" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_road_straight.gltf" id="25_kwkn5"]
+[ext_resource type="PackedScene" uid="uid://di23cwcosws4l" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_road_straight_decorated_A.gltf" id="26_8w630"]
+[ext_resource type="PackedScene" uid="uid://dpqyi0gpiahv2" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_road_straight_decorated_B.gltf" id="27_6g635"]
+[ext_resource type="PackedScene" uid="uid://6o0hrqi1vsgl" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_road_tsplit.gltf" id="28_tuktc"]
+[ext_resource type="PackedScene" uid="uid://bcexwar0113bi" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_road_tsplit_decorated.gltf" id="29_lcfc0"]
+[ext_resource type="PackedScene" uid="uid://ohcdoauctccp" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_wall_entry.gltf" id="30_ewfx2"]
+[ext_resource type="PackedScene" uid="uid://b5mum1xkmfps7" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_wall_entry_decorated.gltf" id="31_bl8k1"]
+[ext_resource type="PackedScene" uid="uid://dy08kl2ym22qo" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_wall_innerCorner.gltf" id="32_x4fws"]
+[ext_resource type="PackedScene" uid="uid://rmuui84jbwtn" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_wall_innerCorner_decorated.gltf" id="33_3vf8a"]
+[ext_resource type="PackedScene" uid="uid://dgx4mwxrm1tu2" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_wall_outerCorner.gltf" id="34_3w5o6"]
+[ext_resource type="PackedScene" uid="uid://bd0wjwbjqitcf" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_wall_outerCorner_decorated.gltf" id="35_fu7u2"]
+[ext_resource type="PackedScene" uid="uid://dfqoqhx56gi4r" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_wall_straight.gltf" id="36_hiyk6"]
+[ext_resource type="PackedScene" uid="uid://du2rpgl4hcuep" path="res://addons/kaykit_city_builder_bits/Assets/gltf/park_wall_straight_decorated.gltf" id="37_m0sks"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b28vj"]
 resource_name = "citybits_texture"
@@ -520,3 +542,47 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="road_tsplit2/road_tsplit/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.052, 0)
 shape = SubResource("BoxShape3D_tyg3y")
+
+[node name="park_base2" parent="." instance=ExtResource("16_f5c2k")]
+
+[node name="park_base_decorated_bushes2" parent="." instance=ExtResource("17_j4s1f")]
+
+[node name="park_base_decorated_trees2" parent="." instance=ExtResource("18_38dox")]
+
+[node name="park_road_corner2" parent="." instance=ExtResource("19_43qid")]
+
+[node name="park_road_corner_decorated2" parent="." instance=ExtResource("20_mw1bn")]
+
+[node name="park_road_junction2" parent="." instance=ExtResource("21_8c17w")]
+
+[node name="park_road_junction_decorated_A2" parent="." instance=ExtResource("22_tnxfn")]
+
+[node name="park_road_junction_decorated_B2" parent="." instance=ExtResource("23_54awe")]
+
+[node name="park_road_junction_decorated_C2" parent="." instance=ExtResource("24_ef3f5")]
+
+[node name="park_road_straight2" parent="." instance=ExtResource("25_kwkn5")]
+
+[node name="park_road_straight_decorated_A2" parent="." instance=ExtResource("26_8w630")]
+
+[node name="park_road_straight_decorated_B2" parent="." instance=ExtResource("27_6g635")]
+
+[node name="park_road_tsplit2" parent="." instance=ExtResource("28_tuktc")]
+
+[node name="park_road_tsplit_decorated2" parent="." instance=ExtResource("29_lcfc0")]
+
+[node name="park_wall_entry2" parent="." instance=ExtResource("30_ewfx2")]
+
+[node name="park_wall_entry_decorated2" parent="." instance=ExtResource("31_bl8k1")]
+
+[node name="park_wall_innerCorner2" parent="." instance=ExtResource("32_x4fws")]
+
+[node name="park_wall_innerCorner_decorated2" parent="." instance=ExtResource("33_3vf8a")]
+
+[node name="park_wall_outerCorner2" parent="." instance=ExtResource("34_3w5o6")]
+
+[node name="park_wall_outerCorner_decorated2" parent="." instance=ExtResource("35_fu7u2")]
+
+[node name="park_wall_straight2" parent="." instance=ExtResource("36_hiyk6")]
+
+[node name="park_wall_straight_decorated2" parent="." instance=ExtResource("37_m0sks")]
