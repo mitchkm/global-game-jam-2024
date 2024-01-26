@@ -11,3 +11,13 @@ obj/
 .DS_Store
 
 *.translation
+
+# Wwise
+.backup*
+.hidden*
+*.akd
+*.teacher
+*.validationcache
+*.wsettings
+AkWwiseProjectData.asset
+IncrementalSoundBankData.xml
