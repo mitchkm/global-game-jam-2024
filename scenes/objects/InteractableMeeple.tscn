@@ -1,5 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://di530mmvbgpyt"]
+[gd_scene load_steps=3 format=3 uid="uid://di530mmvbgpyt"]
 
 [ext_resource type="PackedScene" uid="uid://c3biotlfbklso" path="res://scenes/objects/Meeple.tscn" id="1_dsthi"]
+[ext_resource type="Script" path="res://src/Interactable/DialogueInteractable.cs" id="2_8relo"]
 
 [node name="Meeple" instance=ExtResource("1_dsthi")]
+
+[node name="DialogueInteractable" type="Node" parent="." index="0"]
+script = ExtResource("2_8relo")

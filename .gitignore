@@ -21,3 +21,4 @@ obj/
 *.wsettings
 AkWwiseProjectData.asset
 IncrementalSoundBankData.xml
+*.sln.DotSettings.user
