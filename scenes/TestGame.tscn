@@ -1,15 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://3m6anpx3hnuw"]
+[gd_scene load_steps=4 format=3 uid="uid://3m6anpx3hnuw"]
 
 [ext_resource type="Script" path="res://src/Game.cs" id="1_0nn4y"]
 [ext_resource type="PackedScene" uid="uid://dq36ypdin76tm" path="res://scenes/levels/Level_Test1.tscn" id="2_wk2qx"]
+[ext_resource type="PackedScene" uid="uid://cbslhtwtidhln" path="res://scenes/objects/Player.tscn" id="3_48t3v"]
 
 [node name="TestGame" type="Node3D"]
 script = ExtResource("1_0nn4y")
 
-[node name="Level" parent="." instance=ExtResource("2_wk2qx")]
-
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37099, 2.7983)
+transform = Transform3D(0.710165, -0.347369, 0.612372, -0.0075574, 0.865992, 0.5, -0.703995, -0.359711, 0.612372, 5, 5, 5)
+projection = 1
+current = true
+fov = 37.8493
+size = 6.0
+
+[node name="Level" parent="." instance=ExtResource("2_wk2qx")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.846491, 0.532404, 0, -0.532404, 0.846491, 0, 5.73811, 5.86387)
+
+[node name="Player" parent="." instance=ExtResource("3_48t3v")]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 1.03966, 0.103117, 2.75225)
+_speed = 5.0

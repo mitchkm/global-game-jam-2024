@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbslhtwtidhln"]
+
+[ext_resource type="PackedScene" uid="uid://c3biotlfbklso" path="res://scenes/objects/Meeple.tscn" id="1_7h4pj"]
+[ext_resource type="Script" path="res://src/PlayerController.cs" id="2_xbe6w"]
+
+[node name="Player" instance=ExtResource("1_7h4pj")]
+script = ExtResource("2_xbe6w")
+_speed = 5.0
