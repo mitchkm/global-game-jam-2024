@@ -59,8 +59,11 @@ jobs:
           dotnet --version
           godot --version
 
+      - name: Import attempt
+        run: godot --headless --import || exit 0
+
       - name: 🧑‍🔬 Generate .NET Bindings
-        run: godot --headless --build-solutions --quit-after 2 || exit 0
+        run: godot --headless --build-solutions --quit || exit 0
 
       - name: 🦺 Build Projects
         run: dotnet build
@@ -81,16 +84,16 @@ jobs:
         uses: josephbmanley/butler-publish-itchio-action@master
         env:
           CHANNEL: windows-x64
-          PACKAGE: ./Exports/galactic-commanders-windows.zip
+          PACKAGE: ./Exports/yesnoslap-windows.zip
 
       - name: Upload linux build to itch
         uses: josephbmanley/butler-publish-itchio-action@master
         env:
           CHANNEL: linux
-          PACKAGE: ./Exports/galactic-commanders-linux.zip
+          PACKAGE: ./Exports/yesnoslap-linux.zip
 
       - name: Upload mac build to itch
         uses: josephbmanley/butler-publish-itchio-action@master
         env:
           CHANNEL: osx
-          PACKAGE: ./Exports/galactic-commanders-mac.zip
+          PACKAGE: ./Exports/yesnoslap-mac.zip
