@@ -3,7 +3,10 @@ nupkg/
 coverage/*
 !coverage/.gdignore
 
-.godot/
+.godot/*
+!.godot/
+!.godot/global_script_class_cache.cfg
+!.godot/imported/
 bin/
 obj/
 .generated/
