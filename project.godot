@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
+GameState="*res://src/GameState.cs"
 
 [dotnet]
 
