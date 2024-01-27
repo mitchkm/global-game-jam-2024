@@ -1,0 +1,96 @@
+name: '🛫 Build and Upload to Itch'
+
+
+# Whenever a tag push matching pattern "v*" then run the job
+on:
+  push:
+    tags:
+      - v*
+
+env:
+  BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+  ITCH_GAME: galactic-commanders
+  ITCH_USER: william-ritson
+
+
+jobs:
+  prepareGodot:
+    name: Build on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      # Don't cancel other OS runners if one fails.
+      fail-fast: false
+      matrix:
+        # Put the operating systems you want to run on here.
+        os: [ubuntu-latest]
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: true
+      DOTNET_NOLOGO: true
+    defaults:
+      run:
+        # Use bash shells on all platforms.
+        shell: bash
+    steps:
+      - uses: actions/checkout@v3
+        name: 🧾 Checkout
+        with:
+          lfs: true
+
+      - uses: actions/setup-dotnet@v3
+        name: 💽 Setup .NET SDK
+        with:
+          # Use the .NET SDK from global.json in the root of the repository.
+          global-json-file: global.json
+
+      - name: 📦 Restore Dependencies
+        run: dotnet restore
+
+      - uses: chickensoft-games/setup-godot@v1
+        name: 🤖 Setup Godot
+        with:
+          # Version must include major, minor, and patch, and be >= 4.0.0
+          # Pre-release label is optional.
+          version: 4.2.0 # also valid: 4.0.0.rc1 or 4.0.0, etc
+          # Use .NET-enabled version of Godot (the default is also true).
+          use-dotnet: true
+
+      - name: 🔬 Verify Setup
+        run: |
+          dotnet --version
+          godot --version
+
+      - name: 🧑‍🔬 Generate .NET Bindings
+        run: godot --headless --build-solutions --quit || exit 0
+
+      - name: 🦺 Build Projects
+        run: dotnet build
+
+      - name: 🪟 Export Project Windows
+        run: godot --headless --export-release "Windows Desktop" --quit || exit 0
+
+      - name: 🐧 Export Project Linux
+        run: godot --headless --export-release "Linux/X11" --quit || exit 0
+
+      - name: 🍎 Export Project Mac
+        run: godot --headless --export-release "macOS" --quit || exit 0
+
+      - name: CD
+        run: ls -R
+
+      - name: Upload windows build to itch
+        uses: josephbmanley/butler-publish-itchio-action@master
+        env:
+          CHANNEL: windows-x64
+          PACKAGE: ./Exports/galactic-commanders-windows.zip
+
+      - name: Upload linux build to itch
+        uses: josephbmanley/butler-publish-itchio-action@master
+        env:
+          CHANNEL: linux
+          PACKAGE: ./Exports/galactic-commanders-linux.zip
+
+      - name: Upload mac build to itch
+        uses: josephbmanley/butler-publish-itchio-action@master
+        env:
+          CHANNEL: osx
+          PACKAGE: ./Exports/galactic-commanders-mac.zip
