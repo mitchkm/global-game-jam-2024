@@ -3,6 +3,7 @@ name: '🛫 Build and Upload to Itch'
 
 # Whenever a tag push matching pattern "v*" then run the job
 on:
+  workflow_dispatch:
   push:
     tags:
       - v*
