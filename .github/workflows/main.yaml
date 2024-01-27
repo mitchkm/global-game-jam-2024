@@ -60,7 +60,7 @@ jobs:
           godot --version
 
       - name: 🧑‍🔬 Generate .NET Bindings
-        run: godot --headless --build-solutions --quit || exit 0
+        run: godot --headless --build-solutions --quit-after 2 || exit 0
 
       - name: 🦺 Build Projects
         run: dotnet build
