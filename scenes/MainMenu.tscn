@@ -24,6 +24,7 @@ grow_vertical = 2
 [node name="MainMenuHome" parent="CenterContainer" instance=ExtResource("2_u4t2b")]
 unique_name_in_owner = true
 layout_mode = 2
+PlayButtonScene = "res://scenes/Game.tscn"
 
 [node name="CreditsMenu" parent="CenterContainer" instance=ExtResource("3_prlgw")]
 unique_name_in_owner = true
