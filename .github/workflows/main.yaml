@@ -60,8 +60,11 @@ jobs:
           dotnet --version
           godot --version
 
-      - name: Import attempt
-        run: godot --headless --import || exit 0
+      - name: Import attempt 1
+        run: timeout 180 godot --headless --import || exit 0
+
+      - name: Import attempt 2
+        run: timeout 180 godot --headless --import || exit 0
 
       - name: 🧑‍🔬 Generate .NET Bindings
         run: godot --headless --build-solutions --quit || exit 0
