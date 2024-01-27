@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://3m6anpx3hnuw"]
+[gd_scene load_steps=10 format=3 uid="uid://3m6anpx3hnuw"]
 
 [ext_resource type="Script" path="res://src/Game.cs" id="1_0nn4y"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_7fsi5"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://src/CameraSwitcher.cs" id="5_3d2ml"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_4fsdc"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="5_wuw0y"]
+[ext_resource type="PackedScene" uid="uid://cmcobuxvdipo1" path="res://scenes/UI/EntertainmentBar.tscn" id="8_gsusi"]
 
 [sub_resource type="Resource" id="Resource_3mupl"]
 script = ExtResource("5_4fsdc")
@@ -122,3 +123,8 @@ tween_parameters = SubResource("Resource_3mupl")
 tween_on_load = true
 inactive_update_mode = 0
 camera_3D_resource = null
+
+[node name="UI Layer" type="CanvasLayer" parent="."]
+
+[node name="EntertainmentBar" parent="UI Layer" instance=ExtResource("8_gsusi")]
+anchors_preset = 0
