@@ -2,8 +2,6 @@ using Godot;
 
 namespace YesNoSlap;
 
-using System.Collections.Generic;
-
 public partial class CameraSwitcher : Node {
   [Export] private Node _northView;
   [Export] private Node _eastView;
@@ -39,13 +37,13 @@ public partial class CameraSwitcher : Node {
     }
   }
 
-  private void NextViewLeft() => SetNewViewPriority(IncrementIndex());
+  private void NextViewLeft() => SetNewViewPriority(DecrementIndex());
 
-  private void NextViewRight() => SetNewViewPriority(DecrementIndex());
+  private void NextViewRight() => SetNewViewPriority(IncrementIndex());
 
   private int IncrementIndex() {
     _currentIndex++;
-    if (_currentIndex == _views.Length) {
+    if (_currentIndex >= _views.Length) {
       _currentIndex = 0;
     }
 
@@ -54,7 +52,7 @@ public partial class CameraSwitcher : Node {
 
   private int DecrementIndex() {
     _currentIndex--;
-    if (_currentIndex == -1) {
+    if (_currentIndex <= -1) {
       _currentIndex = _views.Length - 1;
     }
 
