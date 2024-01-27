@@ -9,8 +9,8 @@ on:
 
 env:
   BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
-  ITCH_GAME: galactic-commanders
-  ITCH_USER: william-ritson
+  ITCH_GAME: yesnoslap
+  ITCH_USER: mitchkmiller
 
 
 jobs:
@@ -50,7 +50,7 @@ jobs:
         with:
           # Version must include major, minor, and patch, and be >= 4.0.0
           # Pre-release label is optional.
-          version: 4.2.0 # also valid: 4.0.0.rc1 or 4.0.0, etc
+          version: 4.2.1 # also valid: 4.0.0.rc1 or 4.0.0, etc
           # Use .NET-enabled version of Godot (the default is also true).
           use-dotnet: true
 
