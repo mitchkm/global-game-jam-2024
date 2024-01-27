@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cstkqssi2nh52"]
+
+[ext_resource type="Texture2D" uid="uid://d43sw60ib1iq" path="res://icon.png" id="1_1cp7v"]
+[ext_resource type="Script" path="res://src/UI/MainMenuHome.cs" id="1_fb1nc"]
+[ext_resource type="Theme" uid="uid://cs1230nowva0a" path="res://themes/Main.tres" id="2_p8oec"]
+
+[node name="MainMenuHome" type="VBoxContainer"]
+offset_right = 262.0
+offset_bottom = 488.0
+theme_override_constants/separation = 32
+script = ExtResource("1_fb1nc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_1cp7v")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="PlayButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_p8oec")
+text = "  SLAP!  "
+
+[node name="CreditsButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_p8oec")
+text = "  Credits  "

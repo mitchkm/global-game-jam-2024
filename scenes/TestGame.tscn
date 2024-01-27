@@ -18,7 +18,7 @@ ease = 2
 script = ExtResource("1_0nn4y")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.573577, 0.579228, -0.579228, 0, 0.707107, 0.707107, 0.819152, 0.40558, -0.40558, -2.43571, 4.34576, 0.318771)
+transform = Transform3D(-0.573577, 0.579228, -0.579228, 0, 0.707107, 0.707107, 0.819152, 0.40558, -0.40558, -2.43571, 4.34576, 0.31877)
 projection = 1
 current = true
 size = 4.0
@@ -44,7 +44,7 @@ _southView = NodePath("../South_View")
 _westView = NodePath("../West_View")
 
 [node name="North_View" type="Node3D" parent="."]
-transform = Transform3D(-0.573577, 0.579228, -0.579228, 0, 0.707107, 0.707107, 0.819152, 0.40558, -0.40558, -2.43571, 4.34576, 0.318771)
+transform = Transform3D(-0.573577, 0.579228, -0.579228, 0, 0.707107, 0.707107, 0.819152, 0.40558, -0.40558, -2.43571, 4.34576, 0.31877)
 script = ExtResource("5_wuw0y")
 priority_override = false
 priority = 0
