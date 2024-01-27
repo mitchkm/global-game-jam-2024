@@ -1,0 +1,17 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cs1230nowva0a"]
+
+[ext_resource type="StyleBox" uid="uid://pndaawgns1cx" path="res://themes/styleboxes/button_focused.tres" id="1_cridb"]
+[ext_resource type="FontFile" uid="uid://dve7mgsjik4dg" path="res://addons/phantom_camera/fonts/Nunito-Regular.ttf" id="1_juym7"]
+[ext_resource type="StyleBox" uid="uid://mnc14grb4v0a" path="res://themes/styleboxes/button_hover.tres" id="2_krw4y"]
+[ext_resource type="StyleBox" uid="uid://gf1bswemdgci" path="res://themes/styleboxes/button_normal.tres" id="3_lbsh4"]
+[ext_resource type="StyleBox" uid="uid://ct6w5pn2el8as" path="res://themes/styleboxes/button_pressed.tres" id="4_2g51g"]
+
+[resource]
+Button/font_sizes/font_size = 20
+Button/fonts/font = ExtResource("1_juym7")
+Button/styles/focus = ExtResource("1_cridb")
+Button/styles/hover = ExtResource("2_krw4y")
+Button/styles/normal = ExtResource("3_lbsh4")
+Button/styles/pressed = ExtResource("4_2g51g")
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("1_juym7")
