@@ -1,18 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://3m6anpx3hnuw"]
+[gd_scene load_steps=6 format=3 uid="uid://3m6anpx3hnuw"]
 
 [ext_resource type="Script" path="res://src/Game.cs" id="1_0nn4y"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_7fsi5"]
 [ext_resource type="PackedScene" uid="uid://dq36ypdin76tm" path="res://scenes/levels/Level_Test1.tscn" id="2_wk2qx"]
 [ext_resource type="PackedScene" uid="uid://cbslhtwtidhln" path="res://scenes/objects/Player.tscn" id="3_48t3v"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="5_wuw0y"]
 
 [node name="TestGame" type="Node3D"]
 script = ExtResource("1_0nn4y")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.710165, -0.347369, 0.612372, -0.0075574, 0.865992, 0.5, -0.703995, -0.359711, 0.612372, 5, 5, 5)
+transform = Transform3D(0.707104, -0.499998, 0.499998, 0, 0.707104, 0.707104, -0.707104, -0.499998, 0.499998, 4.03965, 4.34574, 5.75224)
 projection = 1
 current = true
-fov = 37.8493
-size = 6.0
+fov = 74.6288
+size = 4.0
+near = 0.001
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
+script = ExtResource("2_7fsi5")
 
 [node name="Level" parent="." instance=ExtResource("2_wk2qx")]
 
@@ -21,4 +27,23 @@ transform = Transform3D(1, 0, 0, 0, 0.846491, 0.532404, 0, -0.532404, 0.846491, 
 
 [node name="Player" parent="." instance=ExtResource("3_48t3v")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 1.03966, 0.103117, 2.75225)
-_speed = 5.0
+
+[node name="PhantomCamera3D" type="Node3D" parent="."]
+transform = Transform3D(0.707104, -0.499998, 0.499998, 0, 0.707104, 0.707104, -0.707104, -0.499998, 0.499998, 4.03965, 4.34574, 5.75224)
+script = ExtResource("5_wuw0y")
+priority_override = false
+priority = 0
+follow_mode = 5
+follow_target = NodePath("../Player")
+follow_parameters/distance = 6.0
+follow_parameters/target_offset = Vector3(0, 0, 0)
+follow_parameters/damping = true
+follow_parameters/damping_value = 1.0
+follow_parameters/dead_zone_horizontal = 0.2
+follow_parameters/dead_zone_vertical = 0.2
+follow_parameters/viewfinder_in_play = false
+look_at_mode = 0
+tween_parameters = null
+tween_on_load = true
+inactive_update_mode = 0
+camera_3D_resource = null

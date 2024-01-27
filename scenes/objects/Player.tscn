@@ -5,4 +5,4 @@
 
 [node name="Player" instance=ExtResource("1_7h4pj")]
 script = ExtResource("2_xbe6w")
-_speed = 5.0
+_speed = 2.0
