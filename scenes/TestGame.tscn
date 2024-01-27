@@ -1,17 +1,124 @@
-[gd_scene load_steps=3 format=3 uid="uid://3m6anpx3hnuw"]
+[gd_scene load_steps=9 format=3 uid="uid://3m6anpx3hnuw"]
 
 [ext_resource type="Script" path="res://src/Game.cs" id="1_0nn4y"]
-[ext_resource type="PackedScene" uid="uid://c4lfi60a8sw8c" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_A.gltf" id="2_n4b2g"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_7fsi5"]
+[ext_resource type="PackedScene" uid="uid://dq36ypdin76tm" path="res://scenes/levels/Level_Test1.tscn" id="2_wk2qx"]
+[ext_resource type="PackedScene" uid="uid://cbslhtwtidhln" path="res://scenes/objects/Player.tscn" id="3_48t3v"]
+[ext_resource type="Script" path="res://src/CameraSwitcher.cs" id="5_3d2ml"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_4fsdc"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="5_wuw0y"]
+
+[sub_resource type="Resource" id="Resource_3mupl"]
+script = ExtResource("5_4fsdc")
+duration = 1.0
+transition = 0
+ease = 2
 
 [node name="TestGame" type="Node3D"]
 script = ExtResource("1_0nn4y")
 
-[node name="GridMap" type="GridMap" parent="."]
-
-[node name="building_A2" parent="GridMap" instance=ExtResource("2_n4b2g")]
-
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37099, 2.7983)
+transform = Transform3D(-0.573577, 0.579228, -0.579228, 0, 0.707107, 0.707107, 0.819152, 0.40558, -0.40558, -2.43571, 4.34576, 0.318771)
+projection = 1
+current = true
+size = 4.0
+near = 0.001
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
+script = ExtResource("2_7fsi5")
+
+[node name="Level" parent="." instance=ExtResource("2_wk2qx")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.846491, 0.532404, 0, -0.532404, 0.846491, 0, 5.73811, 5.86387)
+
+[node name="Player" parent="." node_paths=PackedStringArray("_camera") instance=ExtResource("3_48t3v")]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 1.03966, 0.103117, 2.75225)
+_camera = NodePath("../Camera3D")
+
+[node name="CameraSwitcher" type="Node" parent="." node_paths=PackedStringArray("_northView", "_eastView", "_southView", "_westView")]
+script = ExtResource("5_3d2ml")
+_northView = NodePath("../North_View")
+_eastView = NodePath("../East_View")
+_southView = NodePath("../South_View")
+_westView = NodePath("../West_View")
+
+[node name="North_View" type="Node3D" parent="."]
+transform = Transform3D(-0.573577, 0.579228, -0.579228, 0, 0.707107, 0.707107, 0.819152, 0.40558, -0.40558, -2.43571, 4.34576, 0.318771)
+script = ExtResource("5_wuw0y")
+priority_override = false
+priority = 0
+follow_mode = 5
+follow_target = NodePath("../Player")
+follow_parameters/distance = 6.0
+follow_parameters/target_offset = Vector3(0, 0, 0)
+follow_parameters/damping = true
+follow_parameters/damping_value = 4.0
+follow_parameters/dead_zone_horizontal = 0.2
+follow_parameters/dead_zone_vertical = 0.2
+follow_parameters/viewfinder_in_play = false
+look_at_mode = 0
+tween_parameters = SubResource("Resource_3mupl")
+tween_on_load = true
+inactive_update_mode = 0
+camera_3D_resource = null
+
+[node name="East_View" type="Node3D" parent="."]
+transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, -1.96034, 4.34576, 5.75225)
+script = ExtResource("5_wuw0y")
+priority_override = false
+priority = 0
+follow_mode = 5
+follow_target = NodePath("../Player")
+follow_parameters/distance = 6.0
+follow_parameters/target_offset = Vector3(0, 0, 0)
+follow_parameters/damping = true
+follow_parameters/damping_value = 4.0
+follow_parameters/dead_zone_horizontal = 0.2
+follow_parameters/dead_zone_vertical = 0.2
+follow_parameters/viewfinder_in_play = false
+look_at_mode = 0
+tween_parameters = SubResource("Resource_3mupl")
+tween_on_load = true
+inactive_update_mode = 0
+camera_3D_resource = null
+
+[node name="South_View" type="Node3D" parent="."]
+transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 4.03966, 4.34576, 5.75225)
+script = ExtResource("5_wuw0y")
+priority_override = false
+priority = 0
+follow_mode = 5
+follow_target = NodePath("../Player")
+follow_parameters/distance = 6.0
+follow_parameters/target_offset = Vector3(0, 0, 0)
+follow_parameters/damping = true
+follow_parameters/damping_value = 4.0
+follow_parameters/dead_zone_horizontal = 0.2
+follow_parameters/dead_zone_vertical = 0.2
+follow_parameters/viewfinder_in_play = false
+look_at_mode = 0
+tween_parameters = SubResource("Resource_3mupl")
+tween_on_load = true
+inactive_update_mode = 0
+camera_3D_resource = null
+
+[node name="West_View" type="Node3D" parent="."]
+transform = Transform3D(-0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, 0.5, -0.5, 4.03966, 4.34576, -0.24775)
+script = ExtResource("5_wuw0y")
+priority_override = false
+priority = 0
+follow_mode = 5
+follow_target = NodePath("../Player")
+follow_parameters/distance = 6.0
+follow_parameters/target_offset = Vector3(0, 0, 0)
+follow_parameters/damping = true
+follow_parameters/damping_value = 4.0
+follow_parameters/dead_zone_horizontal = 0.2
+follow_parameters/dead_zone_vertical = 0.2
+follow_parameters/viewfinder_in_play = false
+look_at_mode = 0
+tween_parameters = SubResource("Resource_3mupl")
+tween_on_load = true
+inactive_update_mode = 0
+camera_3D_resource = null
