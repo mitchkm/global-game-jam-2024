@@ -7,9 +7,11 @@
 [ext_resource type="StyleBox" uid="uid://ct6w5pn2el8as" path="res://themes/styleboxes/button_pressed.tres" id="4_2g51g"]
 
 [resource]
+Button/font_sizes/font_size = 20
 Button/fonts/font = ExtResource("1_juym7")
 Button/styles/focus = ExtResource("1_cridb")
 Button/styles/hover = ExtResource("2_krw4y")
 Button/styles/normal = ExtResource("3_lbsh4")
 Button/styles/pressed = ExtResource("4_2g51g")
+Label/font_sizes/font_size = 20
 Label/fonts/font = ExtResource("1_juym7")
