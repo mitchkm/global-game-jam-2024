@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2036602390	Play_ui_deselect			\Default Work Unit\Play_ui_deselect	
+	3308548503	Play_ui_select			\Default Work Unit\Play_ui_select	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	349664291	ui_select	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\Exports\ui_select_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Exports\ui_select		507248
+	1071380938	ui_deselect	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\Exports\ui_deselect_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Exports\ui_deselect		507248
+

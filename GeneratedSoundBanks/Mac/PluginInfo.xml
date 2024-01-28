@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PluginInfo Platform="Mac" BasePlatform="Mac">
+	<PluginLibs>
+		<PluginLib LibName="System" LibId="11403271" Type="AudioDevice"/>
+		<PluginLib LibName="No Output" LibId="11862023" Type="AudioDevice"/>
+		<PluginLib LibName="Wwise Motion" LibId="33226759" Type="AudioDevice" DLL="AkMotion" StaticLib="AkMotionSink"/>
+	</PluginLibs>
+	<FileHash>{9EC04F04-5CC7-BBA0-2355-52930B52EE7E}</FileHash>
+</PluginInfo>
