@@ -38,9 +38,9 @@ public partial class Main : Node2D {
 #endif
 
   private void RunScene() {
-    var MyGameState = GetNode<GameState>("/root/GameState");
-    MyGameState.Load();
-    GetTree().AutoAcceptQuit = false;
-    GetTree().ChangeSceneToFile("res://scenes/MainMenu.tscn");
+	var MyGameState = GetNode<GameState>("/root/GameState");
+	MyGameState.Load();
+	GetTree().AutoAcceptQuit = false;
+	GetTree().ChangeSceneToFile("res://scenes/MainMenu.tscn");
   }
 }
