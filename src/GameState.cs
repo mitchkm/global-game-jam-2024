@@ -48,7 +48,6 @@ public partial class GameState : Node {
     }
 
     using var saveGame = FileAccess.Open("user://savegame.save", FileAccess.ModeFlags.Read);
-    GD.Print(saveGame.GetPath());
 
     var jsonString = saveGame.GetAsText();
 

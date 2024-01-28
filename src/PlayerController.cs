@@ -7,12 +7,13 @@ using Interactable;
 [Tool]
 public partial class PlayerController : Meeple {
   [Export] private float _speed = 5.0f;
-
   [Export] private Node3D _camera;
+
+  public bool InDialogue { get; set; }
 
   // Get the gravity from the project settings to be synced with RigidBody nodes.
   private float _gravity = ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle();
-  public Interactable.Interactable? InteractTarget { get; set; }
+  private IInteractable? _interactTarget;
 
   public override void _Input(InputEvent @event) {
     if (Engine.IsEditorHint()) {
@@ -22,13 +23,6 @@ public partial class PlayerController : Meeple {
     if (@event.IsActionPressed("interact")) {
       InteractWithTarget();
     }
-  }
-
-  private void InteractWithTarget() {
-    if (InteractTarget == null) {
-      return;
-    }
-    InteractTarget.Interact();
   }
 
   public override void _PhysicsProcess(double delta) {
@@ -45,7 +39,7 @@ public partial class PlayerController : Meeple {
 
     // Get the input direction and handle the movement/deceleration.
     // As good practice, you should replace UI actions with custom gameplay actions.
-    var inputDir = Input.GetVector("move_left", "move_right", "move_up", "move_down");
+    var inputDir = InDialogue ? Vector2.Zero : Input.GetVector("move_left", "move_right", "move_up", "move_down");
     var forward = Vector3.Back.Rotated(Vector3.Up,_camera.Rotation.Y).Normalized();
     var right = Vector3.Right.Rotated(Vector3.Up,_camera.Rotation.Y).Normalized();
     var direction = (forward * inputDir.Y) + (right * inputDir.X);
@@ -61,5 +55,21 @@ public partial class PlayerController : Meeple {
 
     Velocity = velocity;
     MoveAndSlide();
+  }
+
+  private void InteractWithTarget() => _interactTarget?.Interact(this);
+
+  public void NotifyOfInteractTargetEnter(IInteractable interactableTarget) {
+    if (_interactTarget == null) {
+      _interactTarget = interactableTarget;
+      _interactTarget.ToggleHighlight(true);
+    }
+  }
+
+  public void NotifyOfInteractTargetExit(IInteractable interactableTarget) {
+    if (_interactTarget == interactableTarget) {
+      _interactTarget.ToggleHighlight(false);
+      _interactTarget = null;
+    }
   }
 }
