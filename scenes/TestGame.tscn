@@ -4,9 +4,10 @@
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_7fsi5"]
 [ext_resource type="Script" path="res://src/CameraController.cs" id="2_cd81u"]
 [ext_resource type="PackedScene" uid="uid://dq36ypdin76tm" path="res://scenes/levels/Level_Test1.tscn" id="2_wk2qx"]
-[ext_resource type="PackedScene" uid="uid://cbslhtwtidhln" path="res://scenes/objects/Player.tscn" id="3_48t3v"]
+[ext_resource type="PackedScene" uid="uid://cbslhtwtidhln" path="res://scenes/characters/Player.tscn" id="3_48t3v"]
 [ext_resource type="Script" path="res://src/PlayerController.cs" id="5_3d2ml"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="5_wuw0y"]
+
 
 [node name="TestGame" type="Node3D"]
 script = ExtResource("1_0nn4y")
