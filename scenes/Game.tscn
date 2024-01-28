@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bib8yspuxiq2v"]
+[gd_scene load_steps=10 format=3 uid="uid://bib8yspuxiq2v"]
 
 [ext_resource type="Script" path="res://src/Game.cs" id="1_eeo50"]
 [ext_resource type="PackedScene" uid="uid://cgfkg27ywt5la" path="res://scenes/levels/Level_MainCity.tscn" id="2_ivuo1"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://src/CameraSwitcher.cs" id="5_4gm3k"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="6_4jo2p"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_ss1pk"]
+[ext_resource type="PackedScene" uid="uid://di530mmvbgpyt" path="res://scenes/objects/InteractableMeeple.tscn" id="8_6ut53"]
 
 [sub_resource type="Resource" id="Resource_3mupl"]
 script = ExtResource("7_ss1pk")
@@ -23,7 +24,7 @@ script = ExtResource("1_eeo50")
 transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, -3.27833, 4.34564, -1.28619)
 projection = 1
 current = true
-fov = 74.997
+fov = 74.9866
 size = 4.0
 near = 0.001
 
@@ -120,3 +121,11 @@ tween_parameters = SubResource("Resource_3mupl")
 tween_on_load = true
 inactive_update_mode = 0
 camera_3D_resource = null
+
+[node name="Meeples" type="Node3D" parent="."]
+
+[node name="Meeple" parent="Meeples" instance=ExtResource("8_6ut53")]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 4.06229, 0.103117, 0.224967)
+
+[node name="Meeple2" parent="Meeples" instance=ExtResource("8_6ut53")]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 5.27307, 0.103117, 1.31805)

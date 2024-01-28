@@ -2,6 +2,8 @@ using Godot;
 
 namespace YesNoSlap;
 
+using Interactable;
+
 public partial class PlayerController : CharacterBody3D {
   [Export] private float _speed = 5.0f;
 
@@ -9,6 +11,20 @@ public partial class PlayerController : CharacterBody3D {
 
   // Get the gravity from the project settings to be synced with RigidBody nodes.
   private float _gravity = ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle();
+  public Interactable.Interactable? InteractTarget { get; set; }
+
+  public override void _Input(InputEvent @event) {
+    if (@event.IsActionPressed("interact")) {
+      InteractWithTarget();
+    }
+  }
+
+  private void InteractWithTarget() {
+    if (InteractTarget == null) {
+      return;
+    }
+    InteractTarget.Interact();
+  }
 
   public override void _PhysicsProcess(double delta) {
     var velocity = Velocity;
