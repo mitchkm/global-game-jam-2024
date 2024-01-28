@@ -4,20 +4,20 @@
 [ext_resource type="Script" path="res://src/PlayerController.cs" id="2_xbe6w"]
 [ext_resource type="Texture2D" uid="uid://b5ll7f2vkg1rv" path="res://models/meeples/meeple_meeple happy 1-05.png" id="3_dojis"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3hjnt"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5ecf"]
 resource_name = "Material.001"
 cull_mode = 2
 roughness = 0.5
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kh0ji"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mrhcf"]
 albedo_texture = ExtResource("3_dojis")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5dgnd"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2kg0s"]
 resource_name = "Material"
 cull_mode = 2
 roughness = 0.5
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eg3um"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkqqm"]
 resource_name = "Material.003"
 cull_mode = 2
 roughness = 0.5
@@ -31,14 +31,14 @@ _leftArm = NodePath("meeple/LeftArm")
 _rightArm = NodePath("meeple/RightArm")
 
 [node name="Body" parent="meeple" index="0"]
-material_override = SubResource("StandardMaterial3D_3hjnt")
+material_override = SubResource("StandardMaterial3D_v5ecf")
 
 [node name="Head" parent="meeple" index="1"]
-material_override = SubResource("StandardMaterial3D_kh0ji")
+material_override = SubResource("StandardMaterial3D_mrhcf")
 
 [node name="LeftArm" parent="meeple" index="2"]
-material_override = SubResource("StandardMaterial3D_5dgnd")
+material_override = SubResource("StandardMaterial3D_2kg0s")
 
 [node name="RightArm" parent="meeple" index="3"]
 transform = Transform3D(-0.36557, 0.00987064, -0.00128507, 0.00827134, 0.438605, -0.0362604, 0.000455514, -0.0426834, -0.372901, 0, 1.54075, 1.12954)
-material_override = SubResource("StandardMaterial3D_eg3um")
+material_override = SubResource("StandardMaterial3D_mkqqm")

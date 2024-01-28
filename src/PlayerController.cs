@@ -15,6 +15,7 @@ public partial class PlayerController : Meeple {
   // Get the gravity from the project settings to be synced with RigidBody nodes.
   private float _gravity = ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle();
   private IInteractable? _interactTarget;
+  private Vector2 _inputDir;
 
   public override void _Ready() {
     base._Ready();
@@ -47,6 +48,14 @@ public partial class PlayerController : Meeple {
     }
   }
 
+  public override void _Process(double delta) {
+    if (Engine.IsEditorHint()) {
+      return;
+    }
+    
+    _inputDir = InDialogue ? Vector2.Zero : Input.GetVector("move_left", "move_right", "move_up", "move_down");
+  }
+
   public override void _PhysicsProcess(double delta) {
     if (Engine.IsEditorHint()) {
       return;
@@ -61,10 +70,9 @@ public partial class PlayerController : Meeple {
 
     // Get the input direction and handle the movement/deceleration.
     // As good practice, you should replace UI actions with custom gameplay actions.
-    var inputDir = InDialogue ? Vector2.Zero : Input.GetVector("move_left", "move_right", "move_up", "move_down");
     var forward = Vector3.Back.Rotated(Vector3.Up,_camera.Rotation.Y).Normalized();
     var right = Vector3.Right.Rotated(Vector3.Up,_camera.Rotation.Y).Normalized();
-    var direction = (forward * inputDir.Y) + (right * inputDir.X);
+    var direction = ((forward * _inputDir.Y) + (right * _inputDir.X)).Normalized();
 
     if (direction != Vector3.Zero) {
       velocity.X = direction.X * _speed;
@@ -81,7 +89,6 @@ public partial class PlayerController : Meeple {
 
     Velocity = velocity;
     MoveAndSlide();
-
   }
 
   private void InteractWithTarget() => _interactTarget?.Interact(this);
