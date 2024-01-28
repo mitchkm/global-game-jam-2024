@@ -37,7 +37,6 @@ transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0
 environment = SubResource("Environment_jl4i8")
 projection = 1
 current = true
-fov = 74.9877
 size = 4.0
 near = 0.001
 script = ExtResource("5_4gm3k")

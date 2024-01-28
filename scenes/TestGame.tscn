@@ -1,22 +1,28 @@
-[gd_scene load_steps=7 format=3 uid="uid://3m6anpx3hnuw"]
+[gd_scene load_steps=8 format=3 uid="uid://3m6anpx3hnuw"]
 
 [ext_resource type="Script" path="res://src/Game.cs" id="1_0nn4y"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_7fsi5"]
+[ext_resource type="Script" path="res://src/CameraController.cs" id="2_cd81u"]
 [ext_resource type="PackedScene" uid="uid://dq36ypdin76tm" path="res://scenes/levels/Level_Test1.tscn" id="2_wk2qx"]
 [ext_resource type="PackedScene" uid="uid://cbslhtwtidhln" path="res://scenes/objects/Player.tscn" id="3_48t3v"]
-[ext_resource type="Script" path="res://src/CameraSwitcher.cs" id="5_3d2ml"]
+[ext_resource type="Script" path="res://src/PlayerController.cs" id="5_3d2ml"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="5_wuw0y"]
 
 [node name="TestGame" type="Node3D"]
 script = ExtResource("1_0nn4y")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.573577, 0.579228, -0.579228, 2.98023e-08, 0.707107, 0.707107, 0.819152, 0.40558, -0.40558, -3.47537, 4.34564, -2.43348)
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("_northView", "_eastView", "_southView", "_westView")]
+transform = Transform3D(-0.573577, 0.579228, -0.579228, 0, 0.707107, 0.707107, 0.819152, 0.40558, -0.40558, -3.47537, 4.34564, -2.43348)
 projection = 1
 current = true
-fov = 51.2307
+fov = 74.7389
 size = 4.0
 near = 0.001
+script = ExtResource("2_cd81u")
+_northView = NodePath("../North_View")
+_eastView = NodePath("../East_View")
+_southView = NodePath("../South_View")
+_westView = NodePath("../West_View")
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 script = ExtResource("2_7fsi5")
@@ -28,8 +34,6 @@ transform = Transform3D(1, 0, 0, 0, 0.846491, 0.532404, 0, -0.532404, 0.846491, 
 
 [node name="Player" parent="." instance=ExtResource("3_48t3v")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0.103, 0)
-BodyColor = Color(1, 1, 1, 1)
-HeadColor = Color(1, 1, 1, 1)
 
 [node name="CameraSwitcher" type="Node" parent="."]
 script = ExtResource("5_3d2ml")
