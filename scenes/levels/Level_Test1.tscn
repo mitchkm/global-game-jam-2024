@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dq36ypdin76tm"]
 
-[ext_resource type="MeshLibrary" uid="uid://dv5sey5q42060" path="res://addons/kaykit_city_builder_bits/Assets/kaykit_buildings.tres" id="1_kmeew"]
+[ext_resource type="MeshLibrary" uid="uid://5gfcshx5mj5b" path="res://addons/kaykit_city_builder_bits/Assets/kaykit_buildings_and_ground.tres" id="1_kmeew"]
 
 [node name="LevelTest1" type="Node3D"]
 

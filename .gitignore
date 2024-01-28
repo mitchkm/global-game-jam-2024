@@ -3,12 +3,14 @@ nupkg/
 coverage/*
 !coverage/.gdignore
 
-.godot/
+.godot/*
 bin/
 obj/
 .generated/
 .vs/
 .DS_Store
+.tmp
+.import/
 
 *.translation
 

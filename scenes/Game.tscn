@@ -1,0 +1,148 @@
+[gd_scene load_steps=11 format=3 uid="uid://bib8yspuxiq2v"]
+
+[ext_resource type="Script" path="res://src/Game.cs" id="1_eeo50"]
+[ext_resource type="PackedScene" uid="uid://cgfkg27ywt5la" path="res://scenes/levels/Level_MainCity.tscn" id="2_ivuo1"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_ypksi"]
+[ext_resource type="PackedScene" uid="uid://cbslhtwtidhln" path="res://scenes/objects/Player.tscn" id="4_22hdr"]
+[ext_resource type="Script" path="res://src/CameraController.cs" id="5_4gm3k"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="6_4jo2p"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_ss1pk"]
+[ext_resource type="PackedScene" uid="uid://di530mmvbgpyt" path="res://scenes/objects/InteractableMeeple.tscn" id="8_6ut53"]
+
+[sub_resource type="Environment" id="Environment_jl4i8"]
+ambient_light_source = 2
+ambient_light_color = Color(0.729412, 0.556863, 0.329412, 1)
+ambient_light_energy = 0.5
+ssao_radius = 0.3
+ssao_power = 11.1964
+ssao_detail = 3.0
+ssao_horizon = 0.0
+ssao_sharpness = 1.0
+sdfgi_use_occlusion = true
+sdfgi_read_sky_light = false
+
+[sub_resource type="Resource" id="Resource_3mupl"]
+script = ExtResource("7_ss1pk")
+duration = 0.7
+transition = 4
+ease = 2
+
+[node name="Game" type="Node3D"]
+script = ExtResource("1_eeo50")
+
+[node name="LevelMainCity" parent="." instance=ExtResource("2_ivuo1")]
+
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("_northView", "_eastView", "_southView", "_westView")]
+transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, -6.27938, 8.58844, -4.26559)
+environment = SubResource("Environment_jl4i8")
+projection = 1
+current = true
+size = 4.0
+near = 0.001
+script = ExtResource("5_4gm3k")
+_northView = NodePath("../North_View")
+_eastView = NodePath("../East_View")
+_southView = NodePath("../South_View")
+_westView = NodePath("../West_View")
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
+script = ExtResource("2_ypksi")
+
+[node name="Player" parent="." node_paths=PackedStringArray("_camera") instance=ExtResource("4_22hdr")]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -0.279382, 0.103152, 1.73441)
+_camera = NodePath("../Camera3D")
+
+[node name="AkListener3D" type="AkListener3D" parent="Player"]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 2.23506, -0.825216, -13.8753)
+
+[node name="North_View" type="Node3D" parent="."]
+transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, -6.27938, 8.58844, -4.26559)
+script = ExtResource("6_4jo2p")
+priority_override = false
+priority = 0
+follow_mode = 5
+follow_target = NodePath("../Player")
+follow_parameters/distance = 12.0
+follow_parameters/target_offset = Vector3(0, 0, 0)
+follow_parameters/damping = true
+follow_parameters/damping_value = 10.0
+follow_parameters/dead_zone_horizontal = 0.05
+follow_parameters/dead_zone_vertical = 0.05
+follow_parameters/viewfinder_in_play = false
+look_at_mode = 0
+tween_parameters = SubResource("Resource_3mupl")
+tween_on_load = true
+inactive_update_mode = 0
+camera_3D_resource = null
+
+[node name="East_View" type="Node3D" parent="."]
+transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, -6.27938, 8.58844, 7.73441)
+script = ExtResource("6_4jo2p")
+priority_override = false
+priority = 0
+follow_mode = 5
+follow_target = NodePath("../Player")
+follow_parameters/distance = 12.0
+follow_parameters/target_offset = Vector3(0, 0, 0)
+follow_parameters/damping = true
+follow_parameters/damping_value = 10.0
+follow_parameters/dead_zone_horizontal = 0.05
+follow_parameters/dead_zone_vertical = 0.05
+follow_parameters/viewfinder_in_play = false
+look_at_mode = 0
+tween_parameters = SubResource("Resource_3mupl")
+tween_on_load = true
+inactive_update_mode = 0
+camera_3D_resource = null
+
+[node name="South_View" type="Node3D" parent="."]
+transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 5.72062, 8.58844, 7.73441)
+script = ExtResource("6_4jo2p")
+priority_override = false
+priority = 0
+follow_mode = 5
+follow_target = NodePath("../Player")
+follow_parameters/distance = 12.0
+follow_parameters/target_offset = Vector3(0, 0, 0)
+follow_parameters/damping = true
+follow_parameters/damping_value = 10.0
+follow_parameters/dead_zone_horizontal = 0.05
+follow_parameters/dead_zone_vertical = 0.05
+follow_parameters/viewfinder_in_play = false
+look_at_mode = 0
+tween_parameters = SubResource("Resource_3mupl")
+tween_on_load = true
+inactive_update_mode = 0
+camera_3D_resource = null
+
+[node name="West_View" type="Node3D" parent="."]
+transform = Transform3D(-0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, 0.5, -0.5, 5.72062, 8.58844, -4.26559)
+script = ExtResource("6_4jo2p")
+priority_override = false
+priority = 0
+follow_mode = 5
+follow_target = NodePath("../Player")
+follow_parameters/distance = 12.0
+follow_parameters/target_offset = Vector3(0, 0, 0)
+follow_parameters/damping = true
+follow_parameters/damping_value = 10.0
+follow_parameters/dead_zone_horizontal = 0.05
+follow_parameters/dead_zone_vertical = 0.05
+follow_parameters/viewfinder_in_play = false
+look_at_mode = 0
+tween_parameters = SubResource("Resource_3mupl")
+tween_on_load = true
+inactive_update_mode = 0
+camera_3D_resource = null
+
+[node name="Meeples" type="Node3D" parent="."]
+
+[node name="Meeple" parent="Meeples" instance=ExtResource("8_6ut53")]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 4.06229, 0.103117, 0.224967)
+BodyColor = Color(0.415686, 0.45098, 1, 1)
+HeadColor = Color(1, 0.701961, 0.533333, 1)
+
+[node name="Meeple2" parent="Meeples" instance=ExtResource("8_6ut53")]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 5.27307, 0.103117, 1.31805)
+BodyColor = Color(0, 0.678431, 0.294118, 1)
+HeadColor = Color(0.501961, 0.352941, 0.278431, 1)

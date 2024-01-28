@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://0tom4hwtdv82"
+path="res://.godot/imported/GrandmaMatilda.dialogue-2b99ff60d8e1e657e1ff5406ae46b8e7.tres"
+
+[deps]
+
+source_file="res://narrative/GrandmaMatilda.dialogue"
+dest_files=["res://.godot/imported/GrandmaMatilda.dialogue-2b99ff60d8e1e657e1ff5406ae46b8e7.tres"]
+
+[params]
+
+defaults=true

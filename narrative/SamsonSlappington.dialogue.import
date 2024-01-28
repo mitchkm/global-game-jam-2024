@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://db2ny1cxhsbbg"
+path="res://.godot/imported/SamsonSlappington.dialogue-a41f14cbba6bec61957beffe4311e784.tres"
+
+[deps]
+
+source_file="res://narrative/SamsonSlappington.dialogue"
+dest_files=["res://.godot/imported/SamsonSlappington.dialogue-a41f14cbba6bec61957beffe4311e784.tres"]
+
+[params]
+
+defaults=true
