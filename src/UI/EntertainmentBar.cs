@@ -18,11 +18,11 @@ public partial class EntertainmentBar : HBoxContainer
   public Color superHappyColor = new Color(0.102f, 0.435f, 0, 1);
 
 
-  // public Texture2D superBoredFace = load("res://TempImages/ScientistFace/superBored.png");
-  // public Texture2D boredFace = load("res://TempImages/ScientistFace/bored.png");
-  // public Texture2D neutralFace = load("res://TempImages/ScientistFace/neutral.png");
-  // public Texture2D happyFace = load("res://TempImages/ScientistFace/happy.png");
-  // public Texture2D superHappyFace = load("res://TempImages/ScientistFace/superHappy.png");
+  public Texture2D superBoredFace = (Texture2D)GD.Load("res://TempImages/ScientistFace/superBored.png");
+  public Texture2D boredFace = (Texture2D)GD.Load("res://TempImages/ScientistFace/slightlyBored.png");
+  public Texture2D neutralFace = (Texture2D)GD.Load("res://TempImages/ScientistFace/neutral.png");
+  public Texture2D happyFace = (Texture2D)GD.Load("res://TempImages/ScientistFace/slightlyHappy.png");
+  public Texture2D superHappyFace = (Texture2D)GD.Load("res://TempImages/ScientistFace/superHappy.png");
 
 
   // Called when the node enters the scene tree for the first time.
@@ -85,25 +85,30 @@ public partial class EntertainmentBar : HBoxContainer
   {
 	Meter.Value = entertainment;
 
-	if (entertainment > 80)
+	if (entertainment > 4 * (Meter.MaxValue / 5))
 	{
 	  Meter.TintProgress = superHappyColor;
+	  Face.Texture = superHappyFace;
 	}
-	else if (entertainment > 60)
+	else if (entertainment > 3 * (Meter.MaxValue / 5))
 	{
 	  Meter.TintProgress = happyColor;
+	  Face.Texture = happyFace;
 	}
-	else if (entertainment > 40)
+	else if (entertainment > 2 * (Meter.MaxValue / 5))
 	{
 	  Meter.TintProgress = neutralColor;
+	  Face.Texture = neutralFace;
 	}
-	else if (entertainment > 20)
+	else if (entertainment > (Meter.MaxValue / 5))
 	{
 	  Meter.TintProgress = boredColor;
+	  Face.Texture = boredFace;
 	}
 	else
 	{
 	  Meter.TintProgress = superBoredColor;
+	  Face.Texture = superBoredFace;
 	}
 
   }

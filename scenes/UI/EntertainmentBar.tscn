@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cffgah0dsr2e2" path="res://TempImages/EntertainmentBar/ebarprogress.png" id="4_b23u3"]
 
 [node name="EntertainmentBar" type="HBoxContainer"]
-anchors_preset = -1
 offset_left = 30.0
 offset_top = 30.0
 offset_right = 789.0
