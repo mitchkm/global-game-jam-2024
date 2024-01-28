@@ -13,7 +13,7 @@ public partial class PlayerController : Meeple {
 
   // Get the gravity from the project settings to be synced with RigidBody nodes.
   private float _gravity = ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle();
-  private Interactable.Interactable? _interactTarget;
+  private IInteractable? _interactTarget;
 
   public override void _Input(InputEvent @event) {
     if (Engine.IsEditorHint()) {
@@ -59,14 +59,14 @@ public partial class PlayerController : Meeple {
 
   private void InteractWithTarget() => _interactTarget?.Interact(this);
 
-  public void NotifyOfInteractTargetEnter(Interactable.Interactable interactableTarget) {
+  public void NotifyOfInteractTargetEnter(IInteractable interactableTarget) {
     if (_interactTarget == null) {
       _interactTarget = interactableTarget;
       _interactTarget.ToggleHighlight(true);
     }
   }
 
-  public void NotifyOfInteractTargetExit(Interactable.Interactable interactableTarget) {
+  public void NotifyOfInteractTargetExit(IInteractable interactableTarget) {
     if (_interactTarget == interactableTarget) {
       _interactTarget.ToggleHighlight(false);
       _interactTarget = null;

@@ -3,8 +3,7 @@ using Godot;
 namespace YesNoSlap.Interactable;
 
 [GlobalClass]
-public partial class InteractZone : Area3D {
-  [Export] private Interactable? _interactTarget;
+public abstract partial class InteractZone : Area3D, IInteractable {
 
   public override void _Ready() {
     BodyEntered += OnBodyEnteredHandler;
@@ -18,17 +17,17 @@ public partial class InteractZone : Area3D {
 
   private void OnBodyEnteredHandler(Node3D body) {
     if (body is PlayerController player) {
-      if (_interactTarget != null) {
-        player.NotifyOfInteractTargetEnter(_interactTarget);
-      }
+      player.NotifyOfInteractTargetEnter(this);
     }
   }
 
   private void OnBodyExitedHandler(Node3D body) {
     if (body is PlayerController player) {
-      if (_interactTarget != null) {
-        player.NotifyOfInteractTargetExit(_interactTarget);
-      }
+      player.NotifyOfInteractTargetExit(this);
     }
   }
+
+  public abstract void Interact(PlayerController player);
+
+  public abstract void ToggleHighlight(bool toggle);
 }

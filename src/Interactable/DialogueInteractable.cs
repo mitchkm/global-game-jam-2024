@@ -3,7 +3,7 @@
 using Godot;
 
 [GlobalClass]
-public partial class DialogueInteractable : Interactable {
+public partial class DialogueInteractable : InteractZone {
   [Export] private Resource? _dialogueResource;
   [Export] private string? _startNodeTitle = "start";
   [Export] private Node3D? _interactionHighlight;
@@ -11,7 +11,6 @@ public partial class DialogueInteractable : Interactable {
   private static PackedScene DialogueScene = GD.Load<PackedScene>("res://scenes/hud/dialogue_balloon.tscn");
 
   public override void Interact(PlayerController player) {
-    base.Interact(player);
     GD.Print(Owner.Name + " was interacted with");
     StartDialogue(player);
   }
