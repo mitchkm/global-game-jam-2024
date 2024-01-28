@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cgfkg27ywt5la"]
+[gd_scene load_steps=7 format=3 uid="uid://cgfkg27ywt5la"]
 
-[ext_resource type="MeshLibrary" uid="uid://5gfcshx5mj5b" path="res://addons/kaykit_city_builder_bits/Assets/kaykit_buildings_and_ground.tres" id="1_41s55"]
+[ext_resource type="MeshLibrary" uid="uid://dtfg238m3frqw" path="res://addons/kaykit_city_builder_bits/Assets/kaykit_buildings_and_ground.tres" id="1_41s55"]
 [ext_resource type="MeshLibrary" uid="uid://1bbkn4r8dfw" path="res://addons/kaykit_city_builder_bits/Assets/kaykit_decorations.tres" id="2_cjdhx"]
 [ext_resource type="PackedScene" uid="uid://d2sndkp5q6pt7" path="res://scenes/characters/Dumpster.tscn" id="3_7panx"]
 [ext_resource type="PackedScene" uid="uid://bbkk5xil4i358" path="res://scenes/characters/Creator.tscn" id="4_rqk1n"]
+[ext_resource type="PackedScene" uid="uid://rtdi2v7vbfng" path="res://scenes/characters/Samson.tscn" id="5_s7bs1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3mfpx"]
 size = Vector3(6.65967, 7, 6.71301)
@@ -76,3 +77,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.02036, 0.103117, -4.92061)
 
 [node name="Creator" parent="Interactables/Meeples" instance=ExtResource("4_rqk1n")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 16.3054, 0.103117, -10.4472)
+
+[node name="Samson" parent="Interactables/Meeples" instance=ExtResource("5_s7bs1")]
+transform = Transform3D(0.000678056, 0, -0.174999, 0, 0.175, 0, 0.174999, 0, 0.000678056, 11.169, 0.103117, 3.91189)
