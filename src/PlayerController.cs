@@ -11,17 +11,39 @@ public partial class PlayerController : Meeple {
 
   public bool InDialogue { get; set; }
 
+  private CameraController _cameraController;
   // Get the gravity from the project settings to be synced with RigidBody nodes.
   private float _gravity = ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle();
   private IInteractable? _interactTarget;
 
+  public override void _Ready() {
+    base._Ready();
+    _cameraController = (CameraController)_camera;
+  }
+
   public override void _Input(InputEvent @event) {
-    if (Engine.IsEditorHint()) {
+    if (Engine.IsEditorHint() || InDialogue) {
       return;
     }
 
     if (@event.IsActionPressed("interact")) {
       InteractWithTarget();
+    }
+
+    if (@event.IsActionPressed("cam_rotate_left")) {
+      _cameraController.NextViewLeft();
+    }
+
+    if (@event.IsActionPressed("cam_rotate_right")) {
+      _cameraController.NextViewRight();
+    }
+
+    if (@event.IsActionPressed("zoom_up")) {
+      _cameraController.AdjustZoom(true);
+    }
+
+    if (@event.IsActionPressed("zoom_down")) {
+      _cameraController.AdjustZoom(false);
     }
   }
 

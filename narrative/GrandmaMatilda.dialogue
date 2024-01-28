@@ -1,0 +1,57 @@
+using GameState
+~ start
+do Matilda.TallyConvo()
+if Matilda.Progress == 0
+	=> ConvoA
+elif Matilda.Progress == 1
+	=> ConvoB
+elif Matilda.Progress == 2
+	=> ConvoC
+else
+	=> END
+
+
+~ ConvoA
+Grandma Matilda: Sweet thing, can you help me get back home? I seem to have lost my way…
+- Yes
+	do Matilda.TallyYes()
+	[i]You walk across the street with granny to get her home, to her Hot Dog Stand.[/i]
+	do Matilda.ProgressConvo()
+- No
+	do Matilda.TallyNo()
+	[i]You don't help her? Wow, you're a jerk.[/i]
+- SLAP 
+	do Matilda.TallySlap()
+	[i]Just as the impulse to slap your sweet, old grandma takes hold, she ducks down to pick up a penny and you end up slapping the streetlight behind her, knocking it down.[/i]
+=> END
+
+~ ConvoB
+Grandma Matilda: Hey sunny, you're skin and bones! Let grandma whip up a delicious corndog for you.
+- Yes
+	do Matilda.TallyYes()
+	[i]You're not sure how to eat it, but now you have a corndog.[/i]
+	set HasCornDog = true
+	do Matilda.ProgressConvo()
+- No
+	do Matilda.TallyNo()
+	[i]You politely decline the corndog.[/i]
+- SLAP 
+	do Matilda.TallySlap()
+	[i]You viciously try to slap grandma, but you stumble on some trash and end up slapping the corndog from her hands.[/i]
+=> END
+
+~ ConvoC
+Grandma Matilda: I know that life can be challenging for someone your age. Maybe you could try being nice to people?
+- Yes
+	do Matilda.TallyYes()
+	Grandma Matilda: Give it a try next time you meet someone new!
+	do Matilda.ProgressConvo()
+- No, You're all just meat puppets.
+	do Matilda.TallyNo()
+	
+- SLAP 
+	do Matilda.TallySlap()
+	[i]As you try to slap grandma for making such an outrageous suggestion, the hot dog cart loses a wheel and falls over, landing straight in your path.[/i]
+=> END
+
+=> END

@@ -1,0 +1,108 @@
+using GameState
+~ start
+do Samson.TallyConvo()
+if Samson.Progress == 0
+	=> ConvoA
+elif Samson.Progress == 1
+	=> ConvoB
+elif Samson.Progress == 2
+	=> ConvoB2
+elif Samson.Progress == 3
+	=> ConvoC
+else
+	=> END
+
+~ BadSlap
+do Samson.TallySlap()
+if Samson.Run.Slap < 6
+	Samson: You are not ready to just "learn by SLAP'ing!"
+else
+	Samson: Enough! 
+	[i]Your surroundings go dark.[/i]
+=> END
+
+~ ConvoA
+% Samson: Hey kiddo, let uncle Samson tell you a joke! "Why don't you give Elsa a balloon? Because she'll let it go." Hah! Did you like it?
+% Samson: You know there kid, a little advice from Unkie Samson, without geometry, life is pointless! Get it? A little math joke for ya.
+% Samson: Hey there kid, humor your uncle Samson a sec: "What did the ocean say to the shore? Nothing, it just waved!" Haha! Did you like that one?
+- Yes
+	do Samson.TallyYes()
+	% Samson: I see you have an excellent sense of humor! BUAHAHAHAHa
+	% Samson: I knew you'd like that one! Hahahah!
+- No
+	do Samson.TallyNo()
+	Samson: Hmmph... You clearly don't appreciate my comedic prowess!
+- SLAP 
+	do Samson.TallySlap()
+	Samson: Oh I see. You want to learn how to SLAP from the best?! You've got potential, kid. Let me show you how to really slap.
+	do Samson.ProgressConvo()
+=> END
+
+~ ConvoB
+Samson: Ah kiddo! You came back. I see you're ready to [b]really[/b] slap! So tell me, can your slaps break the brittle bones of a human?
+- Yes
+	do Samson.TallyYes()
+	do Samson.ProgressConvo()
+	=> ConvoB2
+- No
+	do Samson.TallyNo()
+	Samson: You lack any confidence at all! Come back when you're [b]really[/b] ready.
+- SLAP 
+	=> BadSlap
+=> END
+
+~ ConvoB2
+{{Samson.Name}}: Good! Now can your slaps bring a tear to uncle Samson's eye? 
+- Yes
+	do Samson.TallyYes()
+	{{Samson.Name}}: WRONG! You are 1000 SLAPs too early to even graze I. Samson "The Slapmaster" Slappington!
+	do Samson.TrueName = true
+- No
+	do Samson.TallyNo()
+	=> ConvoB3
+- SLAP 
+	=> BadSlap
+=> END
+
+~ ConvoB3
+{{Samson.Name}}: You understand your power. Now SLAP me!
+- Yes
+	do Samson.TallyYes()
+	=> ConvoB4
+- No
+	do Samson.TallyNo()
+	=> ConvoB4
+- SLAP 
+	do Samson.TallySlap()
+	{{Samson.Name}}: Good! Now come back again for the next lesson.
+	do Samson.ProgressConvo()
+=> END
+
+~ ConvoB4
+{{Samson.Name}}: Come on now! SLAP me!
+- Yes
+	do Samson.TallyYes()
+	=> ConvoB4
+- No
+	do Samson.TallyNo()
+	=> ConvoB4
+- SLAP 
+	do Samson.TallySlap()
+	{{Samson.Name}}: Good! Now come back again for the next lesson.
+	do Samson.ProgressConvo()
+=> END
+
+~ ConvoC
+{{Samson.Name}}: <Samson's convo C>
+- Yes
+	do Samson.TallyYes()
+	<yes>
+- No
+	do Samson.TallyNo()
+	<no>
+- SLAP 
+	do Samson.TallySlap()
+	<slap>
+=> END
+
+=> END

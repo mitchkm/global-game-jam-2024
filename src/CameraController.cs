@@ -57,31 +57,8 @@ public partial class CameraController : Camera3D {
     _currentCamSize = DefaultCamSize;
   }
 
-  public override void _Input(InputEvent @event) {
-    if (Engine.IsEditorHint()) {
-      return;
-    }
-
-    base._Input(@event);
-    if (@event.IsActionPressed("cam_rotate_left")) {
-      NextViewLeft();
-    }
-
-    if (@event.IsActionPressed("cam_rotate_right")) {
-      NextViewRight();
-    }
-
-    if (@event.IsActionPressed("zoom_up")) {
-      AdjustZoom(-ZoomSpeed);
-    }
-
-    if (@event.IsActionPressed("zoom_down")) {
-      AdjustZoom(ZoomSpeed);
-    }
-  }
-
-  private void AdjustZoom(float amount) =>
-    Size = Mathf.Clamp(Size + (amount), MinCamSize, MaxCamSize);
+  public void AdjustZoom(bool zoomUp) =>
+    Size = Mathf.Clamp(Size + (zoomUp ? -_zoomSpeed : _zoomSpeed), MinCamSize, MaxCamSize);
 
   private void SetNewViewPriority(int index) {
     for (var i = 0; i < _views.Length; i++) {
@@ -89,9 +66,9 @@ public partial class CameraController : Camera3D {
     }
   }
 
-  private void NextViewLeft() => SetNewViewPriority(DecrementIndex());
+  public void NextViewLeft() => SetNewViewPriority(DecrementIndex());
 
-  private void NextViewRight() => SetNewViewPriority(IncrementIndex());
+  public void NextViewRight() => SetNewViewPriority(IncrementIndex());
 
   private int IncrementIndex() {
     _currentIndex++;
