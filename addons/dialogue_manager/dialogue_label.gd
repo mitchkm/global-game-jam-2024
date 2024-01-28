@@ -142,6 +142,9 @@ func _type_next(delta: float, seconds_needed: float) -> void:
 		visible_characters += 1
 		if visible_characters <= get_total_character_count():
 			spoke.emit(get_parsed_text()[visible_characters - 1], visible_characters - 1, _get_speed(visible_characters))
+			Wwise.register_game_obj(self, self.name)
+			Wwise.set_3d_position(self, get_global_transform())
+			Wwise.post_event_id(AK.EVENTS.PLAY_RANDOM_LETTER, self)			
 		# See if there's time to type out some more in this frame
 		seconds_needed += seconds_per_step * (1.0 / _get_speed(visible_characters))
 		if seconds_needed > delta:

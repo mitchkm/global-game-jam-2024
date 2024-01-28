@@ -9,10 +9,23 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{2200C8B6-B768-E8CF-C105-5FEE336AA867}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{045A18DB-6097-BADC-5484-07FD04A32258}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<Media>
+				<File Id="30489455" Language="SFX" Streaming="false" Location="OtherBank">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_WideOpen.wav</ShortName>
+					<CachePath>Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Forest/AE_ForestAuterlitz_WideOpen_76A2E422.wem</CachePath>
+				</File>
+			</Media>
 			<Plugins>
+				<ShareSets>
+					<Plugin Id="502771456" Name="ForestAuterlitz_WideOpen" LibName="Wwise Convolution Reverb" LibId="8323075">
+						<MediaRefs>
+							<MediaRef Id="30489455"/>
+						</MediaRefs>
+					</Plugin>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
@@ -22,6 +35,16 @@
 				<Bus Id="985987111" Name="Motion Factory Bus"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="1954817294" Name="Environment_Auxiliary_Bus">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="502771456"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2603924349" Name="Dialogue_Auxiliary_Bus"/>
+			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="796049864" Name="RPM"/>
 				<GameParameter Id="822163944" Name="SS_Air_RPM"/>
@@ -197,6 +220,242 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="2842600557" Type="User" Language="SFX" Hash="{2270E90B-1150-F703-D6CB-C5D6EBBACD29}">
+			<ShortName>Dialogue_SoundBank</ShortName>
+			<Path>Dialogue_SoundBank.bnk</Path>
+			<Media>
+				<File Id="12235801" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>k_megan.wav</ShortName>
+					<CachePath>SFX/k_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="40040291" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>e_megan.wav</ShortName>
+					<CachePath>SFX/e_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="52591147" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>u_megan.wav</ShortName>
+					<CachePath>SFX/u_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="87486596" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>l_megan.wav</ShortName>
+					<CachePath>SFX/l_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="94640774" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>s_megan.wav</ShortName>
+					<CachePath>SFX/s_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="114362915" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>n_megan.wav</ShortName>
+					<CachePath>SFX/n_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="210835020" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>oh_megan.wav</ShortName>
+					<CachePath>SFX/oh_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="269919247" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>f_megan.wav</ShortName>
+					<CachePath>SFX/f_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="350299003" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>j_megan.wav</ShortName>
+					<CachePath>SFX/j_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="361464786" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>t_megan.wav</ShortName>
+					<CachePath>SFX/t_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="365383117" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ah_megan.wav</ShortName>
+					<CachePath>SFX/ah_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="382171952" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>a_megan.wav</ShortName>
+					<CachePath>SFX/a_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="417377378" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>q_megan.wav</ShortName>
+					<CachePath>SFX/q_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="425639171" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>b_megan.wav</ShortName>
+					<CachePath>SFX/b_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="499908441" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>eih_megan.wav</ShortName>
+					<CachePath>SFX/eih_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="516533453" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>g_megan.wav</ShortName>
+					<CachePath>SFX/g_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="613076512" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>y_megan.wav</ShortName>
+					<CachePath>SFX/y_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="646705627" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>c_megan.wav</ShortName>
+					<CachePath>SFX/c_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="646918195" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>p_megan.wav</ShortName>
+					<CachePath>SFX/p_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="661016684" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>r_megan.wav</ShortName>
+					<CachePath>SFX/r_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="690573889" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>eh_megan.wav</ShortName>
+					<CachePath>SFX/eh_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="716693592" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>m_megan.wav</ShortName>
+					<CachePath>SFX/m_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="736144779" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>d_megan.wav</ShortName>
+					<CachePath>SFX/d_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="766000253" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>w_megan.wav</ShortName>
+					<CachePath>SFX/w_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="795998169" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>v_megan.wav</ShortName>
+					<CachePath>SFX/v_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="831065516" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>h_megan.wav</ShortName>
+					<CachePath>SFX/h_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="928972394" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>z_megan.wav</ShortName>
+					<CachePath>SFX/z_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="936671885" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>x_megan.wav</ShortName>
+					<CachePath>SFX/x_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="944634484" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>oo_megan.wav</ShortName>
+					<CachePath>SFX/oo_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1016938993" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>o_megan.wav</ShortName>
+					<CachePath>SFX/o_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1032276599" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>i_megan.wav</ShortName>
+					<CachePath>SFX/i_megan_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2931723581" Name="Play_eih_megan">
+					<MediaRefs>
+						<MediaRef Id="499908441"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="712332466" Name="Play_Random_Letter">
+					<MediaRefs>
+						<MediaRef Id="12235801"/>
+						<MediaRef Id="40040291"/>
+						<MediaRef Id="52591147"/>
+						<MediaRef Id="87486596"/>
+						<MediaRef Id="94640774"/>
+						<MediaRef Id="114362915"/>
+						<MediaRef Id="210835020"/>
+						<MediaRef Id="269919247"/>
+						<MediaRef Id="350299003"/>
+						<MediaRef Id="361464786"/>
+						<MediaRef Id="365383117"/>
+						<MediaRef Id="382171952"/>
+						<MediaRef Id="417377378"/>
+						<MediaRef Id="425639171"/>
+						<MediaRef Id="516533453"/>
+						<MediaRef Id="613076512"/>
+						<MediaRef Id="646705627"/>
+						<MediaRef Id="646918195"/>
+						<MediaRef Id="661016684"/>
+						<MediaRef Id="690573889"/>
+						<MediaRef Id="716693592"/>
+						<MediaRef Id="736144779"/>
+						<MediaRef Id="766000253"/>
+						<MediaRef Id="795998169"/>
+						<MediaRef Id="831065516"/>
+						<MediaRef Id="928972394"/>
+						<MediaRef Id="936671885"/>
+						<MediaRef Id="944634484"/>
+						<MediaRef Id="1016938993"/>
+						<MediaRef Id="1032276599"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<AuxBusses>
+				<AuxBus Id="2603924349" Name="Dialogue_Auxiliary_Bus"/>
+			</AuxBusses>
+		</SoundBank>
+		<SoundBank Id="2906258066" Type="User" Language="SFX" Hash="{CB3B687A-0354-B659-9A2A-2DCBA0E03E5E}">
+			<ShortName>Atmospheric_SoundBank</ShortName>
+			<Path>Atmospheric_SoundBank.bnk</Path>
+			<Media>
+				<File Id="26225040" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>borbchirps.wav</ShortName>
+					<CachePath>SFX/borbchirps_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="30489455" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_WideOpen.wav</ShortName>
+					<CachePath>Plugins/Wwise Convolution Reverb/AudioEase/Altiverb - Outdoor and More/Outdoor/Forest/AE_ForestAuterlitz_WideOpen_76A2E422.wem</CachePath>
+				</File>
+				<File Id="1039884250" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>treewind.wav</ShortName>
+					<CachePath>SFX/treewind_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="502771456" Name="ForestAuterlitz_WideOpen" LibName="Wwise Convolution Reverb" LibId="8323075">
+						<MediaRefs>
+							<MediaRef Id="30489455"/>
+						</MediaRefs>
+					</Plugin>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="1344522535" Name="Mute_borbchirps"/>
+				<Event Id="4229813931" Name="Mute_treewind"/>
+				<Event Id="22007848" Name="Play_borbchirps">
+					<MediaRefs>
+						<MediaRef Id="26225040"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1349479672" Name="Play_treewind">
+					<MediaRefs>
+						<MediaRef Id="1039884250"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="983941684" Name="UnMute_borbchirps"/>
+				<Event Id="3130011852" Name="UnMute_treewind"/>
+			</Events>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<AuxBusses>
+				<AuxBus Id="1954817294" Name="Environment_Auxiliary_Bus">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="502771456"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
+		</SoundBank>
+		<SoundBank Id="4165272615" Type="User" Language="SFX" Hash="{BD5796F4-ED57-06FA-7D9E-0CA1EAB33F36}">
+			<ShortName>BGM_SoundBank</ShortName>
+			<Path>BGM_SoundBank.bnk</Path>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{77966390-0E76-6E26-4E07-6B06F3BE9D59}</FileHash>
+	<FileHash>{33770613-7C7F-EBC6-2EF9-66E38B907570}</FileHash>
 </SoundBanksInfo>
