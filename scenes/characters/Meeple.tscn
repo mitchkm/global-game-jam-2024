@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://c3biotlfbklso"]
+[gd_scene load_steps=37 format=3 uid="uid://c3biotlfbklso"]
 
 [ext_resource type="Script" path="res://src/Meeple.cs" id="1_ycfan"]
 [ext_resource type="Texture2D" uid="uid://b5ll7f2vkg1rv" path="res://models/meeples/meeple_meeple happy 1-05.png" id="2_oychp"]
@@ -17,36 +17,164 @@ tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.266667, 1, 0, -0.05, 0, 0.76
 
 [sub_resource type="Animation" id="Animation_4om4n"]
 resource_name = "Slap"
-loop_mode = 1
+length = 0.333335
+step = 0.0166667
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ArmRoot")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.0833333, 1, 0, 0.707, 0, 0.707, 0.166667, 1, 0, 1, 0, 0, 0.25, 1, 0, 0.707, 0, -0.707, 0.333333, 1, 0, 0, 0, 1)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ArmRoot/LeftArmSlot:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.3, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.0994838, -0.0628319, 0.020944), Vector3(-0.0625206, -0.0996793, -1.5436), Vector3(-0.0625206, -0.0996793, -1.5436), Vector3(0.0994838, -0.0628319, 0.020944)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ArmRoot/RightArmSlot:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.3, 0.333335),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.0994838, 3.09098, 0.020944), Vector3(-0.0503639, 3.04198, -1.54482), Vector3(-0.0503639, 3.04198, -1.54482), Vector3(0.0994838, 3.09098, 0.020944)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ArmRoot/LeftArmSlot:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.3, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.073, 1.417, -1.127), Vector3(-0.5367, 1.95754, -1.16501), Vector3(-0.5367, 1.95754, -1.16501), Vector3(0.073, 1.417, -1.127)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ArmRoot/RightArmSlot:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.3, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.073, 1.417, 1.127), Vector3(0.537, 1.958, 1.165), Vector3(0.537, 1.958, 1.165), Vector3(-0.073, 1.417, 1.127)]
+}
+
+[sub_resource type="Animation" id="Animation_ji8um"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ArmRoot/LeftArmSlot:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0994838, -0.0628319, 0.020944)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ArmRoot/RightArmSlot:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0994838, 3.09098, 0.020944)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ArmRoot/LeftArmSlot:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.073, 1.417, -1.127)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ArmRoot/RightArmSlot:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.073, 1.417, 1.127)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_e1p2f"]
 _data = {
 "Idle-Hover": SubResource("Animation_ftggj"),
+"RESET": SubResource("Animation_ji8um"),
 "Slap": SubResource("Animation_4om4n")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1uf4d"]
 animation = &"Idle-Hover"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rnc3e"]
+animation = &"RESET"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lq1q6"]
+animation = &"Slap"
+
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vn7ls"]
 advance_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wttve"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y8v3w"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4peu3"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ajccn"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ad1kl"]
 switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_h6hoh"]
+states/End/position = Vector2(1001, 100)
 states/Idle-Hover/node = SubResource("AnimationNodeAnimation_1uf4d")
-states/Idle-Hover/position = Vector2(558, 100)
+states/Idle-Hover/position = Vector2(506, 175)
+states/RESET/node = SubResource("AnimationNodeAnimation_rnc3e")
+states/RESET/position = Vector2(783, 100)
+states/Slap/node = SubResource("AnimationNodeAnimation_lq1q6")
+states/Slap/position = Vector2(506, 23)
 states/Start/position = Vector2(225, 100)
-transitions = ["Start", "Idle-Hover", SubResource("AnimationNodeStateMachineTransition_vn7ls"), "Idle-Hover", "End", SubResource("AnimationNodeStateMachineTransition_wttve")]
+transitions = ["Start", "Idle-Hover", SubResource("AnimationNodeStateMachineTransition_vn7ls"), "Idle-Hover", "RESET", SubResource("AnimationNodeStateMachineTransition_y8v3w"), "Slap", "RESET", SubResource("AnimationNodeStateMachineTransition_4peu3"), "Start", "Slap", SubResource("AnimationNodeStateMachineTransition_ajccn"), "RESET", "End", SubResource("AnimationNodeStateMachineTransition_ad1kl")]
 graph_offset = Vector2(-249, -101)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r7r2g"]
 radius = 1.0
 height = 3.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sftcs"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q7cn4"]
 resource_name = "Material.001"
 cull_mode = 2
 diffuse_mode = 3
@@ -93,7 +221,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_recsl")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8n31m"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c75eq"]
 resource_name = "Material.002"
 cull_mode = 2
 diffuse_mode = 3
@@ -141,7 +269,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3njw1")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r4ll0"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5lldo"]
 resource_name = "Material"
 cull_mode = 2
 diffuse_mode = 1
@@ -189,7 +317,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_1sn7w")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cwym7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jk2xl"]
 resource_name = "Material.003"
 cull_mode = 2
 diffuse_mode = 3
@@ -291,13 +419,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 shape = SubResource("CapsuleShape3D_r7r2g")
 
 [node name="Model" type="Node3D" parent="."]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, -0.0284689, 0)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, 0)
 
 [node name="BodySlot" type="Node3D" parent="Model"]
 
 [node name="Body" type="MeshInstance3D" parent="Model/BodySlot"]
 transform = Transform3D(1, 0, 0, 0, 0.903634, 0, 0, 0, 0.903634, 0, 1.39494, 0)
-material_override = SubResource("StandardMaterial3D_sftcs")
+material_override = SubResource("StandardMaterial3D_q7cn4")
 mesh = SubResource("ArrayMesh_g6tky")
 skeleton = NodePath("")
 
@@ -305,7 +433,7 @@ skeleton = NodePath("")
 
 [node name="Head" type="MeshInstance3D" parent="Model/HeadSlot"]
 transform = Transform3D(0.52128, 2.69455e-05, 2.92948e-05, -2.69328e-05, 0.52128, -0.000130539, -2.93065e-05, 0.000130536, 0.52128, 0, 2.84017, 0)
-material_override = SubResource("StandardMaterial3D_8n31m")
+material_override = SubResource("StandardMaterial3D_c75eq")
 mesh = SubResource("ArrayMesh_f3ayf")
 skeleton = NodePath("")
 
@@ -316,17 +444,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0762042, 0)
 transform = Transform3D(0.997677, -0.0271361, -0.0624801, 0.0208389, 0.994837, -0.0993197, 0.0648526, 0.097787, 0.993092, 0.073, 1.417, -1.127)
 
 [node name="LeftArm" type="MeshInstance3D" parent="Model/ArmRoot/LeftArmSlot"]
-transform = Transform3D(0.365658, 0, 0, 0, 0.440785, 0, 0, 0, 0.37467, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_r4ll0")
+transform = Transform3D(0.365658, 0, 7.45058e-09, 1.86265e-09, 0.440785, 8.61473e-09, 7.45058e-09, -5.58794e-09, 0.37467, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_5lldo")
 mesh = SubResource("ArrayMesh_vg8ua")
 skeleton = NodePath("")
 
 [node name="RightArmSlot" type="Node3D" parent="Model/ArmRoot"]
-transform = Transform3D(-0.998395, 0.0259394, 0.0503427, 0.0208389, 0.994837, -0.0993197, -0.0526591, -0.0981113, -0.993781, -0.073, 1.417, 1.127)
+transform = Transform3D(-0.998395, 0.0259394, 0.0503427, 0.0208389, 0.994837, -0.0993198, -0.0526591, -0.0981113, -0.993781, -0.073, 1.417, 1.127)
 
 [node name="RightArm" type="MeshInstance3D" parent="Model/ArmRoot/RightArmSlot"]
 transform = Transform3D(0.365664, 0, 0, 0, 0.440787, 0, 0, 0, 0.374662, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_cwym7")
+material_override = SubResource("StandardMaterial3D_jk2xl")
 mesh = SubResource("ArrayMesh_rhf4g")
 skeleton = NodePath("")
 
