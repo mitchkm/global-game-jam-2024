@@ -1,22 +1,50 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbslhtwtidhln"]
+[gd_scene load_steps=8 format=3 uid="uid://cbslhtwtidhln"]
 
 [ext_resource type="PackedScene" uid="uid://c3biotlfbklso" path="res://scenes/objects/Meeple.tscn" id="1_7h4pj"]
 [ext_resource type="Script" path="res://src/PlayerController.cs" id="2_xbe6w"]
+[ext_resource type="Texture2D" uid="uid://d3ri8vg135fer" path="res://models/meeples/meeple_meeple happy transparent-05.png" id="3_a74iy"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tkyfh"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5i0yy"]
+resource_name = "Material.001"
+cull_mode = 2
 albedo_color = Color(0.607843, 0.607843, 0.607843, 1)
+roughness = 0.5
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wxuna"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dn0ke"]
+resource_name = "Material.002"
+cull_mode = 2
 albedo_color = Color(0.678431, 0.619608, 0.501961, 1)
+albedo_texture = ExtResource("3_a74iy")
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_08dt8"]
+resource_name = "Material"
+cull_mode = 2
+albedo_color = Color(0.607843, 0.607843, 0.607843, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o1va4"]
+resource_name = "Material.003"
+cull_mode = 2
+albedo_color = Color(0.607843, 0.607843, 0.607843, 1)
+roughness = 0.5
 
 [node name="Player" instance=ExtResource("1_7h4pj")]
 script = ExtResource("2_xbe6w")
 _speed = 2.0
 BodyColor = Color(0.607843, 0.607843, 0.607843, 1)
 HeadColor = Color(0.678431, 0.619608, 0.501961, 1)
+LeftArmColor = Color(0.607843, 0.607843, 0.607843, 1)
+RightArmColor = Color(0.607843, 0.607843, 0.607843, 1)
 
-[node name="Body" parent="." index="2"]
-material_override = SubResource("StandardMaterial3D_tkyfh")
+[node name="Body" parent="meeple" index="0"]
+material_override = SubResource("StandardMaterial3D_5i0yy")
 
-[node name="Head" parent="." index="3"]
-material_override = SubResource("StandardMaterial3D_wxuna")
+[node name="Head" parent="meeple" index="1"]
+material_override = SubResource("StandardMaterial3D_dn0ke")
+
+[node name="LeftArm" parent="meeple" index="2"]
+material_override = SubResource("StandardMaterial3D_08dt8")
+
+[node name="RightArm" parent="meeple" index="3"]
+material_override = SubResource("StandardMaterial3D_o1va4")

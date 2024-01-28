@@ -47,6 +47,10 @@ public partial class PlayerController : Meeple {
     if (direction != Vector3.Zero) {
       velocity.X = direction.X * _speed;
       velocity.Z = direction.Z * _speed;
+      var angle = Transform.Basis.Z.AngleTo(direction);
+      if (angle != 0) {
+        RotateY(angle);
+      }
     }
     else {
       velocity.X = Mathf.MoveToward(Velocity.X, 0, _speed);
@@ -55,6 +59,7 @@ public partial class PlayerController : Meeple {
 
     Velocity = velocity;
     MoveAndSlide();
+
   }
 
   private void InteractWithTarget() => _interactTarget?.Interact(this);
