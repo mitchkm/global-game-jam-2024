@@ -11,10 +11,10 @@
 script = ExtResource("1_0nn4y")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.573577, 0.579228, -0.579228, 0, 0.707107, 0.707107, 0.819152, 0.40558, -0.40558, -3.47537, 4.34564, -2.43348)
+transform = Transform3D(-0.573577, 0.579228, -0.579228, 2.98023e-08, 0.707107, 0.707107, 0.819152, 0.40558, -0.40558, -3.47537, 4.34564, -2.43348)
 projection = 1
 current = true
-fov = 74.8187
+fov = 51.2307
 size = 4.0
 near = 0.001
 
@@ -28,6 +28,8 @@ transform = Transform3D(1, 0, 0, 0, 0.846491, 0.532404, 0, -0.532404, 0.846491, 
 
 [node name="Player" parent="." instance=ExtResource("3_48t3v")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0.103, 0)
+BodyColor = Color(1, 1, 1, 1)
+HeadColor = Color(1, 1, 1, 1)
 
 [node name="CameraSwitcher" type="Node" parent="."]
 script = ExtResource("5_3d2ml")

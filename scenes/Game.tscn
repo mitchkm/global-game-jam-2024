@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://src/Game.cs" id="1_eeo50"]
 [ext_resource type="PackedScene" uid="uid://cgfkg27ywt5la" path="res://scenes/levels/Level_MainCity.tscn" id="2_ivuo1"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_ypksi"]
-[ext_resource type="Script" path="res://src/CameraController.cs" id="3_ias7f"]
 [ext_resource type="PackedScene" uid="uid://cbslhtwtidhln" path="res://scenes/objects/Player.tscn" id="4_22hdr"]
+[ext_resource type="Script" path="res://src/CameraSwitcher.cs" id="5_4gm3k"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="6_4jo2p"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_ss1pk"]
 [ext_resource type="PackedScene" uid="uid://di530mmvbgpyt" path="res://scenes/objects/InteractableMeeple.tscn" id="8_6ut53"]
@@ -15,34 +15,43 @@ duration = 0.7
 transition = 4
 ease = 2
 
-[node name="TestGame" type="Node3D"]
+[node name="Game" type="Node3D"]
 script = ExtResource("1_eeo50")
 
-[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("_northView", "_eastView", "_southView", "_westView")]
-transform = Transform3D(-0.707107, 0.353553, -0.612372, 0, 0.866025, 0.5, 0.707107, 0.353553, -0.612372, -7.62785, 6.10315, -5.61405)
+[node name="LevelMainCity" parent="." instance=ExtResource("2_ivuo1")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, -3.27938, 4.34579, -1.26559)
 projection = 1
 current = true
-fov = 74.9972
-size = 8.0
+size = 4.0
 near = 0.001
-script = ExtResource("3_ias7f")
-DefaultCamSize = 8.0
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
+script = ExtResource("2_ypksi")
+
+[node name="Player" parent="." node_paths=PackedStringArray("_camera") instance=ExtResource("4_22hdr")]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -0.279382, 0.103152, 1.73441)
+_camera = NodePath("../Camera3D")
+
+[node name="AkListener3D" type="AkListener3D" parent="Player"]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 2.23506, -0.825216, -13.8753)
+
+[node name="CameraSwitcher" type="Node" parent="." node_paths=PackedStringArray("_northView", "_eastView", "_southView", "_westView")]
+script = ExtResource("5_4gm3k")
 _northView = NodePath("../North_View")
 _eastView = NodePath("../East_View")
 _southView = NodePath("../South_View")
 _westView = NodePath("../West_View")
 
-[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
-script = ExtResource("2_ypksi")
-
 [node name="North_View" type="Node3D" parent="."]
-transform = Transform3D(-0.707107, 0.353553, -0.612372, 0, 0.866025, 0.5, 0.707107, 0.353553, -0.612372, -7.62785, 6.10315, -5.61405)
+transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, -3.27938, 4.34579, -1.26559)
 script = ExtResource("6_4jo2p")
 priority_override = false
 priority = 0
 follow_mode = 5
 follow_target = NodePath("../Player")
-follow_parameters/distance = 12.0
+follow_parameters/distance = 6.0
 follow_parameters/target_offset = Vector3(0, 0, 0)
 follow_parameters/damping = true
 follow_parameters/damping_value = 10.0
@@ -56,13 +65,13 @@ inactive_update_mode = 0
 camera_3D_resource = null
 
 [node name="East_View" type="Node3D" parent="."]
-transform = Transform3D(0.707111, 0.353553, -0.612373, -3.72529e-06, 0.866025, 0.5, 0.707111, -0.353554, 0.612373, -7.62786, 6.10315, 9.08289)
+transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, -3.27938, 4.34579, 4.73441)
 script = ExtResource("6_4jo2p")
 priority_override = false
 priority = 0
 follow_mode = 5
 follow_target = NodePath("../Player")
-follow_parameters/distance = 12.0
+follow_parameters/distance = 6.0
 follow_parameters/target_offset = Vector3(0, 0, 0)
 follow_parameters/damping = true
 follow_parameters/damping_value = 10.0
@@ -76,13 +85,13 @@ inactive_update_mode = 0
 camera_3D_resource = null
 
 [node name="South_View" type="Node3D" parent="."]
-transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866026, 0.499999, -0.707107, -0.353553, 0.612372, 7.06908, 6.10314, 9.08287)
+transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 2.72062, 4.34579, 4.73441)
 script = ExtResource("6_4jo2p")
 priority_override = false
 priority = 0
 follow_mode = 5
 follow_target = NodePath("../Player")
-follow_parameters/distance = 12.0
+follow_parameters/distance = 6.0
 follow_parameters/target_offset = Vector3(0, 0, 0)
 follow_parameters/damping = true
 follow_parameters/damping_value = 10.0
@@ -96,13 +105,13 @@ inactive_update_mode = 0
 camera_3D_resource = null
 
 [node name="West_View" type="Node3D" parent="."]
-transform = Transform3D(-0.707111, -0.353554, 0.612373, 3.72529e-06, 0.866025, 0.5, -0.707111, 0.353553, -0.612373, 7.0691, 6.10315, -5.61406)
+transform = Transform3D(-0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, 0.5, -0.5, 2.72062, 4.34579, -1.26559)
 script = ExtResource("6_4jo2p")
 priority_override = false
 priority = 0
 follow_mode = 5
 follow_target = NodePath("../Player")
-follow_parameters/distance = 12.0
+follow_parameters/distance = 6.0
 follow_parameters/target_offset = Vector3(0, 0, 0)
 follow_parameters/damping = true
 follow_parameters/damping_value = 10.0
@@ -115,12 +124,6 @@ tween_on_load = true
 inactive_update_mode = 0
 camera_3D_resource = null
 
-[node name="LevelMainCity" parent="." instance=ExtResource("2_ivuo1")]
-
-[node name="Player" parent="." node_paths=PackedStringArray("_camera") instance=ExtResource("4_22hdr")]
-transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -0.279382, 0.103152, 1.73441)
-_camera = NodePath("../Camera3D")
-
 [node name="Meeples" type="Node3D" parent="."]
 
 [node name="Meeple" parent="Meeples" instance=ExtResource("8_6ut53")]
@@ -132,19 +135,3 @@ HeadColor = Color(1, 0.701961, 0.533333, 1)
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 5.27307, 0.103117, 1.31805)
 BodyColor = Color(0, 0.678431, 0.294118, 1)
 HeadColor = Color(0.501961, 0.352941, 0.278431, 1)
-
-[node name="AkBank" type="AkBank" parent="."]
-bank = {
-"id": 2454045173,
-"name": "UI_SoundBank"
-}
-load_on = 1
-
-[node name="AkEvent3D_OnPlayTest" type="AkEvent3D" parent="."]
-event = {
-"id": 3308548503,
-"name": "Play_ui_select"
-}
-trigger_on = 2
-
-[node name="AkListener3D" type="AkListener3D" parent="."]
