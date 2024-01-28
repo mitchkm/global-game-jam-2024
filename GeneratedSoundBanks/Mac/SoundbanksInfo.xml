@@ -221,7 +221,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2842600557" Type="User" Language="SFX" Hash="{2270E90B-1150-F703-D6CB-C5D6EBBACD29}">
+		<SoundBank Id="2842600557" Type="User" Language="SFX" Hash="{86D5573C-677B-B220-07C9-DE64C7E24252}">
 			<ShortName>Dialogue_SoundBank</ShortName>
 			<Path>Dialogue_SoundBank.bnk</Path>
 			<Media>
@@ -458,5 +458,5 @@
 			<Path>BGM_SoundBank.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3578228D-4DDB-CE53-A26D-24A8927C7C88}</FileHash>
+	<FileHash>{AC8E8347-F3C4-4808-D731-22040C996EA6}</FileHash>
 </SoundBanksInfo>
