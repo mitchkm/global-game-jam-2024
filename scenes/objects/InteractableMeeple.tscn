@@ -7,9 +7,9 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_dxqbw"]
 radius = 4.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pg2or"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p71dn"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0cxxl"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1foxo"]
 
 [node name="Meeple" instance=ExtResource("1_dsthi")]
 
@@ -22,7 +22,7 @@ _interactionHighlight = NodePath("../Highlight")
 shape = SubResource("SphereShape3D_dxqbw")
 
 [node name="Body" parent="." index="3"]
-material_override = SubResource("StandardMaterial3D_pg2or")
+material_override = SubResource("StandardMaterial3D_p71dn")
 
 [node name="Head" parent="." index="4"]
-material_override = SubResource("StandardMaterial3D_0cxxl")
+material_override = SubResource("StandardMaterial3D_1foxo")
