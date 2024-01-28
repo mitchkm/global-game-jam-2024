@@ -50,6 +50,13 @@ public partial class Character : GodotObject  {
     RunConvos = 0;
   }
 
+  public virtual void FullReset() {
+    RunReset();
+    Progress = 0;
+    TotalConvos = 0;
+    Total.Reset();
+  }
+
   public virtual Godot.Collections.Dictionary<string, Variant> GetSaveData() =>
     new()
     {
@@ -121,6 +128,9 @@ public partial class SamsonCharacter : Character {
   }
 }
 
+public partial class FalconeCharacter : Character {
+}
+
 // Side Characters
 public partial class DumpsterCharacter : Character {
 
@@ -147,6 +157,7 @@ public partial class GameState : Node {
   public CreatorCharacter Creator = new();
   public MatildaCharacter Matilda = new();
   public SamsonCharacter Samson = new();
+  public FalconeCharacter Falcone = new();
 
   // Side Characters
   public DumpsterCharacter Dumpster = new();
@@ -167,8 +178,33 @@ public partial class GameState : Node {
   public void CreatorBlockingComment(string comment) => CreatorCommentEvent.Invoke(comment, true);
 
   public void ResetForNewRun() {
+    Creator.RunReset();
     Matilda.RunReset();
     Samson.RunReset();
+    Falcone.RunReset();
+
+    Dumpster.RunReset();
+    Caline.RunReset();
+    Barrista.RunReset();
+
+    HasCornDog = false;
+    HasDirtyChaiLatte = false;
+  }
+
+  public void FullReset() {
+    RunsMade = 0;
+    TutorialIndex = 0;
+    InteractionTutorialIndex = 0;
+    ResetForNewRun();
+
+    Creator.FullReset();
+    Matilda.FullReset();
+    Samson.FullReset();
+    Falcone.FullReset();
+
+    Dumpster.FullReset();
+    Caline.FullReset();
+    Barrista.FullReset();
   }
 
   private Godot.Collections.Dictionary<string, Variant> GetSaveData() =>
@@ -180,6 +216,7 @@ public partial class GameState : Node {
       { nameof(Creator), Creator.GetSaveData() },
       { nameof(Matilda), Matilda.GetSaveData() },
       { nameof(Samson), Samson.GetSaveData() },
+      { nameof(Falcone), Falcone.GetSaveData() },
       { nameof(Dumpster), Dumpster.GetSaveData() },
       { nameof(Caline), Caline.GetSaveData() },
       { nameof(Barrista), Barrista.GetSaveData() },
