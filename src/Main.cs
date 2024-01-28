@@ -37,6 +37,10 @@ public partial class Main : Node2D {
 	=> _ = GoTest.RunTests(Assembly.GetExecutingAssembly(), this, Environment);
 #endif
 
-  private void RunScene()
-	=> GetTree().ChangeSceneToFile("res://scenes/MainMenu.tscn");
+  private void RunScene() {
+    var MyGameState = GetNode<GameState>("/root/GameState");
+    MyGameState.Load();
+    GetTree().AutoAcceptQuit = false;
+    GetTree().ChangeSceneToFile("res://scenes/MainMenu.tscn");
+  }
 }
