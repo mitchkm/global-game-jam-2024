@@ -13,13 +13,15 @@ load_path = "res://.godot/imported/ebarover.png-321b1ce00a7be57c886cf2838aaa3468
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pvebd"]
 load_path = "res://.godot/imported/ebarprogress.png-b201f5e358081c0722d0a6e8708eb0b4.ctex"
 
-[node name="EntertainmentBar" type="ReferenceRect"]
+[node name="EntertainmentBar" type="ReferenceRect" node_paths=PackedStringArray("_face", "_meter")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xbgfc")
+_face = NodePath("Face/ScientistFace")
+_meter = NodePath("Meter/EntertainmentMeter")
 
 [node name="Face" type="ReferenceRect" parent="."]
 layout_mode = 1

@@ -42,7 +42,7 @@ public partial class MainMenuHome : VBoxContainer
 
   private void OnQuitButtonPressed()
   {
-	GetTree().Root.PropagateNotification((int)NotificationWMCloseRequest);
+	  GetTree().Root.PropagateNotification((int)NotificationWMCloseRequest);
   }
 
 }

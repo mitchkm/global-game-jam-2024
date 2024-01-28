@@ -16,9 +16,11 @@ else
 do Samson.TallySlap()
 if Samson.Run.Slap < 6
 	Samson: You are not ready to just "learn by SLAP'ing!"
+	do ModifyEntertainment(5)
 else
 	Samson: Enough! 
 	[i]Your surroundings go dark.[/i]
+	do EndRun()
 => END
 
 ~ ConvoA
@@ -29,17 +31,21 @@ else
 	do Samson.TallyYes()
 	% Samson: I see you have an excellent sense of humor! BUAHAHAHAHa
 	% Samson: I knew you'd like that one! Hahahah!
+	do ModifyEntertainment(-5)
 - No
 	do Samson.TallyNo()
 	Samson: Hmmph... You clearly don't appreciate my comedic prowess!
+	do ModifyEntertainment(-5)
 - SLAP 
 	do Samson.TallySlap()
 	Samson: Oh I see. You want to learn how to SLAP from the best?! You've got potential, kid. Let me show you how to really slap.
+	do ModifyEntertainment(10)
 	do Samson.ProgressConvo()
 => END
 
 ~ ConvoB
 Samson: Ah kiddo! You came back. I see you're ready to [b]really[/b] slap! So tell me, can your slaps break the brittle bones of a human?
+do ModifyEntertainment(5)
 - Yes
 	do Samson.TallyYes()
 	do Samson.ProgressConvo()
@@ -47,16 +53,19 @@ Samson: Ah kiddo! You came back. I see you're ready to [b]really[/b] slap! So te
 - No
 	do Samson.TallyNo()
 	Samson: You lack any confidence at all! Come back when you're [b]really[/b] ready.
+	do ModifyEntertainment(-10)
 - SLAP 
 	=> BadSlap
 => END
 
 ~ ConvoB2
-{{Samson.Name}}: Good! Now can your slaps bring a tear to uncle Samson's eye? 
+{{Samson.Name}}: Good! Now can your slaps bring a tear to uncle Samson's eye?
+do ModifyEntertainment(5)
 - Yes
 	do Samson.TallyYes()
 	{{Samson.Name}}: WRONG! You are 1000 SLAPs too early to even graze I. Samson "The Slapmaster" Slappington!
 	do Samson.TrueName = true
+	do ModifyEntertainment(5)
 - No
 	do Samson.TallyNo()
 	=> ConvoB3

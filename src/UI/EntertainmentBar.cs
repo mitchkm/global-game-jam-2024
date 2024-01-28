@@ -4,9 +4,9 @@ using System;
 public partial class EntertainmentBar : Control {
   private int entertainment = 50;
 
-  public TextureRect Face { get; private set; } = default!;
+  [Export] private TextureRect _face;
 
-  public TextureProgressBar Meter { get; private set; } = default!;
+  [Export] private TextureProgressBar _meter;
 
 
   public Color superBoredColor = new Color(0.725f, 0.204f, 0, 1);
@@ -25,8 +25,6 @@ public partial class EntertainmentBar : Control {
 
   // Called when the node enters the scene tree for the first time.
   public override void _Ready() {
-    Face = GetNode<TextureRect>("%ScientistFace");
-    Meter = GetNode<TextureProgressBar>("%EntertainmentMeter");
     UpdateVisuals();
   }
 
@@ -47,6 +45,7 @@ public partial class EntertainmentBar : Control {
 
   public void ModifyEntertainment(int delta) {
     entertainment = Math.Clamp(entertainment + delta, 0, 100);
+    UpdateVisuals();
   }
 
   public void SetEntertainment(int value) {
@@ -55,28 +54,28 @@ public partial class EntertainmentBar : Control {
   }
 
   private void UpdateVisuals() {
-    Meter.Value = entertainment;
+    _meter.Value = entertainment;
 
-    if (entertainment > 4 * (Meter.MaxValue / 5)) {
-      Meter.TintProgress = superHappyColor;
-      Face.Texture = happyFace;
+    if (entertainment > 4 * (_meter.MaxValue / 5)) {
+      _meter.TintProgress = superHappyColor;
+      _face.Texture = happyFace;
       // Face.Texture = superHappyFace;
     }
-    else if (entertainment > 3 * (Meter.MaxValue / 5)) {
-      Meter.TintProgress = happyColor;
-      Face.Texture = happyFace;
+    else if (entertainment > 3 * (_meter.MaxValue / 5)) {
+      _meter.TintProgress = happyColor;
+      _face.Texture = happyFace;
     }
-    else if (entertainment > 2 * (Meter.MaxValue / 5)) {
-      Meter.TintProgress = neutralColor;
-      Face.Texture = neutralFace;
+    else if (entertainment > 2 * (_meter.MaxValue / 5)) {
+      _meter.TintProgress = neutralColor;
+      _face.Texture = neutralFace;
     }
-    else if (entertainment > (Meter.MaxValue / 5)) {
-      Meter.TintProgress = boredColor;
-      Face.Texture = boredFace;
+    else if (entertainment > (_meter.MaxValue / 5)) {
+      _meter.TintProgress = boredColor;
+      _face.Texture = boredFace;
     }
     else {
-      Meter.TintProgress = superBoredColor;
-      Face.Texture = boredFace;
+      _meter.TintProgress = superBoredColor;
+      _face.Texture = boredFace;
       // Face.Texture = superBoredFace;
     }
   }

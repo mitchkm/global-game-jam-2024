@@ -50,8 +50,7 @@ public partial class PauseMenu : CenterContainer
 
   private void OnQuitButtonPressed()
   {
-	GetTree().Root.PropagateNotification((int)NotificationWMCloseRequest);
-	GetTree().Quit();
+	  GetTree().Root.PropagateNotification((int)NotificationWMCloseRequest);
   }
 
   private void OnMenuButtonPressed()

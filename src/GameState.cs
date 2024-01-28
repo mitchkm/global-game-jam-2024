@@ -2,6 +2,7 @@ using Godot;
 
 namespace YesNoSlap;
 
+using System;
 using Godot.Collections;
 
 public partial class InteractionCounts : GodotObject {
@@ -93,6 +94,7 @@ public partial class Character : GodotObject  {
   }
 }
 
+// Main Characters
 public partial class MatildaCharacter : Character {
 }
 
@@ -116,13 +118,35 @@ public partial class SamsonCharacter : Character {
   }
 }
 
+// Side Characters
+public partial class DumpsterCharacter : Character {
+
+}
+
+public partial class CalineCharacter : Character {
+
+}
+
 public partial class GameState : Node {
   public int RunsMade;
   public bool HasCornDog;
 
-  // Characters
+  // Main Characters
   public MatildaCharacter Matilda = new();
   public SamsonCharacter Samson = new();
+
+  // Side Characters
+  public DumpsterCharacter Dumpster = new();
+  public CalineCharacter Caline = new();
+
+  // Dialogue hooks
+  public event Action RunEndEvent;
+  public event Action<int> EntertainmentModifyEvent;
+
+
+  public void EndRun() => RunEndEvent.Invoke();
+
+  public void ModifyEntertainment(int i) => EntertainmentModifyEvent.Invoke(i);
 
   public void ResetForNewRun() {
     Matilda.RunReset();
@@ -136,6 +160,8 @@ public partial class GameState : Node {
       { nameof(HasCornDog), HasCornDog },
       { nameof(Matilda), Matilda.GetSaveData() },
       { nameof(Samson), Samson.GetSaveData() },
+      { nameof(Dumpster), Dumpster.GetSaveData() },
+      { nameof(Caline), Caline.GetSaveData() },
     };
 
   private void LoadSave(Godot.Collections.Dictionary<string, Variant> data) {
@@ -157,7 +183,6 @@ public partial class GameState : Node {
   public override void _Notification(int what)
   {
     if (what == NotificationWMCloseRequest) {
-      Save();
       GetTree().Quit(); // default behavior
     }
   }
