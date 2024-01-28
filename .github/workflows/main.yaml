@@ -60,6 +60,12 @@ jobs:
           dotnet --version
           godot --version
 
+      - name: Import Project 1/2
+        run: timeout 180 godot --headless -e --quit || exit 0
+
+      - name: Import Project 1/2
+        run: timeout 180 godot --headless -e --quit || exit 0
+
       - name: 🧑‍🔬 Generate .NET Bindings
         run: timeout 180 godot --headless --build-solutions --quit || exit 0
 
