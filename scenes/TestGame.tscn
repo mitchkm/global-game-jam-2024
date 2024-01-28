@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cbslhtwtidhln" path="res://scenes/characters/Player.tscn" id="3_48t3v"]
 [ext_resource type="Script" path="res://src/PlayerController.cs" id="5_3d2ml"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="5_wuw0y"]
+[ext_resource type="PackedScene" uid="uid://cmcobuxvdipo1" path="res://scenes/UI/EntertainmentBar.tscn" id="8_gsusi"]
 
 
 [node name="TestGame" type="Node3D"]
@@ -86,3 +87,8 @@ tween_parameters = null
 tween_on_load = true
 inactive_update_mode = 0
 camera_3D_resource = null
+
+[node name="UI Layer" type="CanvasLayer" parent="."]
+
+[node name="EntertainmentBar" parent="UI Layer" instance=ExtResource("8_gsusi")]
+anchors_preset = 0

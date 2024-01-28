@@ -11,14 +11,14 @@ public partial class CreditsMenu : VBoxContainer
 
   public override void _Ready()
   {
-	BackToMenuButton = GetNode<Button>("%BackToMenuButton");
+	  BackToMenuButton = GetNode<Button>("%BackToMenuButton");
 
-	BackToMenuButton.Pressed += OnBackToMenuButtonPressed;
+	  BackToMenuButton.Pressed += OnBackToMenuButtonPressed;
   }
 
   private void OnBackToMenuButtonPressed()
   {
-	EmitSignal(SignalName.GoToMainMenuHome);
+	  EmitSignal(SignalName.GoToMainMenuHome);
   }
 
 }
