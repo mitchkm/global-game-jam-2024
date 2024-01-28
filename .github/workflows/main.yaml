@@ -37,16 +37,49 @@ jobs:
         with:
           lfs: true
 
-      - name: export game
-        id: export
-        # Use latest version (see releases for all versions)
-        uses: firebelley/godot-export@v5.2.0
+      - uses: actions/setup-dotnet@v3
+        name: 💽 Setup .NET SDK
         with:
-          # Defining all the required inputs
-          godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/4.2.1/Godot_v4.2.1-stable_linux.x86_64.zip
-          godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/4.2.1/Godot_v4.2.1-stable_export_templates.tpz
-          relative_project_path: ./
-          archive_output: true
+          # Use the .NET SDK from global.json in the root of the repository.
+          global-json-file: global.json
+
+      - name: 📦 Restore Dependencies
+        run: dotnet restore
+
+      - uses: chickensoft-games/setup-godot@v1
+        name: 🤖 Setup Godot
+        with:
+          # Version must include major, minor, and patch, and be >= 4.0.0
+          # Pre-release label is optional.
+          version: 4.2.1 # also valid: 4.0.0.rc1 or 4.0.0, etc
+          # Use .NET-enabled version of Godot (the default is also true).
+          use-dotnet: true
+
+      - name: 🔬 Verify Setup
+        run: |
+          dotnet --version
+          godot --version
+
+      - name: Import Project 1/2
+        run: timeout 180 godot --headless -e --quit || exit 0
+
+      - name: Import Project 1/2
+        run: timeout 180 godot --headless -e --quit || exit 0
+
+      - name: 🧑‍🔬 Generate .NET Bindings
+        run: timeout 180 godot --headless --build-solutions --quit || exit 0
+
+      - name: 🦺 Build Projects
+        run: dotnet build
+
+      - name: 🪟 Export Project Windows
+        run: godot --headless --export-release "Windows Desktop" --quit || exit 0
+
+      - name: 🐧 Export Project Linux
+        run: godot --headless --export-release "Linux/X11" --quit || exit 0
+
+      - name: 🍎 Export Project Mac
+        run: godot --headless --export-release "macOS" --quit || exit 0
 
       - name: CD
         run: ls -R
