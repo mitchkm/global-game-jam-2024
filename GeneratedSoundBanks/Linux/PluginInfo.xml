@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginInfo Platform="Linux" BasePlatform="Linux">
 	<PluginLibs>
+		<PluginLib LibName="Wwise Convolution Reverb" LibId="8323075" Type="Effect" DLL="AkConvolutionReverb" StaticLib="AkConvolutionReverbFX"/>
 		<PluginLib LibName="System" LibId="11403271" Type="AudioDevice"/>
 		<PluginLib LibName="No Output" LibId="11862023" Type="AudioDevice"/>
 	</PluginLibs>
-	<FileHash>{AFC8C5A5-D363-5920-6F75-DABE9A71FEBE}</FileHash>
+	<FileHash>{6005E3C9-C8DC-ABFE-FA29-046EE6D4BC0F}</FileHash>
 </PluginInfo>

@@ -1,0 +1,24 @@
+Event	ID	Name			Wwise Object Path	Notes
+	22007848	Play_borbchirps			\Default Work Unit\Play_borbchirps	
+	983941684	UnMute_borbchirps			\Default Work Unit\UnMute_borbchirps	
+	1344522535	Mute_borbchirps			\Default Work Unit\Mute_borbchirps	
+	1349479672	Play_treewind			\Default Work Unit\Play_treewind	
+	3130011852	UnMute_treewind			\Default Work Unit\UnMute_treewind	
+	4229813931	Mute_treewind			\Default Work Unit\Mute_treewind	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	1954817294	Environment_Auxiliary_Bus			\Default Work Unit\Master Audio Bus\Environment_Auxiliary_Bus	
+
+Effect plug-ins	ID	Name	Type				Notes
+	502771456	ForestAuterlitz_WideOpen	Wwise Convolution Reverb			Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	26225040	borbchirps	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\borbchirps_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\borbchirps		6107948
+	1039884250	treewind	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\treewind_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\treewind		3285548
+
+Plug-in Media	ID	Name	Source file	Type	Wwise Object Path	Notes	Data Size
+	30489455	ForestAuterlitz_WideOpen	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\Plugins\Wwise Convolution Reverb\AudioEase\Altiverb - Outdoor and More\Outdoor\Forest\AE_ForestAuterlitz_WideOpen_76A2E422.wem	Wwise Convolution Reverb (Shared)	\Effects\Factory Altiverb - Outdoor and More\Altiverb - Outdoor and More\Outdoor Forest\ForestAuterlitz_WideOpen	Impulse response created by AudioEase. © 2011 AudioEase.  All rights reserved.	366032
+

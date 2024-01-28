@@ -1,0 +1,43 @@
+Event	ID	Name			Wwise Object Path	Notes
+	712332466	Play_Random_Letter			\Default Work Unit\Play_Random_Letter	
+	2931723581	Play_eih_megan			\Default Work Unit\Play_eih_megan	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	2603924349	Dialogue_Auxiliary_Bus			\Default Work Unit\Master Audio Bus\Dialogue_Auxiliary_Bus	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	12235801	k_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\k_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\k_megan		132396
+	40040291	e_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\e_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\e_megan		132396
+	52591147	u_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\u_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\u_megan		132396
+	87486596	l_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\l_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\l_megan		132396
+	94640774	s_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\s_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\s_megan		132396
+	114362915	n_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\n_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\n_megan		132396
+	210835020	oh_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\oh_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\oh_megan		132396
+	269919247	f_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\f_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\f_megan		132396
+	350299003	j_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\j_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\j_megan		132396
+	361464786	t_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\t_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\t_megan		132396
+	365383117	ah_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\ah_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\ah_megan		132396
+	382171952	a_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\a_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\a_megan		132396
+	417377378	q_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\q_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\q_megan		132396
+	425639171	b_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\b_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\b_megan		132396
+	499908441	eih_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\eih_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\eih_megan		132396
+	516533453	g_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\g_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\g_megan		132396
+	613076512	y_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\y_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\y_megan		132396
+	646705627	c_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\c_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\c_megan		132396
+	646918195	p_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\p_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\p_megan		132396
+	661016684	r_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\r_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\r_megan		132396
+	690573889	eh_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\eh_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\eh_megan		132396
+	716693592	m_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\m_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\m_megan		132396
+	736144779	d_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\d_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\d_megan		132396
+	766000253	w_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\w_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\w_megan		132396
+	795998169	v_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\v_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\v_megan		132396
+	831065516	h_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\h_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\h_megan		132396
+	928972394	z_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\z_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\z_megan		132396
+	936671885	x_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\x_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\x_megan		132396
+	944634484	oo_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\oo_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\oo_megan		132396
+	1016938993	o_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\o_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\o_megan		132396
+	1032276599	i_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\i_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\i_megan		132396
+
