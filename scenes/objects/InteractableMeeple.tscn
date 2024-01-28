@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://di530mmvbgpyt"]
+[gd_scene load_steps=5 format=3 uid="uid://di530mmvbgpyt"]
 
 [ext_resource type="PackedScene" uid="uid://c3biotlfbklso" path="res://scenes/objects/Meeple.tscn" id="1_dsthi"]
 [ext_resource type="Script" path="res://src/Interactable/DialogueInteractable.cs" id="2_8relo"]
@@ -6,10 +6,6 @@
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_dxqbw"]
 radius = 4.0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p71dn"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1foxo"]
 
 [node name="Meeple" instance=ExtResource("1_dsthi")]
 
@@ -21,8 +17,5 @@ _interactionHighlight = NodePath("../Highlight")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueInteractable" index="0"]
 shape = SubResource("SphereShape3D_dxqbw")
 
-[node name="Body" parent="." index="3"]
-material_override = SubResource("StandardMaterial3D_p71dn")
-
-[node name="Head" parent="." index="4"]
-material_override = SubResource("StandardMaterial3D_1foxo")
+[node name="Highlight" parent="." index="4"]
+transform = Transform3D(-0.535769, 4.68384e-08, 0.131559, -6.55671e-08, -0.75, 0, 0.524835, -4.58825e-08, 0.134299, 0, 3.93463, 0)

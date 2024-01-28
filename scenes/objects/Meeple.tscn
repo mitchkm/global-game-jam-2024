@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c3biotlfbklso"]
+[gd_scene load_steps=20 format=3 uid="uid://c3biotlfbklso"]
 
 [ext_resource type="Script" path="res://src/Meeple.cs" id="1_ica0f"]
 [ext_resource type="Texture2D" uid="uid://b5ll7f2vkg1rv" path="res://models/meeples/meeple_meeple happy 1-05.png" id="2_y68qr"]
@@ -172,13 +172,25 @@ albedo_color = Color(0.92549, 0.752941, 0, 1)
 
 [sub_resource type="PrismMesh" id="PrismMesh_bo2o5"]
 
-[node name="Meeple" type="CharacterBody3D" node_paths=PackedStringArray("_body", "_head", "_leftArm", "_rightArm")]
+[sub_resource type="Animation" id="Animation_tuxms"]
+resource_name = "spin"
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 1, 0, 0.5, 1, 1, 0, 0, 0, 0.75, 1, 0.707, 0, -0.707, 0, 1, 1, 0, 0, 1, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5hx40"]
+_data = {
+"spin": SubResource("Animation_tuxms")
+}
+
+[node name="Meeple" type="CharacterBody3D"]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -0.00129479, 0.00338581, 0.00072211)
 script = ExtResource("1_ica0f")
-_body = NodePath("meeple/Body")
-_head = NodePath("meeple/Head")
-_leftArm = NodePath("meeple/LeftArm")
-_rightArm = NodePath("meeple/RightArm")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
@@ -210,7 +222,14 @@ mesh = SubResource("ArrayMesh_rhf4g")
 skeleton = NodePath("")
 
 [node name="Highlight" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 1.50996e-07, 0, -1.50996e-07, -1, 0, 0, 0, 0.25, 0, 3.7397, 0)
+transform = Transform3D(-0.443667, 3.87866e-08, 0.151578, -6.55671e-08, -0.75, 0, 0.604698, -5.28644e-08, 0.111213, 0, 3.93463, 0)
 visible = false
 material_override = SubResource("StandardMaterial3D_1a37l")
 mesh = SubResource("PrismMesh_bo2o5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Highlight"]
+libraries = {
+"": SubResource("AnimationLibrary_5hx40")
+}
+autoplay = "spin"
+speed_scale = 0.5

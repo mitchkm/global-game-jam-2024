@@ -21,10 +21,10 @@ script = ExtResource("1_eeo50")
 [node name="LevelMainCity" parent="." instance=ExtResource("2_ivuo1")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, -6.27938, 8.58843, -4.26559)
+transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, -6.27938, 8.58844, -4.26559)
 projection = 1
 current = true
-fov = 74.9992
+fov = 74.9923
 size = 4.0
 near = 0.001
 script = ExtResource("5_4gm3k")
@@ -32,14 +32,15 @@ script = ExtResource("5_4gm3k")
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 script = ExtResource("2_ypksi")
 
-[node name="Player" parent="." instance=ExtResource("4_22hdr")]
+[node name="Player" parent="." node_paths=PackedStringArray("_camera") instance=ExtResource("4_22hdr")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -0.279382, 0.103152, 1.73441)
+_camera = NodePath("../Camera3D")
 
 [node name="AkListener3D" type="AkListener3D" parent="Player"]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 2.23506, -0.825216, -13.8753)
 
 [node name="North_View" type="Node3D" parent="."]
-transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, -6.27938, 8.58843, -4.26559)
+transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, -6.27938, 8.58844, -4.26559)
 script = ExtResource("6_4jo2p")
 priority_override = false
 priority = 0
@@ -59,7 +60,7 @@ inactive_update_mode = 0
 camera_3D_resource = null
 
 [node name="East_View" type="Node3D" parent="."]
-transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, -6.27938, 8.58843, 7.73441)
+transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, -6.27938, 8.58844, 7.73441)
 script = ExtResource("6_4jo2p")
 priority_override = false
 priority = 0
@@ -79,7 +80,7 @@ inactive_update_mode = 0
 camera_3D_resource = null
 
 [node name="South_View" type="Node3D" parent="."]
-transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 5.72062, 8.58843, 7.73441)
+transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 5.72062, 8.58844, 7.73441)
 script = ExtResource("6_4jo2p")
 priority_override = false
 priority = 0
@@ -99,7 +100,7 @@ inactive_update_mode = 0
 camera_3D_resource = null
 
 [node name="West_View" type="Node3D" parent="."]
-transform = Transform3D(-0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, 0.5, -0.5, 5.72062, 8.58843, -4.26559)
+transform = Transform3D(-0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, 0.5, -0.5, 5.72062, 8.58844, -4.26559)
 script = ExtResource("6_4jo2p")
 priority_override = false
 priority = 0
