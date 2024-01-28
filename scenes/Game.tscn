@@ -132,3 +132,19 @@ HeadColor = Color(1, 0.701961, 0.533333, 1)
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 5.27307, 0.103117, 1.31805)
 BodyColor = Color(0, 0.678431, 0.294118, 1)
 HeadColor = Color(0.501961, 0.352941, 0.278431, 1)
+
+[node name="AkBank" type="AkBank" parent="."]
+bank = {
+"id": 2454045173,
+"name": "UI_SoundBank"
+}
+load_on = 1
+
+[node name="AkEvent3D_OnPlayTest" type="AkEvent3D" parent="."]
+event = {
+"id": 3308548503,
+"name": "Play_ui_select"
+}
+trigger_on = 2
+
+[node name="AkListener3D" type="AkListener3D" parent="."]
