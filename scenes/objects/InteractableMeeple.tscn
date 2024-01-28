@@ -7,9 +7,9 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_dxqbw"]
 radius = 4.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bb2xl"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pufg5"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubtg2"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ebifq"]
 
 [node name="Meeple" instance=ExtResource("1_dsthi")]
 
@@ -24,7 +24,7 @@ _interactTarget = NodePath("../DialogueInteractable")
 shape = SubResource("SphereShape3D_dxqbw")
 
 [node name="Body" parent="." index="4"]
-material_override = SubResource("StandardMaterial3D_bb2xl")
+material_override = SubResource("StandardMaterial3D_pufg5")
 
 [node name="Head" parent="." index="5"]
-material_override = SubResource("StandardMaterial3D_ubtg2")
+material_override = SubResource("StandardMaterial3D_ebifq")

@@ -1,14 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3biotlfbklso"]
+[gd_scene load_steps=7 format=3 uid="uid://c3biotlfbklso"]
 
 [ext_resource type="Script" path="res://src/Meeple.cs" id="1_ica0f"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r7r2g"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xwux"]
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_plxtq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kl77e"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_bpf3g"]
 
-[node name="Meeple" type="CharacterBody3D" node_paths=PackedStringArray("_bodyInstance", "_headInstance")]
+[node name="Meeple2" type="CharacterBody3D" node_paths=PackedStringArray("_bodyInstance", "_headInstance")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -0.00129479, 0.00338581, 0.00072211)
 script = ExtResource("1_ica0f")
 _bodyInstance = NodePath("Body")
@@ -22,8 +26,10 @@ shape = SubResource("CapsuleShape3D_r7r2g")
 
 [node name="Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_override = SubResource("StandardMaterial3D_3xwux")
 mesh = SubResource("CapsuleMesh_plxtq")
 
 [node name="Head" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+material_override = SubResource("StandardMaterial3D_kl77e")
 mesh = SubResource("SphereMesh_bpf3g")

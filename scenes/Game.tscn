@@ -21,10 +21,9 @@ script = ExtResource("1_eeo50")
 [node name="LevelMainCity" parent="." instance=ExtResource("2_ivuo1")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, -3.27833, 4.34564, -1.28619)
+transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, -3.27938, 4.34579, -1.26559)
 projection = 1
 current = true
-fov = 74.9866
 size = 4.0
 near = 0.001
 
@@ -32,7 +31,7 @@ near = 0.001
 script = ExtResource("2_ypksi")
 
 [node name="Player" parent="." node_paths=PackedStringArray("_camera") instance=ExtResource("4_22hdr")]
-transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -0.278325, 0.103, 1.71381)
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -0.279382, 0.103152, 1.73441)
 _camera = NodePath("../Camera3D")
 
 [node name="CameraSwitcher" type="Node" parent="." node_paths=PackedStringArray("_northView", "_eastView", "_southView", "_westView")]
@@ -43,7 +42,7 @@ _southView = NodePath("../South_View")
 _westView = NodePath("../West_View")
 
 [node name="North_View" type="Node3D" parent="."]
-transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, -3.27833, 4.34564, -1.28619)
+transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, -3.27938, 4.34579, -1.26559)
 script = ExtResource("6_4jo2p")
 priority_override = false
 priority = 0
@@ -63,7 +62,7 @@ inactive_update_mode = 0
 camera_3D_resource = null
 
 [node name="East_View" type="Node3D" parent="."]
-transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, -3.27833, 4.34564, 4.71381)
+transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, -3.27938, 4.34579, 4.73441)
 script = ExtResource("6_4jo2p")
 priority_override = false
 priority = 0
@@ -83,7 +82,7 @@ inactive_update_mode = 0
 camera_3D_resource = null
 
 [node name="South_View" type="Node3D" parent="."]
-transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 2.72167, 4.34564, 4.71381)
+transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 2.72062, 4.34579, 4.73441)
 script = ExtResource("6_4jo2p")
 priority_override = false
 priority = 0
@@ -103,7 +102,7 @@ inactive_update_mode = 0
 camera_3D_resource = null
 
 [node name="West_View" type="Node3D" parent="."]
-transform = Transform3D(-0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, 0.5, -0.5, 2.72167, 4.34564, -1.28619)
+transform = Transform3D(-0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, 0.5, -0.5, 2.72062, 4.34579, -1.26559)
 script = ExtResource("6_4jo2p")
 priority_override = false
 priority = 0
@@ -126,6 +125,10 @@ camera_3D_resource = null
 
 [node name="Meeple" parent="Meeples" instance=ExtResource("8_6ut53")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 4.06229, 0.103117, 0.224967)
+BodyColor = Color(0.415686, 0.45098, 1, 1)
+HeadColor = Color(1, 0.701961, 0.533333, 1)
 
 [node name="Meeple2" parent="Meeples" instance=ExtResource("8_6ut53")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 5.27307, 0.103117, 1.31805)
+BodyColor = Color(0, 0.678431, 0.294118, 1)
+HeadColor = Color(0.501961, 0.352941, 0.278431, 1)

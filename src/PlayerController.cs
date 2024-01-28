@@ -4,7 +4,8 @@ namespace YesNoSlap;
 
 using Interactable;
 
-public partial class PlayerController : CharacterBody3D {
+[Tool]
+public partial class PlayerController : Meeple {
   [Export] private float _speed = 5.0f;
 
   [Export] private Node3D _camera;
@@ -14,6 +15,10 @@ public partial class PlayerController : CharacterBody3D {
   public Interactable.Interactable? InteractTarget { get; set; }
 
   public override void _Input(InputEvent @event) {
+    if (Engine.IsEditorHint()) {
+      return;
+    }
+
     if (@event.IsActionPressed("interact")) {
       InteractWithTarget();
     }
@@ -27,6 +32,10 @@ public partial class PlayerController : CharacterBody3D {
   }
 
   public override void _PhysicsProcess(double delta) {
+    if (Engine.IsEditorHint()) {
+      return;
+    }
+
     var velocity = Velocity;
 
     // Add the gravity.

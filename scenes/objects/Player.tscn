@@ -1,8 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbslhtwtidhln"]
+[gd_scene load_steps=5 format=3 uid="uid://cbslhtwtidhln"]
 
 [ext_resource type="PackedScene" uid="uid://c3biotlfbklso" path="res://scenes/objects/Meeple.tscn" id="1_7h4pj"]
 [ext_resource type="Script" path="res://src/PlayerController.cs" id="2_xbe6w"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tkyfh"]
+albedo_color = Color(0.607843, 0.607843, 0.607843, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wxuna"]
+albedo_color = Color(0.678431, 0.619608, 0.501961, 1)
+
 [node name="Player" instance=ExtResource("1_7h4pj")]
 script = ExtResource("2_xbe6w")
 _speed = 2.0
+BodyColor = Color(0.607843, 0.607843, 0.607843, 1)
+HeadColor = Color(0.678431, 0.619608, 0.501961, 1)
+
+[node name="Body" parent="." index="2"]
+material_override = SubResource("StandardMaterial3D_tkyfh")
+
+[node name="Head" parent="." index="3"]
+material_override = SubResource("StandardMaterial3D_wxuna")
