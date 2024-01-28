@@ -1,0 +1,35 @@
+using GameState
+~ start
+do Caline.TallyConvo()
+if HasCornDog == false
+	=> ConvoBase
+elif HasCornDog == true
+	=> ConvoCornDog
+else
+	=> END
+
+~ ConvoBase
+Caline: Arf! [i]The dog looks at you expectantly.[/i]
+- Yes
+	do Caline.TallyYes()
+	[i]You find yourself compelled to pet the doggo.[/i]
+- No
+	do Caline.TallyNo()
+	[i]You find yourself compelled to pet the doggo.[/i]
+- SLAP 
+	do Caline.TallySlap()
+	[i]You find yourself compelled to pet the doggo.[/i]
+=> END
+
+~ ConvoCornDog
+Caline: Arf! [i]The dog looks at the corn dog expectantly.[/i]
+- Yes
+	do Caline.TallyYes()
+	[i]You find yourself compelled to feed the doggo.[/i]
+- No
+	do Caline.TallyNo()
+	[i]You find yourself compelled to feed the doggo.[/i]
+- SLAP 
+	do Caline.TallySlap()
+	[i]You find yourself compelled to feed the doggo.[/i]
+=> END

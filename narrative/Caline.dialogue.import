@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://3wbnb25j83jl"
+path="res://.godot/imported/Caline.dialogue-2cf27722d1e8f43e61a0b3cb57e1cd4e.tres"
+
+[deps]
+
+source_file="res://narrative/Caline.dialogue"
+dest_files=["res://.godot/imported/Caline.dialogue-2cf27722d1e8f43e61a0b3cb57e1cd4e.tres"]
+
+[params]
+
+defaults=true

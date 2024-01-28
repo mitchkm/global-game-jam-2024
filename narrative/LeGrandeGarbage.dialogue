@@ -1,0 +1,67 @@
+using GameState
+~ start
+do Dumpster.TallyConvo()
+if Dumpster.Progress == 0
+	=> ConvoA
+elif Dumpster.Progress == 1
+	=> ConvoB
+elif HasCornDog == false
+	=> ConvoB
+elif HasCornDog == true
+	=> ConvoCornDog
+elif Dumpster.Progress == 2
+	=> ConvoC
+else
+	=> END
+
+~ ConvoA
+Dumpster: I am Le Grande Garbage. Do you need to make a deposit?
+- Yes
+	do Dumpster.TallyYes()
+	[i]It opens wide and waits for your delicious trash.[/i]
+- No
+	do Dumpster.TallyNo()
+	Le Grande Garbage: A withdrawal I see. Disgusting peasant.
+- SLAP
+	do Dumpster.TallySlap()
+	Le Grande Garbage: Quelle horreur!
+=> END
+
+~ ConvoB
+Le Grande Garbage: You. Again. Do you have a deposit to make?
+- Yes
+	do Dumpster.TallyYes()
+	Le Grande Garbage: Oh là là
+- No
+	do Dumpster.TallyNo()
+	Le Grande Garbage: Again you plunder my riches!
+- SLAP
+	do Dumpster.TallySlap()
+	Le Grande Garbage: Tu pues!
+=> END
+
+~ ConvoC
+Dumpster: Again you come to make a deposit to the Queen, oui?
+- Yes
+	do Dumpster.TallyYes()
+	Le Grande Garbage: Miam miam!
+- No
+	do Dumpster.TallyNo()
+	Le Grande Garbage: This is the last time, you buffoon!
+- SLAP
+	do Dumpster.TallySlap()
+	Le Grande Garbage: Crétin!
+=> END
+
+~ ConvoCornDog
+Dumpster: I smell a delectable bread and porky morsel nearby. Will you donate it to the cause?
+- Yes
+	do Dumpster.TallyYes()
+	Le Grande Garbage: La présentation est magnifique!
+- No
+	do Dumpster.TallyNo()
+	Le Grande Garbage: Vieille bique!
+- SLAP
+	do Dumpster.TallySlap()
+	[i]The dumpster ignores your wallop.[/i]
+=> END
