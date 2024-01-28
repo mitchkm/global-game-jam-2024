@@ -16,22 +16,26 @@ public partial class MainMenuHome : VBoxContainer
   public Button PlayButton { get; private set; } = default!;
   public Button CreditsButton { get; private set; } = default!;
 
+  public Button ResetSaveButton { get; private set; } = default!;
+
   public Button QuitButton { get; private set; } = default!;
 
   public override void _Ready()
   {
-	  PlayButton = GetNode<Button>("%PlayButton");
-	  CreditsButton = GetNode<Button>("%CreditsButton");
-	  QuitButton = GetNode<Button>("%QuitButton");
+	PlayButton = GetNode<Button>("%PlayButton");
+	CreditsButton = GetNode<Button>("%CreditsButton");
+	ResetSaveButton = GetNode<Button>("%ResetSaveButton");
+	QuitButton = GetNode<Button>("%QuitButton");
 
-	  PlayButton.Pressed += OnPlayButtonPressed;
-	  CreditsButton.Pressed += OnCreditsButtonPressed;
-	  QuitButton.Pressed += OnQuitButtonPressed;
+	PlayButton.Pressed += OnPlayButtonPressed;
+	CreditsButton.Pressed += OnCreditsButtonPressed;
+	ResetSaveButton.Pressed += OnResetSaveButtonPressed;
+	QuitButton.Pressed += OnQuitButtonPressed;
   }
 
   private void OnPlayButtonPressed()
   {
-	  GetTree().ChangeSceneToFile(PlayButtonScene);
+	GetTree().ChangeSceneToFile(PlayButtonScene);
   }
 
 
@@ -40,9 +44,14 @@ public partial class MainMenuHome : VBoxContainer
 	EmitSignal(SignalName.GoToCredits);
   }
 
+  private void OnResetSaveButtonPressed()
+  {
+
+  }
+
   private void OnQuitButtonPressed()
   {
-	  GetTree().Root.PropagateNotification((int)NotificationWMCloseRequest);
+	GetTree().Root.PropagateNotification((int)NotificationWMCloseRequest);
   }
 
 }
