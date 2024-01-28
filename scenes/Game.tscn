@@ -1,13 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://bib8yspuxiq2v"]
+[gd_scene load_steps=14 format=3 uid="uid://bib8yspuxiq2v"]
 
 [ext_resource type="Script" path="res://src/Game.cs" id="1_eeo50"]
 [ext_resource type="PackedScene" uid="uid://cgfkg27ywt5la" path="res://scenes/levels/Level_MainCity.tscn" id="2_ivuo1"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_ypksi"]
-[ext_resource type="PackedScene" uid="uid://cbslhtwtidhln" path="res://scenes/objects/Player.tscn" id="4_22hdr"]
+[ext_resource type="PackedScene" uid="uid://cbslhtwtidhln" path="res://scenes/characters/Player.tscn" id="4_22hdr"]
 [ext_resource type="Script" path="res://src/CameraController.cs" id="5_4gm3k"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="6_4jo2p"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_ss1pk"]
-[ext_resource type="PackedScene" uid="uid://di530mmvbgpyt" path="res://scenes/objects/InteractableMeeple.tscn" id="8_6ut53"]
+[ext_resource type="PackedScene" uid="uid://di530mmvbgpyt" path="res://scenes/characters/InteractableMeeple.tscn" id="8_6ut53"]
+[ext_resource type="PackedScene" uid="uid://bbkk5xil4i358" path="res://scenes/characters/Creator.tscn" id="9_nel35"]
 [ext_resource type="PackedScene" uid="uid://cmcobuxvdipo1" path="res://scenes/UI/EntertainmentBar.tscn" id="9_t3s2c"]
 [ext_resource type="PackedScene" uid="uid://c1brwostv6xar" path="res://scenes/UI/PauseMenu.tscn" id="10_donla"]
 
@@ -39,6 +40,7 @@ transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0
 environment = SubResource("Environment_jl4i8")
 projection = 1
 current = true
+fov = 74.9903
 size = 4.0
 near = 0.001
 script = ExtResource("5_4gm3k")
@@ -148,6 +150,9 @@ HeadColor = Color(1, 0.701961, 0.533333, 1)
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 5.27307, 0.103117, 1.31805)
 BodyColor = Color(0, 0.678431, 0.294118, 1)
 HeadColor = Color(0.501961, 0.352941, 0.278431, 1)
+
+[node name="Creator" parent="Meeples" instance=ExtResource("9_nel35")]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 16.3054, 0.103117, -10.4472)
 
 [node name="UI Layer" type="CanvasLayer" parent="."]
 

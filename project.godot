@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="YesNoSlap"
+config/description="Your choices are Yes, No or Slap. Choose wisely."
 run/main_scene="res://scenes/Main.tscn"
 config/features=PackedStringArray("4.2", "C#", "Mobile")
 run/max_fps=60
@@ -106,7 +107,7 @@ pause={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://narrative/test-meeple.dialogue", "res://narrative/GrandmaMatilda.dialogue", "res://narrative/SamsonSlappington.dialogue")
+locale/translations_pot_files=PackedStringArray("res://narrative/test-meeple.dialogue", "res://narrative/GrandmaMatilda.dialogue", "res://narrative/SamsonSlappington.dialogue", "res://narrative/Caline.dialogue", "res://narrative/LeGrandeGarbage.dialogue", "res://narrative/Creator.dialogue")
 
 [wwise]
 

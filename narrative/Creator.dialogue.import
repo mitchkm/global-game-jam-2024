@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cfmuo6sedammr"
+path="res://.godot/imported/Creator.dialogue-055ce88503b9f50747b8627eb1f0dd6f.tres"
+
+[deps]
+
+source_file="res://narrative/Creator.dialogue"
+dest_files=["res://.godot/imported/Creator.dialogue-055ce88503b9f50747b8627eb1f0dd6f.tres"]
+
+[params]
+
+defaults=true

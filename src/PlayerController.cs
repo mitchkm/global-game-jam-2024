@@ -52,7 +52,7 @@ public partial class PlayerController : Meeple {
     if (Engine.IsEditorHint()) {
       return;
     }
-    
+
     _inputDir = InDialogue ? Vector2.Zero : Input.GetVector("move_left", "move_right", "move_up", "move_down");
   }
 
