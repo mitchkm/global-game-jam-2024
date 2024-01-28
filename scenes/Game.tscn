@@ -20,14 +20,17 @@ script = ExtResource("1_eeo50")
 
 [node name="LevelMainCity" parent="." instance=ExtResource("2_ivuo1")]
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("_northView", "_eastView", "_southView", "_westView")]
 transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, -6.27938, 8.58844, -4.26559)
 projection = 1
 current = true
-fov = 74.9923
 size = 4.0
 near = 0.001
 script = ExtResource("5_4gm3k")
+_northView = NodePath("../North_View")
+_eastView = NodePath("../East_View")
+_southView = NodePath("../South_View")
+_westView = NodePath("../West_View")
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 script = ExtResource("2_ypksi")
