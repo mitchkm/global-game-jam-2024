@@ -2,13 +2,13 @@ using GameState
 ~ start
 do Caline.TallyConvo()
 if HasCornDog == false
-	=> ConvoA
+	=> ConvoBase
 elif HasCornDog == true
-	=> ConvoB
+	=> ConvoCornDog
 else
 	=> END
 
-~ ConvoA
+~ ConvoBase
 Caline: Arf! [i]The dog looks at you expectantly.[/i]
 - Yes
 	do Caline.TallyYes()
@@ -21,7 +21,7 @@ Caline: Arf! [i]The dog looks at you expectantly.[/i]
 	[i]You find yourself compelled to pet the doggo.[/i]
 => END
 
-~ ConvoB
+~ ConvoCornDog
 Caline: Arf! [i]The dog looks at the corn dog expectantly.[/i]
 - Yes
 	do Caline.TallyYes()

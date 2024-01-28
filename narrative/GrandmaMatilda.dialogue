@@ -7,6 +7,8 @@ elif Matilda.Progress == 1
 	=> ConvoB
 elif Matilda.Progress == 2
 	=> ConvoC
+elif Matilda.Progress == 3
+	=> ConvoD
 else
 	=> END
 
@@ -19,7 +21,7 @@ Grandma Matilda: Sweet thing, can you help me get back home? I seem to have lost
 - No
 	do Matilda.TallyNo()
 	[i]You don't help her? Wow, you're a jerk.[/i]
-- SLAP 
+- SLAP
 	do Matilda.TallySlap()
 	[i]Just as the impulse to slap your sweet, old grandma takes hold, she ducks down to pick up a penny and you end up slapping the streetlight behind her, knocking it down.[/i]
 => END
@@ -28,13 +30,13 @@ Grandma Matilda: Sweet thing, can you help me get back home? I seem to have lost
 Grandma Matilda: Hey sunny, you're skin and bones! Let grandma whip up a delicious corndog for you.
 - Yes
 	do Matilda.TallyYes()
-	[i]You're not sure how to eat it, but now you have a corndog.[/i]
+	[i]You're not sure how to eat it, but you now have a corndog.[/i]
 	set HasCornDog = true
 	do Matilda.ProgressConvo()
 - No
 	do Matilda.TallyNo()
 	[i]You politely decline the corndog.[/i]
-- SLAP 
+- SLAP
 	do Matilda.TallySlap()
 	[i]You viciously try to slap grandma, but you stumble on some trash and end up slapping the corndog from her hands.[/i]
 => END
@@ -45,12 +47,24 @@ Grandma Matilda: I know that life can be challenging for someone your age. Maybe
 	do Matilda.TallyYes()
 	Grandma Matilda: Give it a try next time you meet someone new!
 	do Matilda.ProgressConvo()
-- No, You're all just meat puppets.
 	do Matilda.TallyNo()
-	
-- SLAP 
+	No, You're all just meat puppets.	
+- SLAP
 	do Matilda.TallySlap()
 	[i]As you try to slap grandma for making such an outrageous suggestion, the hot dog cart loses a wheel and falls over, landing straight in your path.[/i]
+=> END
+
+~ ConvoD
+Grandma Matilda: Oh deary me, you're back and in a foul mood as ever. Have a corndog and cheer up you. Maybe next time, try helping people.
+- Yes
+	do Matilda.TallyYes()
+	Grandma Matilda: It can't hurt to try.
+	do Matilda.ProgressConvo()
+	do Matilda.TallyNo()
+	Grandma Matilda: It can't hurt to try.
+- SLAP
+	do Matilda.TallySlap()
+	[i]As you once again try to wallop grandma with your articulated metallic fingers, a bolt of lightning strikes your raised hand, electrocuting various circuitry and shorting out motors, leaving you unable to strike. [b]You die.[/b][/i]
 => END
 
 => END
