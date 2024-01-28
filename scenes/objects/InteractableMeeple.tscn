@@ -1,39 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://di530mmvbgpyt"]
+[gd_scene load_steps=5 format=3 uid="uid://di530mmvbgpyt"]
 
 [ext_resource type="PackedScene" uid="uid://c3biotlfbklso" path="res://scenes/objects/Meeple.tscn" id="1_dsthi"]
 [ext_resource type="Script" path="res://src/Interactable/DialogueInteractable.cs" id="2_8relo"]
 [ext_resource type="Resource" uid="uid://db2ny1cxhsbbg" path="res://narrative/SamsonSlappington.dialogue" id="3_4nqy5"]
-[ext_resource type="Texture2D" uid="uid://b5ll7f2vkg1rv" path="res://models/meeples/meeple_meeple happy 1-05.png" id="4_soiyp"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_dxqbw"]
 radius = 4.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ewwqc"]
-resource_name = "Material.001"
-cull_mode = 2
-roughness = 0.5
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mo31"]
-resource_name = "Material.002"
-cull_mode = 2
-albedo_texture = ExtResource("4_soiyp")
-roughness = 0.5
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hv3d3"]
-resource_name = "Material"
-cull_mode = 2
-roughness = 0.5
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gt6mo"]
-resource_name = "Material.003"
-cull_mode = 2
-roughness = 0.5
-
 [node name="Meeple" node_paths=PackedStringArray("_body", "_head", "_leftArm", "_rightArm") instance=ExtResource("1_dsthi")]
-_body = NodePath("meeple/Body")
-_head = NodePath("meeple/Head")
-_leftArm = NodePath("meeple/LeftArm")
-_rightArm = NodePath("meeple/RightArm")
+_body = NodePath("Model/BodySlot/Body")
+_head = NodePath("Model/HeadSlot/Head")
+_leftArm = NodePath("Model/LeftArmSlot/LeftArm")
+_rightArm = NodePath("Model/RightArmSlot/RightArm")
 
 [node name="DialogueInteractable" type="Area3D" parent="." index="0" node_paths=PackedStringArray("_interactionHighlight")]
 script = ExtResource("2_8relo")
@@ -42,18 +20,6 @@ _interactionHighlight = NodePath("../Highlight")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueInteractable" index="0"]
 shape = SubResource("SphereShape3D_dxqbw")
-
-[node name="Body" parent="meeple" index="0"]
-material_override = SubResource("StandardMaterial3D_ewwqc")
-
-[node name="Head" parent="meeple" index="1"]
-material_override = SubResource("StandardMaterial3D_2mo31")
-
-[node name="LeftArm" parent="meeple" index="2"]
-material_override = SubResource("StandardMaterial3D_hv3d3")
-
-[node name="RightArm" parent="meeple" index="3"]
-material_override = SubResource("StandardMaterial3D_gt6mo")
 
 [node name="Highlight" parent="." index="4"]
 transform = Transform3D(-0.535769, 4.68384e-08, 0.131559, -6.55671e-08, -0.75, 0, 0.524835, -4.58825e-08, 0.134299, 0, 3.93463, 0)

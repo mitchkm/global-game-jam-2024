@@ -194,9 +194,13 @@ _data = {
 "spin": SubResource("Animation_tuxms")
 }
 
-[node name="Meeple" type="CharacterBody3D"]
+[node name="Meeple" type="CharacterBody3D" node_paths=PackedStringArray("_body", "_head", "_leftArm", "_rightArm")]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -0.00129479, 0.00338581, 0.00072211)
 script = ExtResource("1_ica0f")
+_body = NodePath("Model/BodySlot/Body")
+_head = NodePath("Model/HeadSlot/Head")
+_leftArm = NodePath("Model/LeftArmSlot/LeftArm")
+_rightArm = NodePath("Model/RightArmSlot/RightArm")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
@@ -204,25 +208,33 @@ script = ExtResource("1_ica0f")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 shape = SubResource("CapsuleShape3D_r7r2g")
 
-[node name="meeple" type="Node3D" parent="."]
+[node name="Model" type="Node3D" parent="."]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, 0)
 
-[node name="Body" type="MeshInstance3D" parent="meeple"]
+[node name="BodySlot" type="Node3D" parent="Model"]
+
+[node name="Body" type="MeshInstance3D" parent="Model/BodySlot"]
 transform = Transform3D(1, 0, 0, 0, 0.903634, 0, 0, 0, 0.903634, 0, 1.39494, 0)
 mesh = SubResource("ArrayMesh_g6tky")
 skeleton = NodePath("")
 
-[node name="Head" type="MeshInstance3D" parent="meeple"]
+[node name="HeadSlot" type="Node3D" parent="Model"]
+
+[node name="Head" type="MeshInstance3D" parent="Model/HeadSlot"]
 transform = Transform3D(0.52128, 2.69455e-05, 2.92948e-05, -2.69328e-05, 0.52128, -0.000130539, -2.93065e-05, 0.000130536, 0.52128, 0, 2.84017, 0)
 mesh = SubResource("ArrayMesh_f3ayf")
 skeleton = NodePath("")
 
-[node name="LeftArm" type="MeshInstance3D" parent="meeple"]
+[node name="LeftArmSlot" type="Node3D" parent="Model"]
+
+[node name="LeftArm" type="MeshInstance3D" parent="Model/LeftArmSlot"]
 transform = Transform3D(0.365546, -0.00890752, 0.00538997, 0.00787514, 0.438511, -0.037144, -0.00450062, 0.0438216, 0.372786, 0, 1.54075, -1.12954)
 mesh = SubResource("ArrayMesh_vg8ua")
 skeleton = NodePath("")
 
-[node name="RightArm" type="MeshInstance3D" parent="meeple"]
+[node name="RightArmSlot" type="Node3D" parent="Model"]
+
+[node name="RightArm" type="MeshInstance3D" parent="Model/RightArmSlot"]
 transform = Transform3D(-0.365579, 0.00944639, -0.000800166, 0.00787525, 0.438513, -0.0371432, 3.19692e-08, -0.0437088, -0.372815, 0, 1.54075, 1.12954)
 mesh = SubResource("ArrayMesh_rhf4g")
 skeleton = NodePath("")
