@@ -4,3 +4,19 @@
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_2dx5s")
+
+[node name="AkBank_Init" type="AkBank" parent="."]
+bank = {
+"id": 1355168291,
+"name": "Init"
+}
+load_on = 1
+unload_on = 3
+
+[node name="AkBank_UI" type="AkBank" parent="."]
+bank = {
+"id": 2454045173,
+"name": "UI_SoundBank"
+}
+load_on = 1
+unload_on = 3
