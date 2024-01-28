@@ -10,8 +10,9 @@ height = 3.0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bfr2p"]
 resource_name = "Material.001"
 cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
 albedo_color = Color(1, 1, 0.999968, 1)
-roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_recsl"]
 _surfaces = [{
@@ -50,8 +51,9 @@ shadow_mesh = SubResource("ArrayMesh_recsl")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xv78"]
 resource_name = "Material.002"
 cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
 albedo_texture = ExtResource("2_y68qr")
-roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_3njw1"]
 _surfaces = [{
@@ -90,8 +92,9 @@ shadow_mesh = SubResource("ArrayMesh_3njw1")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w50ni"]
 resource_name = "Material"
 cull_mode = 2
-albedo_color = Color(1, 1, 0.999968, 1)
-roughness = 0.5
+diffuse_mode = 1
+specular_mode = 1
+metallic_specular = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_1sn7w"]
 _surfaces = [{
@@ -130,8 +133,11 @@ shadow_mesh = SubResource("ArrayMesh_1sn7w")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bm030"]
 resource_name = "Material.003"
 cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
 albedo_color = Color(1, 1, 0.999968, 1)
-roughness = 0.5
+metallic_specular = 0.0
+roughness = 0.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8366j"]
 _surfaces = [{
@@ -207,7 +213,7 @@ mesh = SubResource("ArrayMesh_g6tky")
 skeleton = NodePath("")
 
 [node name="Head" type="MeshInstance3D" parent="meeple"]
-transform = Transform3D(0.52128, 0, 0, 0, 0.52128, 0, 0, 0, 0.52128, 0, 2.84017, 0)
+transform = Transform3D(0.52128, 2.69455e-05, 2.92948e-05, -2.69328e-05, 0.52128, -0.000130539, -2.93065e-05, 0.000130536, 0.52128, 0, 2.84017, 0)
 mesh = SubResource("ArrayMesh_f3ayf")
 skeleton = NodePath("")
 

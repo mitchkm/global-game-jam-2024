@@ -8,23 +8,23 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_dxqbw"]
 radius = 4.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jn5eb"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gbc62"]
 resource_name = "Material.001"
 cull_mode = 2
 roughness = 0.5
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vol66"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rnnn7"]
 resource_name = "Material.002"
 cull_mode = 2
 albedo_texture = ExtResource("4_soiyp")
 roughness = 0.5
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aca18"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_awpw6"]
 resource_name = "Material"
 cull_mode = 2
 roughness = 0.5
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uwgdi"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8j6r1"]
 resource_name = "Material.003"
 cull_mode = 2
 roughness = 0.5
@@ -44,16 +44,16 @@ _interactionHighlight = NodePath("../Highlight")
 shape = SubResource("SphereShape3D_dxqbw")
 
 [node name="Body" parent="meeple" index="0"]
-material_override = SubResource("StandardMaterial3D_jn5eb")
+material_override = SubResource("StandardMaterial3D_gbc62")
 
 [node name="Head" parent="meeple" index="1"]
-material_override = SubResource("StandardMaterial3D_vol66")
+material_override = SubResource("StandardMaterial3D_rnnn7")
 
 [node name="LeftArm" parent="meeple" index="2"]
-material_override = SubResource("StandardMaterial3D_aca18")
+material_override = SubResource("StandardMaterial3D_awpw6")
 
 [node name="RightArm" parent="meeple" index="3"]
-material_override = SubResource("StandardMaterial3D_uwgdi")
+material_override = SubResource("StandardMaterial3D_8j6r1")
 
 [node name="Highlight" parent="." index="4"]
 transform = Transform3D(-0.535769, 4.68384e-08, 0.131559, -6.55671e-08, -0.75, 0, 0.524835, -4.58825e-08, 0.134299, 0, 3.93463, 0)

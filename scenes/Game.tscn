@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bib8yspuxiq2v"]
+[gd_scene load_steps=11 format=3 uid="uid://bib8yspuxiq2v"]
 
 [ext_resource type="Script" path="res://src/Game.cs" id="1_eeo50"]
 [ext_resource type="PackedScene" uid="uid://cgfkg27ywt5la" path="res://scenes/levels/Level_MainCity.tscn" id="2_ivuo1"]
@@ -8,6 +8,18 @@
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3D.gd" id="6_4jo2p"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_ss1pk"]
 [ext_resource type="PackedScene" uid="uid://di530mmvbgpyt" path="res://scenes/objects/InteractableMeeple.tscn" id="8_6ut53"]
+
+[sub_resource type="Environment" id="Environment_jl4i8"]
+ambient_light_source = 2
+ambient_light_color = Color(0.729412, 0.556863, 0.329412, 1)
+ambient_light_energy = 0.5
+ssao_radius = 0.3
+ssao_power = 11.1964
+ssao_detail = 3.0
+ssao_horizon = 0.0
+ssao_sharpness = 1.0
+sdfgi_use_occlusion = true
+sdfgi_read_sky_light = false
 
 [sub_resource type="Resource" id="Resource_3mupl"]
 script = ExtResource("7_ss1pk")
@@ -22,8 +34,10 @@ script = ExtResource("1_eeo50")
 
 [node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("_northView", "_eastView", "_southView", "_westView")]
 transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, -6.27938, 8.58844, -4.26559)
+environment = SubResource("Environment_jl4i8")
 projection = 1
 current = true
+fov = 74.9985
 size = 4.0
 near = 0.001
 script = ExtResource("5_4gm3k")
