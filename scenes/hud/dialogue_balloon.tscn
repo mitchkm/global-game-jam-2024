@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://ccv08i1iqfn1n"]
+[gd_scene load_steps=10 format=3 uid="uid://ccv08i1iqfn1n"]
 
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_3u50v"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_pa5oc"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_jpnn2"]
+[ext_resource type="Script" path="res://src/audio/DialogueAudio.gd" id="4_a6vpw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -66,13 +67,6 @@ Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 [node name="dialogue_balloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_3u50v")
-
-[node name="AkBank" type="AkBank" parent="."]
-bank = {
-"id": 2842600557,
-"name": "Dialogue_SoundBank"
-}
-load_on = 1
 
 [node name="Balloon" type="Panel" parent="."]
 unique_name_in_owner = true
@@ -141,5 +135,11 @@ response_template = NodePath("ResponseExample")
 layout_mode = 2
 text = "Response example"
 
+[node name="DialogueAudio" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("4_a6vpw")
+
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
+[connection signal="spoke" from="Balloon/Dialogue/VBoxContainer/DialogueLabel" to="DialogueAudio" method="spokeHandler"]
 [connection signal="response_selected" from="Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
