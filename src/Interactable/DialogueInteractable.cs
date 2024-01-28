@@ -11,7 +11,7 @@ public partial class DialogueInteractable : Interactable {
 
   public override void Interact() {
     base.Interact();
-    GD.Print(Name + " was interacted with");
+    GD.Print(Owner.Name + " was interacted with");
     StartDialogue();
   }
 

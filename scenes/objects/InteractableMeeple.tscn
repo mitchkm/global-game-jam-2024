@@ -1,9 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://di530mmvbgpyt"]
+[gd_scene load_steps=7 format=3 uid="uid://di530mmvbgpyt"]
 
 [ext_resource type="PackedScene" uid="uid://c3biotlfbklso" path="res://scenes/objects/Meeple.tscn" id="1_dsthi"]
 [ext_resource type="Script" path="res://src/Interactable/DialogueInteractable.cs" id="2_8relo"]
+[ext_resource type="Script" path="res://src/Interactable/InteractZone.cs" id="3_stbtx"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dxqbw"]
+radius = 4.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bb2xl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubtg2"]
 
 [node name="Meeple" instance=ExtResource("1_dsthi")]
 
 [node name="DialogueInteractable" type="Node" parent="." index="0"]
 script = ExtResource("2_8relo")
+
+[node name="InteractZone" type="Area3D" parent="." index="1" node_paths=PackedStringArray("_interactTarget")]
+script = ExtResource("3_stbtx")
+_interactTarget = NodePath("../DialogueInteractable")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractZone" index="0"]
+shape = SubResource("SphereShape3D_dxqbw")
+
+[node name="Body" parent="." index="4"]
+material_override = SubResource("StandardMaterial3D_bb2xl")
+
+[node name="Head" parent="." index="5"]
+material_override = SubResource("StandardMaterial3D_ubtg2")
