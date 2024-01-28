@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bib8yspuxiq2v"]
+[gd_scene load_steps=13 format=3 uid="uid://bib8yspuxiq2v"]
 
 [ext_resource type="Script" path="res://src/Game.cs" id="1_eeo50"]
 [ext_resource type="PackedScene" uid="uid://cgfkg27ywt5la" path="res://scenes/levels/Level_MainCity.tscn" id="2_ivuo1"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_ss1pk"]
 [ext_resource type="PackedScene" uid="uid://di530mmvbgpyt" path="res://scenes/objects/InteractableMeeple.tscn" id="8_6ut53"]
 [ext_resource type="PackedScene" uid="uid://cmcobuxvdipo1" path="res://scenes/UI/EntertainmentBar.tscn" id="9_t3s2c"]
+[ext_resource type="PackedScene" uid="uid://c1brwostv6xar" path="res://scenes/UI/PauseMenu.tscn" id="10_donla"]
 
 [sub_resource type="Environment" id="Environment_jl4i8"]
 ambient_light_source = 2
@@ -151,4 +152,6 @@ HeadColor = Color(0.501961, 0.352941, 0.278431, 1)
 [node name="UI Layer" type="CanvasLayer" parent="."]
 
 [node name="EntertainmentBar" parent="UI Layer" instance=ExtResource("9_t3s2c")]
-anchors_preset = 0
+
+[node name="PauseMenu" parent="UI Layer" instance=ExtResource("10_donla")]
+visible = false
