@@ -149,15 +149,14 @@ advance_mode = 2
 switch_mode = 2
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ns723"]
+
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4peu3"]
 switch_mode = 2
 advance_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ad1kl"]
-switch_mode = 2
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1xtnj"]
 advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ns723"]
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_h6hoh"]
 states/End/position = Vector2(1001, 100)
@@ -168,7 +167,7 @@ states/RESET/position = Vector2(783, 100)
 states/Slap/node = SubResource("AnimationNodeAnimation_lq1q6")
 states/Slap/position = Vector2(506, 23)
 states/Start/position = Vector2(225, 100)
-transitions = ["Start", "Idle-Hover", SubResource("AnimationNodeStateMachineTransition_vn7ls"), "Idle-Hover", "RESET", SubResource("AnimationNodeStateMachineTransition_y8v3w"), "Slap", "RESET", SubResource("AnimationNodeStateMachineTransition_4peu3"), "RESET", "End", SubResource("AnimationNodeStateMachineTransition_ad1kl"), "Idle-Hover", "Slap", SubResource("AnimationNodeStateMachineTransition_ns723")]
+transitions = ["Start", "Idle-Hover", SubResource("AnimationNodeStateMachineTransition_vn7ls"), "Idle-Hover", "RESET", SubResource("AnimationNodeStateMachineTransition_y8v3w"), "Idle-Hover", "Slap", SubResource("AnimationNodeStateMachineTransition_ns723"), "Slap", "RESET", SubResource("AnimationNodeStateMachineTransition_4peu3"), "RESET", "Idle-Hover", SubResource("AnimationNodeStateMachineTransition_1xtnj")]
 graph_offset = Vector2(-249, -101)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r7r2g"]
@@ -420,7 +419,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 shape = SubResource("CapsuleShape3D_r7r2g")
 
 [node name="Model" type="Node3D" parent="."]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, 0)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, -0.0449107, 0)
 
 [node name="BodySlot" type="Node3D" parent="Model"]
 
