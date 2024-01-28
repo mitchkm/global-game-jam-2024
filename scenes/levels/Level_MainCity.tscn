@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cgfkg27ywt5la"]
 
 [ext_resource type="MeshLibrary" uid="uid://5gfcshx5mj5b" path="res://addons/kaykit_city_builder_bits/Assets/kaykit_buildings_and_ground.tres" id="1_41s55"]
-[ext_resource type="MeshLibrary" uid="uid://0benj7r1s4xx" path="res://addons/kaykit_city_builder_bits/Assets/kaykit_decorations.tres" id="2_2ssnm"]
+[ext_resource type="MeshLibrary" uid="uid://1bbkn4r8dfw" path="res://addons/kaykit_city_builder_bits/Assets/kaykit_decorations.tres" id="2_cjdhx"]
 
 [node name="LevelMainCity" type="Node3D"]
 
@@ -30,7 +30,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0996218, 0)
 
 [node name="NonInteractable_DecoGridMap" type="GridMap" parent="Decorations"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00133586, 0.00375068, -0.00281334)
-mesh_library = ExtResource("2_np4nk")
+mesh_library = ExtResource("2_cjdhx")
 cell_size = Vector3(0.25, 0.25, 0.25)
 cell_center_y = false
 data = {
