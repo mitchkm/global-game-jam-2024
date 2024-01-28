@@ -38,7 +38,7 @@ public partial class Main : Node2D {
 #endif
 
   private void RunScene() {
-    GetTree().AutoAcceptQuit = false;
-    GetTree().ChangeSceneToFile("res://scenes/MainMenu.tscn");
+	GetTree().AutoAcceptQuit = false;
+	GetTree().ChangeSceneToFile("res://scenes/MainMenu.tscn");
   }
 }

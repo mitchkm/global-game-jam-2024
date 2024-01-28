@@ -25,7 +25,7 @@ public partial class EntertainmentBar : Control {
 
   // Called when the node enters the scene tree for the first time.
   public override void _Ready() {
-    UpdateVisuals();
+	UpdateVisuals();
   }
 
   // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -33,50 +33,50 @@ public partial class EntertainmentBar : Control {
   }
 
   public override void _Input(InputEvent @event) {
-    base._Input(@event);
-    if (@event.IsActionPressed("temp_add_entertainment")) {
-      ModifyEntertainment(1);
-    }
+	base._Input(@event);
+	if (@event.IsActionPressed("temp_add_entertainment")) {
+	  ModifyEntertainment(1);
+	}
 
-    if (@event.IsActionPressed("temp_remove_entertainment")) {
-      ModifyEntertainment(-1);
-    }
+	if (@event.IsActionPressed("temp_remove_entertainment")) {
+	  ModifyEntertainment(-1);
+	}
   }
 
   public void ModifyEntertainment(int delta) {
-    entertainment = Math.Clamp(entertainment + delta, 0, 100);
-    UpdateVisuals();
+	entertainment = Math.Clamp(entertainment + delta, 0, 100);
+	UpdateVisuals();
   }
 
   public void SetEntertainment(int value) {
-    entertainment = Math.Clamp(value, 0, 100);
-    UpdateVisuals();
+	entertainment = Math.Clamp(value, 0, 100);
+	UpdateVisuals();
   }
 
   private void UpdateVisuals() {
-    _meter.Value = entertainment;
+	_meter.Value = entertainment;
 
-    if (entertainment > 4 * (_meter.MaxValue / 5)) {
-      _meter.TintProgress = superHappyColor;
-      _face.Texture = happyFace;
-      // Face.Texture = superHappyFace;
-    }
-    else if (entertainment > 3 * (_meter.MaxValue / 5)) {
-      _meter.TintProgress = happyColor;
-      _face.Texture = happyFace;
-    }
-    else if (entertainment > 2 * (_meter.MaxValue / 5)) {
-      _meter.TintProgress = neutralColor;
-      _face.Texture = neutralFace;
-    }
-    else if (entertainment > (_meter.MaxValue / 5)) {
-      _meter.TintProgress = boredColor;
-      _face.Texture = boredFace;
-    }
-    else {
-      _meter.TintProgress = superBoredColor;
-      _face.Texture = boredFace;
-      // Face.Texture = superBoredFace;
-    }
+	if (entertainment > 4 * (_meter.MaxValue / 5)) {
+	  _meter.TintProgress = superHappyColor;
+	  _face.Texture = happyFace;
+	  // Face.Texture = superHappyFace;
+	}
+	else if (entertainment > 3 * (_meter.MaxValue / 5)) {
+	  _meter.TintProgress = happyColor;
+	  _face.Texture = happyFace;
+	}
+	else if (entertainment > 2 * (_meter.MaxValue / 5)) {
+	  _meter.TintProgress = neutralColor;
+	  _face.Texture = neutralFace;
+	}
+	else if (entertainment > (_meter.MaxValue / 5)) {
+	  _meter.TintProgress = boredColor;
+	  _face.Texture = boredFace;
+	}
+	else {
+	  _meter.TintProgress = superBoredColor;
+	  _face.Texture = boredFace;
+	  // Face.Texture = superBoredFace;
+	}
   }
 }

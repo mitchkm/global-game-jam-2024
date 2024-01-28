@@ -20,6 +20,8 @@ public partial class MainMenuHome : VBoxContainer
 
   public Button QuitButton { get; private set; } = default!;
 
+  private GameState MyGameState;
+
   public override void _Ready()
   {
 	PlayButton = GetNode<Button>("%PlayButton");
@@ -31,6 +33,8 @@ public partial class MainMenuHome : VBoxContainer
 	CreditsButton.Pressed += OnCreditsButtonPressed;
 	ResetSaveButton.Pressed += OnResetSaveButtonPressed;
 	QuitButton.Pressed += OnQuitButtonPressed;
+
+	MyGameState = GetNode<GameState>("/root/GameState");
   }
 
   private void OnPlayButtonPressed()
@@ -46,7 +50,8 @@ public partial class MainMenuHome : VBoxContainer
 
   private void OnResetSaveButtonPressed()
   {
-
+	MyGameState.FullReset();
+	OS.MoveToTrash(ProjectSettings.GlobalizePath("user://savegame.save"));
   }
 
   private void OnQuitButtonPressed()
