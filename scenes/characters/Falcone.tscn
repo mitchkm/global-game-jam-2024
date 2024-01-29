@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b5ll7f2vkg1rv" path="res://models/meeples/meeple_meeple happy 1-05.png" id="2_ng2qp"]
 [ext_resource type="PackedScene" uid="uid://bbpmfpelad3w4" path="res://models/meeples/props/detective pipe.glb" id="3_bsi7e"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3anu8"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tk1p7"]
 resource_name = "Material.001"
 cull_mode = 2
 diffuse_mode = 3
@@ -95,7 +95,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_p44qq")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f3kpu"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lm2bq"]
 resource_name = "Material.002"
 cull_mode = 2
 diffuse_mode = 3
@@ -110,7 +110,7 @@ albedo_color = Color(0.329412, 0.329412, 0.329412, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_q07td"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u68yu"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bm0l6"]
 resource_name = "Material"
 cull_mode = 2
 diffuse_mode = 1
@@ -118,7 +118,7 @@ specular_mode = 1
 albedo_color = Color(0.329412, 0.329412, 0.329412, 1)
 metallic_specular = 0.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8x0vh"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1j2ba"]
 resource_name = "Material.003"
 cull_mode = 2
 diffuse_mode = 3
@@ -134,17 +134,14 @@ HeadColor = Color(0.8, 0.678431, 0.576471, 1)
 LeftArmColor = Color(0.329412, 0.329412, 0.329412, 1)
 RightArmColor = Color(0.329412, 0.329412, 0.329412, 1)
 
-[node name="AnimationTree" parent="." index="2"]
-active = false
-
 [node name="Model" parent="." index="5"]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, -0.0397529, 0)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0.035795, 0)
 
 [node name="BodySlot" parent="Model" index="0"]
 transform = Transform3D(0.173648, 0, -0.984808, 0, 1, 0, 0.984808, 0, 0.173648, 0, 0, 0)
 
 [node name="Body" parent="Model/BodySlot" index="0"]
-material_override = SubResource("StandardMaterial3D_3anu8")
+material_override = SubResource("StandardMaterial3D_tk1p7")
 
 [node name="Cube" type="MeshInstance3D" parent="Model/BodySlot" index="1"]
 transform = Transform3D(-0.068947, 7.72687e-08, -4.86711e-08, 5.54791e-08, 0.0594653, -0.0625676, -1.28772e-08, -0.12845, -0.0289654, 9.59262e-08, 2.07593, -0.313007)
@@ -159,7 +156,7 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_puo78")
 
 [node name="Head" parent="Model/HeadSlot" index="0"]
-material_override = SubResource("StandardMaterial3D_f3kpu")
+material_override = SubResource("StandardMaterial3D_lm2bq")
 
 [node name="detective pipe" parent="Model/HeadSlot" index="1" instance=ExtResource("3_bsi7e")]
 transform = Transform3D(-0.101005, 0, 0.282485, 0, 0.3, 0, -0.282485, 0, -0.101005, 1.43489, 2.39906, -0.505754)
@@ -179,14 +176,8 @@ mesh = SubResource("SphereMesh_q07td")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_dvdt7")
 
-[node name="LeftArmSlot" parent="Model/ArmRoot" index="0"]
-transform = Transform3D(0.997677, -0.0271361, -0.0624801, 0.0208389, 0.994837, -0.0993198, 0.0648527, 0.097787, 0.993092, 0.073, 1.417, -1.127)
-
 [node name="LeftArm" parent="Model/ArmRoot/LeftArmSlot" index="0"]
-material_override = SubResource("StandardMaterial3D_u68yu")
-
-[node name="RightArmSlot" parent="Model/ArmRoot" index="1"]
-transform = Transform3D(-0.998395, 0.0259392, 0.0503408, 0.0208389, 0.994837, -0.0993197, -0.0526572, -0.0981113, -0.993781, -0.073, 1.417, 1.127)
+material_override = SubResource("StandardMaterial3D_bm0l6")
 
 [node name="RightArm" parent="Model/ArmRoot/RightArmSlot" index="0"]
-material_override = SubResource("StandardMaterial3D_8x0vh")
+material_override = SubResource("StandardMaterial3D_1j2ba")

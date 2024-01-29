@@ -1,6 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
+	110175594	Play_Play_Random_Letter_M_Low			\Default Work Unit\Play_Play_Random_Letter_M_Low	
 	712332466	Play_Random_Letter			\Default Work Unit\Play_Random_Letter	
+	823209833	Play_Play_Random_Letter_F_Low			\Default Work Unit\Play_Play_Random_Letter_F_Low	
+	2233431296	Play_Play_Random_Letter_M_High			\Default Work Unit\Play_Play_Random_Letter_M_High	
+	2471308434	Play_Play_Random_Letter_F			\Default Work Unit\Play_Play_Random_Letter_F	
+	2471308441	Play_Play_Random_Letter_M			\Default Work Unit\Play_Play_Random_Letter_M	
 	2931723581	Play_eih_megan			\Default Work Unit\Play_eih_megan	
+	4071706653	Play_Play_Random_Letter_F_High			\Default Work Unit\Play_Play_Random_Letter_F_High	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
@@ -9,35 +15,61 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	2603924349	Dialogue_Auxiliary_Bus			\Default Work Unit\Master Audio Bus\Dialogue_Auxiliary_Bus	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	12235801	k_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\k_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\k_megan		132396
-	40040291	e_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\e_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\e_megan		132396
-	52591147	u_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\u_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\u_megan		132396
-	87486596	l_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\l_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\l_megan		132396
-	94640774	s_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\s_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\s_megan		132396
-	114362915	n_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\n_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\n_megan		132396
-	210835020	oh_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\oh_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\oh_megan		132396
-	269919247	f_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\f_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\f_megan		132396
-	350299003	j_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\j_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\j_megan		132396
-	361464786	t_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\t_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\t_megan		132396
-	365383117	ah_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\ah_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\ah_megan		132396
-	382171952	a_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\a_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\a_megan		132396
-	417377378	q_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\q_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\q_megan		132396
-	425639171	b_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\b_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\b_megan		132396
+	4714877	n_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\n_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\n_mitch		99948
+	12235801	k	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\k_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\k		99948
+	40040291	e	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\e_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\e		99948
+	40125089	e_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\e_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\e_mitch		99948
+	46888619	g_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\g_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\g_mitch		99948
+	52591147	u	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\u_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\u		99948
+	87486596	l	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\l_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\l		99948
+	94640774	s	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\s_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\s		99948
+	114362915	n	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\n_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\n		99948
+	142438750	h_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\h_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\h_mitch		99948
+	146227684	m_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\m_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\m_mitch		99948
+	210035596	x_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\x_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\x_mitch		99948
+	210835020	oh	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\oh_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\oh		132396
+	269919247	f	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\f_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\f		99948
+	271726127	w_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\w_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\w_mitch		99948
+	350299003	j	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\j_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\j		99948
+	350939553	a_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\a_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\a_mitch		99948
+	356241097	u_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\u_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\u_mitch		99948
+	361464786	t	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\t_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\t		99948
+	365383117	ah	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\ah_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\ah		132396
+	382171952	a	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\a_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\a		99948
+	417377378	q	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\q_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\q		99948
+	425639171	b	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\b_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\b		99948
+	430436501	c_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\c_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\c_mitch		99948
 	499908441	eih_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\eih_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\eih_megan		132396
-	516533453	g_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\g_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\g_megan		132396
-	613076512	y_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\y_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\y_megan		132396
-	646705627	c_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\c_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\c_megan		132396
-	646918195	p_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\p_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\p_megan		132396
-	661016684	r_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\r_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\r_megan		132396
-	690573889	eh_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\eh_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\eh_megan		132396
-	716693592	m_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\m_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\m_megan		132396
-	736144779	d_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\d_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\d_megan		132396
-	766000253	w_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\w_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\w_megan		132396
-	795998169	v_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\v_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\v_megan		132396
-	831065516	h_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\h_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\h_megan		132396
-	928972394	z_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\z_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\z_megan		132396
-	936671885	x_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\x_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\x_megan		132396
-	944634484	oo_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\oo_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\oo_megan		132396
-	1016938993	o_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\o_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\o_megan		132396
-	1032276599	i_megan	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\i_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\i_megan		132396
+	513318723	k_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\k_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\k_mitch		99948
+	513817548	t_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\t_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\t_mitch		99948
+	516533453	g	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\g_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\g		99948
+	588937729	l_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\l_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\l_mitch		99948
+	613076512	y	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\y_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\y		99948
+	646705627	c	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\c_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\c		99948
+	646918195	p	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\p_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\p		99948
+	657673150	j_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\j_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\j_mitch		99948
+	661016684	r	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\r_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\r		99948
+	668074850	p_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\p_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\p_mitch		99948
+	679676583	r_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\r_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\r_mitch		99948
+	690573889	eh	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\eh_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\eh		132396
+	716693592	m	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\m_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\m		99948
+	720625830	d_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\d_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\d_mitch		99948
+	736144779	d	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\d_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\d		99948
+	762297302	z_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\z_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\z_mitch		99948
+	766000253	w	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\w_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\w		99948
+	770377353	f_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\f_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\f_mitch		99948
+	795998169	v	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\v_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\v		99948
+	831065516	h	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\h_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\h		99948
+	900529734	v_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\v_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\v_mitch		99948
+	901982066	o_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\o_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\o_mitch		99948
+	928972394	z	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\z_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\z		99948
+	930518848	i_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\i_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\i_mitch		99948
+	936671885	x	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\x_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\x		99948
+	944634484	oo	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\oo_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\oo		132396
+	978131356	q_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\q_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\q_mitch		99948
+	1016938993	o	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\o_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\o		99948
+	1032276599	i	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\i_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\i		99948
+	1042284291	s_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\s_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\s_mitch		99948
+	1064214653	y_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\y_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\y_mitch		99948
+	1065608787	b_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\b_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\b_mitch		99948
 

@@ -8,6 +8,7 @@ using Interactable;
 public partial class PlayerController : Meeple {
   [Export] private float _speed = 5.0f;
   [Export] private Node3D _camera;
+  [Export] private Game _game;
 
   public bool InDialogue { get; set; }
 
@@ -97,6 +98,13 @@ public partial class PlayerController : Meeple {
     if (_interactTarget == null) {
       _interactTarget = interactableTarget;
       _interactTarget.ToggleHighlight(true);
+
+      // Tutorial check
+      var MyGameState = GetNode<GameState>("/root/GameState");
+      if (MyGameState.InteractionTutorialIndex == 0) {
+        MyGameState.InteractionTutorialIndex++;
+        MyGameState.CreatorBlockingComment("TutorialInteract");
+      }
     }
   }
 
