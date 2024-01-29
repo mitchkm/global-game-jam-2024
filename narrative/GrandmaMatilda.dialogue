@@ -66,5 +66,3 @@ Grandma Matilda: Oh deary me, you're back and in a foul mood as ever. Have a cor
 	do Matilda.TallySlap()
 	[i]As you once again try to wallop grandma with your articulated metallic fingers, a bolt of lightning strikes your raised hand, electrocuting various circuitry and shorting out motors, leaving you unable to strike. [b]You die.[/b][/i]
 => END
-
-=> END
