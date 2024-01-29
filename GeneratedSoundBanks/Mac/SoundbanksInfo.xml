@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{64D3F84E-885C-2CD4-9E04-EE32D26E5B27}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{01F3227A-AC29-4B17-BFF1-5A41945F1A98}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Media>
@@ -66,6 +66,15 @@
 				<GameParameter Id="3847924954" Name="SS_Air_Presence"/>
 				<GameParameter Id="4160247818" Name="SS_Air_Turbulence"/>
 			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="3575957003" Name="Dead_or_Alive">
+					<States>
+						<State Id="655265632" Name="Alive"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2044049779" Name="Dead"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 			<AcousticTextures>
 				<AcousticTexture Id="504532776" Name="Brick">
 					<Properties>
@@ -773,27 +782,52 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="4165272615" Type="User" Language="SFX" Hash="{B640C301-72A6-93E7-E4C8-FA71B8B53FC2}">
+		<SoundBank Id="4165272615" Type="User" Language="SFX" Hash="{1041AA3B-0252-CC10-1A3D-508E2EDBABCA}">
 			<ShortName>BGM_SoundBank</ShortName>
 			<Path>BGM_SoundBank.bnk</Path>
 			<Media>
-				<File Id="301868561" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>BGM_SFX.wav</ShortName>
-					<CachePath>SFX/BGM_SFX_818F3B66.wem</CachePath>
-				</File>
 				<File Id="504631662" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BGMCheck_Louder.wav</ShortName>
 					<CachePath>SFX/BGMCheck_Louder_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="596802321" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>birbchirps.wav</ShortName>
+					<CachePath>SFX/birbchirps_FBC78EF0.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
-				<Event Id="804258696" Name="Play_BGM_SFX">
+				<Event Id="3625263358" Name="Game_Music_Event">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3575957003" Id="655265632"/>
+							<MediaRefs>
+								<MediaRef Id="504631662"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3575957003" Id="2044049779"/>
+							<MediaRefs>
+								<MediaRef Id="596802321"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2887373789" Name="Play_BGM_Playlist_Container">
 					<MediaRefs>
-						<MediaRef Id="301868561"/>
+						<MediaRef Id="504631662"/>
 					</MediaRefs>
 				</Event>
 			</Events>
+			<StateGroups>
+				<StateGroup Id="3575957003" Name="Dead_or_Alive">
+					<States>
+						<State Id="655265632" Name="Alive"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2044049779" Name="Dead"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B829D192-A28F-7114-4F71-6D73ABA7B6B4}</FileHash>
+	<FileHash>{9D0FE351-686D-FB06-DF12-EEAB79FB89FB}</FileHash>
 </SoundBanksInfo>

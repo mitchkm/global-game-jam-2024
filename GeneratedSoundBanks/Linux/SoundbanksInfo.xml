@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{045A18DB-6097-BADC-5484-07FD04A32258}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F70A1A99-6D97-36BE-B933-B86B9664EC83}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Media>
@@ -65,6 +65,15 @@
 				<GameParameter Id="3847924954" Name="SS_Air_Presence"/>
 				<GameParameter Id="4160247818" Name="SS_Air_Turbulence"/>
 			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="3575957003" Name="Dead_or_Alive">
+					<States>
+						<State Id="655265632" Name="Alive"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2044049779" Name="Dead"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 			<AcousticTextures>
 				<AcousticTexture Id="504532776" Name="Brick">
 					<Properties>
@@ -220,7 +229,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2842600557" Type="User" Language="SFX" Hash="{973D42E8-C811-7349-CEC4-7293A3AE5034}">
+		<SoundBank Id="2842600557" Type="User" Language="SFX" Hash="{94C3303A-DE6A-640A-E220-2FD5392499D5}">
 			<ShortName>Dialogue_SoundBank</ShortName>
 			<Path>Dialogue_SoundBank.bnk</Path>
 			<Media>
@@ -255,6 +264,10 @@
 				<File Id="94640774" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>s_megan.wav</ShortName>
 					<CachePath>SFX/s_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="106563525" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>NO_mitch.wav</ShortName>
+					<CachePath>SFX/NO_mitch_818F3B66.wem</CachePath>
 				</File>
 				<File Id="114362915" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>n_megan.wav</ShortName>
@@ -336,6 +349,10 @@
 					<ShortName>g_megan.wav</ShortName>
 					<CachePath>SFX/g_megan_818F3B66.wem</CachePath>
 				</File>
+				<File Id="549063046" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>YES_mitch.wav</ShortName>
+					<CachePath>SFX/YES_mitch_818F3B66.wem</CachePath>
+				</File>
 				<File Id="588937729" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>l_mitch.wav</ShortName>
 					<CachePath>SFX/l_mitch_818F3B66.wem</CachePath>
@@ -404,6 +421,10 @@
 					<ShortName>h_megan.wav</ShortName>
 					<CachePath>SFX/h_megan_818F3B66.wem</CachePath>
 				</File>
+				<File Id="877673620" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Robot_Exertation0_mitch.wav</ShortName>
+					<CachePath>SFX/Robot_Exertation0_mitch_818F3B66.wem</CachePath>
+				</File>
 				<File Id="900529734" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>v_mitch.wav</ShortName>
 					<CachePath>SFX/v_mitch_818F3B66.wem</CachePath>
@@ -419,6 +440,10 @@
 				<File Id="930518848" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>i_mitch.wav</ShortName>
 					<CachePath>SFX/i_mitch_818F3B66.wem</CachePath>
+				</File>
+				<File Id="934043110" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Smacked_Robot_mitch.wav</ShortName>
+					<CachePath>SFX/Smacked_Robot_mitch_818F3B66.wem</CachePath>
 				</File>
 				<File Id="936671885" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>x_megan.wav</ShortName>
@@ -673,6 +698,26 @@
 						<MediaRef Id="1032276599"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3261570811" Name="Play_Response_NO">
+					<MediaRefs>
+						<MediaRef Id="106563525"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4193539119" Name="Play_Response_YES">
+					<MediaRefs>
+						<MediaRef Id="549063046"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2946088427" Name="Play_Robot_Slap">
+					<MediaRefs>
+						<MediaRef Id="877673620"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1055064742" Name="Play_Robot_Slapped">
+					<MediaRefs>
+						<MediaRef Id="934043110"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
@@ -736,27 +781,52 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="4165272615" Type="User" Language="SFX" Hash="{B640C301-72A6-93E7-E4C8-FA71B8B53FC2}">
+		<SoundBank Id="4165272615" Type="User" Language="SFX" Hash="{1041AA3B-0252-CC10-1A3D-508E2EDBABCA}">
 			<ShortName>BGM_SoundBank</ShortName>
 			<Path>BGM_SoundBank.bnk</Path>
 			<Media>
-				<File Id="301868561" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>BGM_SFX.wav</ShortName>
-					<CachePath>SFX/BGM_SFX_818F3B66.wem</CachePath>
-				</File>
 				<File Id="504631662" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BGMCheck_Louder.wav</ShortName>
 					<CachePath>SFX/BGMCheck_Louder_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="596802321" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>birbchirps.wav</ShortName>
+					<CachePath>SFX/birbchirps_FBC78EF0.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
-				<Event Id="804258696" Name="Play_BGM_SFX">
+				<Event Id="3625263358" Name="Game_Music_Event">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3575957003" Id="655265632"/>
+							<MediaRefs>
+								<MediaRef Id="504631662"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3575957003" Id="2044049779"/>
+							<MediaRefs>
+								<MediaRef Id="596802321"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2887373789" Name="Play_BGM_Playlist_Container">
 					<MediaRefs>
-						<MediaRef Id="301868561"/>
+						<MediaRef Id="504631662"/>
 					</MediaRefs>
 				</Event>
 			</Events>
+			<StateGroups>
+				<StateGroup Id="3575957003" Name="Dead_or_Alive">
+					<States>
+						<State Id="655265632" Name="Alive"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2044049779" Name="Dead"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3618C795-701A-5FF6-C5A8-9025A6A22C0A}</FileHash>
+	<FileHash>{E4FDCEB2-A992-8A16-84C6-B3A0FDEA9616}</FileHash>
 </SoundBanksInfo>

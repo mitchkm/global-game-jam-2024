@@ -1,3 +1,11 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	3575957003	Dead_or_Alive			\Default Work Unit\Dead_or_Alive	
+
+State	ID	Name	State Group			Notes
+	655265632	Alive	Dead_or_Alive			
+	748895195	None	Dead_or_Alive			
+	2044049779	Dead	Dead_or_Alive			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	
 	513139656	Mountain			\Factory Acoustic Textures\Textures\Mountain	

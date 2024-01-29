@@ -11,6 +11,7 @@ bank = {
 "name": "Init"
 }
 load_on = 1
+unload_on = 3
 
 [node name="AkBank_UI" type="AkBank" parent="."]
 bank = {
@@ -18,6 +19,7 @@ bank = {
 "name": "UI_SoundBank"
 }
 load_on = 1
+unload_on = 3
 
 [node name="AkBank_Dialogue" type="AkBank" parent="."]
 bank = {
@@ -25,6 +27,7 @@ bank = {
 "name": "Dialogue_SoundBank"
 }
 load_on = 1
+unload_on = 3
 
 [node name="AkBank_BGM" type="AkBank" parent="."]
 bank = {
@@ -32,6 +35,7 @@ bank = {
 "name": "BGM_SoundBank"
 }
 load_on = 1
+unload_on = 3
 
 [node name="AkBank_Atmospheric" type="AkBank" parent="."]
 bank = {
@@ -39,3 +43,4 @@ bank = {
 "name": "Atmospheric_SoundBank"
 }
 load_on = 1
+unload_on = 3
