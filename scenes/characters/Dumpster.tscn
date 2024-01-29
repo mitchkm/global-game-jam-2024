@@ -52,7 +52,7 @@ metallic_specular = 0.55
 size = Vector3(0.644958, 0.498169, 0.355896)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_inf14"]
-radius = 4.0
+radius = 0.8
 
 [node name="StaticBody3D" type="StaticBody3D"]
 

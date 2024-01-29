@@ -47,6 +47,7 @@ Grandma Matilda: I know that life can be challenging for someone your age. Maybe
 	do Matilda.TallyYes()
 	Grandma Matilda: Give it a try next time you meet someone new!
 	do Matilda.ProgressConvo()
+- No
 	do Matilda.TallyNo()
 	No, You're all just meat puppets.	
 - SLAP
@@ -59,12 +60,10 @@ Grandma Matilda: Oh deary me, you're back and in a foul mood as ever. Have a cor
 - Yes
 	do Matilda.TallyYes()
 	Grandma Matilda: It can't hurt to try.
-	do Matilda.ProgressConvo()
+- No
 	do Matilda.TallyNo()
 	Grandma Matilda: It can't hurt to try.
 - SLAP
 	do Matilda.TallySlap()
 	[i]As you once again try to wallop grandma with your articulated metallic fingers, a bolt of lightning strikes your raised hand, electrocuting various circuitry and shorting out motors, leaving you unable to strike. [b]You die.[/b][/i]
-=> END
-
 => END
