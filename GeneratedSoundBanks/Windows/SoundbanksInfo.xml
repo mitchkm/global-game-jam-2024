@@ -737,10 +737,16 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="4165272615" Type="User" Language="SFX" Hash="{BD5796F4-ED57-06FA-7D9E-0CA1EAB33F36}">
+		<SoundBank Id="4165272615" Type="User" Language="SFX" Hash="{9E98EECC-8E9E-4115-8FE3-8809CBCE590D}">
 			<ShortName>BGM_SoundBank</ShortName>
 			<Path>BGM_SoundBank.bnk</Path>
+			<Media>
+				<File Id="504631662" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGMCheck_Louder.wav</ShortName>
+					<CachePath>SFX/BGMCheck_Louder_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{605EA049-4E4E-0E05-4615-285F89C67CEE}</FileHash>
+	<FileHash>{2A9A7228-0538-B265-D5D4-4781C7D63B1D}</FileHash>
 </SoundBanksInfo>

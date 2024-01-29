@@ -1,0 +1,3 @@
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	504631662	BGMCheck_Louder	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Mac\SFX\BGMCheck_Louder_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGMCheck_Louder\BGMCheck_Louder		6390436
+
