@@ -71,6 +71,7 @@ shape = SubResource("BoxShape3D_jvxh5")
 [node name="DialogueInteractable" type="Area3D" parent="."]
 script = ExtResource("2_527ud")
 _dialogueResource = ExtResource("3_sd77d")
+_voice = "M"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueInteractable"]
 shape = SubResource("SphereShape3D_inf14")

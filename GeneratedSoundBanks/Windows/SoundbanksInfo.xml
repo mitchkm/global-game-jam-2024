@@ -221,7 +221,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2842600557" Type="User" Language="SFX" Hash="{973D42E8-C811-7349-CEC4-7293A3AE5034}">
+		<SoundBank Id="2842600557" Type="User" Language="SFX" Hash="{94C3303A-DE6A-640A-E220-2FD5392499D5}">
 			<ShortName>Dialogue_SoundBank</ShortName>
 			<Path>Dialogue_SoundBank.bnk</Path>
 			<Media>
@@ -256,6 +256,10 @@
 				<File Id="94640774" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>s_megan.wav</ShortName>
 					<CachePath>SFX/s_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="106563525" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>NO_mitch.wav</ShortName>
+					<CachePath>SFX/NO_mitch_818F3B66.wem</CachePath>
 				</File>
 				<File Id="114362915" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>n_megan.wav</ShortName>
@@ -337,6 +341,10 @@
 					<ShortName>g_megan.wav</ShortName>
 					<CachePath>SFX/g_megan_818F3B66.wem</CachePath>
 				</File>
+				<File Id="549063046" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>YES_mitch.wav</ShortName>
+					<CachePath>SFX/YES_mitch_818F3B66.wem</CachePath>
+				</File>
 				<File Id="588937729" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>l_mitch.wav</ShortName>
 					<CachePath>SFX/l_mitch_818F3B66.wem</CachePath>
@@ -405,6 +413,10 @@
 					<ShortName>h_megan.wav</ShortName>
 					<CachePath>SFX/h_megan_818F3B66.wem</CachePath>
 				</File>
+				<File Id="877673620" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Robot_Exertation0_mitch.wav</ShortName>
+					<CachePath>SFX/Robot_Exertation0_mitch_818F3B66.wem</CachePath>
+				</File>
 				<File Id="900529734" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>v_mitch.wav</ShortName>
 					<CachePath>SFX/v_mitch_818F3B66.wem</CachePath>
@@ -420,6 +432,10 @@
 				<File Id="930518848" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>i_mitch.wav</ShortName>
 					<CachePath>SFX/i_mitch_818F3B66.wem</CachePath>
+				</File>
+				<File Id="934043110" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Smacked_Robot_mitch.wav</ShortName>
+					<CachePath>SFX/Smacked_Robot_mitch_818F3B66.wem</CachePath>
 				</File>
 				<File Id="936671885" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>x_megan.wav</ShortName>
@@ -674,6 +690,26 @@
 						<MediaRef Id="1032276599"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3261570811" Name="Play_Response_NO">
+					<MediaRefs>
+						<MediaRef Id="106563525"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4193539119" Name="Play_Response_YES">
+					<MediaRefs>
+						<MediaRef Id="549063046"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2946088427" Name="Play_Robot_Slap">
+					<MediaRefs>
+						<MediaRef Id="877673620"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1055064742" Name="Play_Robot_Slapped">
+					<MediaRefs>
+						<MediaRef Id="934043110"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
@@ -759,5 +795,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1946C11D-67BA-BFE2-4014-F9098C7CD3CA}</FileHash>
+	<FileHash>{45681282-9B18-4771-3F0D-664F44994373}</FileHash>
 </SoundBanksInfo>

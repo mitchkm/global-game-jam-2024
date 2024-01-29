@@ -7,6 +7,7 @@ const NEXT_ACTION = &"ui_accept"
 const SKIP_ACTION = &"ui_cancel"
 
 
+@export var dialogue_audio: DialogueAudio;
 @onready var balloon: Panel = %Balloon
 @onready var character_label: RichTextLabel = %CharacterLabel
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
@@ -93,6 +94,8 @@ func start(dialogue_resource: DialogueResource, title: String, extra_game_states
 	resource = dialogue_resource
 	self.dialogue_line = await resource.get_next_dialogue_line(title, temporary_game_states)
 
+func setSpeaker(spoker: String):
+	dialogue_audio.setSpeaker(spoker)
 
 ## Go to the next line
 func next(next_id: String) -> void:

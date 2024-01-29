@@ -77,6 +77,7 @@ public partial class Game : Node {
     if (DialogueBalloon != null) {
       GetTree().CurrentScene.AddChild(DialogueBalloon);
       DialogueBalloon.Call("start", _creatorDialogue, startNode);
+      DialogueBalloon.Call("setSpeaker", "F_LOW");
       if (blockPlayerInput) {
         _player.InDialogue = true;
         DialogueBalloon.TreeExiting += () => { _player.InDialogue = false; };

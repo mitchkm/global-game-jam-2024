@@ -6,6 +6,7 @@ using Godot;
 public partial class DialogueInteractable : InteractZone {
   [Export] private Resource? _dialogueResource;
   [Export] private string? _startNodeTitle = "start";
+  [Export] private string? _voice = "F";
   [Export] private Node3D? _interactionHighlight;
 
   private static PackedScene DialogueScene = GD.Load<PackedScene>("res://scenes/hud/dialogue_balloon.tscn");
@@ -33,6 +34,7 @@ public partial class DialogueInteractable : InteractZone {
       GetTree().CurrentScene.AddChild(DialogueBalloon);
       player.InDialogue = true;
       DialogueBalloon.Call("start", _dialogueResource, _startNodeTitle);
+      DialogueBalloon.Call("setSpeaker", _voice);
       DialogueBalloon.TreeExiting += () => { player.InDialogue = false; };
     }
   }

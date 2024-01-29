@@ -64,9 +64,10 @@ MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
-[node name="dialogue_balloon" type="CanvasLayer"]
+[node name="dialogue_balloon" type="CanvasLayer" node_paths=PackedStringArray("dialogue_audio")]
 layer = 100
 script = ExtResource("1_3u50v")
+dialogue_audio = NodePath("DialogueAudio")
 
 [node name="Balloon" type="Panel" parent="."]
 unique_name_in_owner = true

@@ -2,11 +2,15 @@ Event	ID	Name			Wwise Object Path	Notes
 	110175594	Play_Play_Random_Letter_M_Low			\Default Work Unit\Play_Play_Random_Letter_M_Low	
 	712332466	Play_Random_Letter			\Default Work Unit\Play_Random_Letter	
 	823209833	Play_Play_Random_Letter_F_Low			\Default Work Unit\Play_Play_Random_Letter_F_Low	
+	1055064742	Play_Robot_Slapped			\Default Work Unit\Play_Robot_Slapped	
 	2233431296	Play_Play_Random_Letter_M_High			\Default Work Unit\Play_Play_Random_Letter_M_High	
 	2471308434	Play_Play_Random_Letter_F			\Default Work Unit\Play_Play_Random_Letter_F	
 	2471308441	Play_Play_Random_Letter_M			\Default Work Unit\Play_Play_Random_Letter_M	
 	2931723581	Play_eih_megan			\Default Work Unit\Play_eih_megan	
+	2946088427	Play_Robot_Slap			\Default Work Unit\Play_Robot_Slap	
+	3261570811	Play_Response_NO			\Default Work Unit\Play_Response_NO	
 	4071706653	Play_Play_Random_Letter_F_High			\Default Work Unit\Play_Play_Random_Letter_F_High	
+	4193539119	Play_Response_YES			\Default Work Unit\Play_Response_YES	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
@@ -23,6 +27,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	52591147	u	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\u_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\u		99948
 	87486596	l	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\l_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\l		99948
 	94640774	s	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\s_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\s		99948
+	106563525	Response_NO	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\NO_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Response_NO		99948
 	114362915	n	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\n_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\n		99948
 	142438750	h_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\h_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\h_mitch		99948
 	146227684	m_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\m_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\m_mitch		99948
@@ -43,6 +48,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	513318723	k_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\k_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\k_mitch		99948
 	513817548	t_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\t_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\t_mitch		99948
 	516533453	g	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\g_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\g		99948
+	549063046	Response_YES	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\YES_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Response_YES		99948
 	588937729	l_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\l_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\l_mitch		99948
 	613076512	y	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\y_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\y		99948
 	646705627	c	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\c_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\c		99948
@@ -60,10 +66,12 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	770377353	f_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\f_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\f_mitch		99948
 	795998169	v	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\v_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\v		99948
 	831065516	h	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\h_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\h		99948
+	877673620	Robot_Slap	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\Robot_Exertation0_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Robot_Slap		99948
 	900529734	v_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\v_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\v_mitch		99948
 	901982066	o_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\o_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\o_mitch		99948
 	928972394	z	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\z_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\z		99948
 	930518848	i_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\i_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\i_mitch		99948
+	934043110	Robot_Slapped	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\Smacked_Robot_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Robot_Slapped		99948
 	936671885	x	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\x_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\x		99948
 	944634484	oo	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\oo_megan_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Letter\oo		132396
 	978131356	q_mitch	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Windows\SFX\q_mitch_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dialogue\Play_Random_Letter_M\q_mitch		99948
