@@ -5,14 +5,14 @@
 [ext_resource type="Resource" uid="uid://0tom4hwtdv82" path="res://narrative/GrandmaMatilda.dialogue" id="2_kprj4"]
 [ext_resource type="PackedScene" uid="uid://bbd3oje0riws7" path="res://models/meeples/props/grandma glasses.glb" id="3_wiegt"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_icrtr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wwbnf"]
 resource_name = "Material.001"
 cull_mode = 2
 diffuse_mode = 3
 specular_mode = 1
 albedo_color = Color(0.694118, 0.545098, 1, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kawlq"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r0ybt"]
 resource_name = "Material.002"
 cull_mode = 2
 diffuse_mode = 3
@@ -22,7 +22,7 @@ albedo_texture = ExtResource("2_jt01x")
 
 [sub_resource type="SphereMesh" id="SphereMesh_ptgmo"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovc7c"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdqr2"]
 resource_name = "Material"
 cull_mode = 2
 diffuse_mode = 1
@@ -30,7 +30,7 @@ specular_mode = 1
 albedo_color = Color(0.694118, 0.545098, 1, 1)
 metallic_specular = 0.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hbf77"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eyibq"]
 resource_name = "Material.003"
 cull_mode = 2
 diffuse_mode = 3
@@ -48,15 +48,16 @@ RightArmColor = Color(0.694118, 0.545098, 1, 1)
 
 [node name="DialogueInteractable" parent="." index="0"]
 _dialogueResource = ExtResource("2_kprj4")
+_voice = "F_HIGH"
 
 [node name="Model" parent="." index="5"]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0.0501321, 0)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, -0.0396927, 0)
 
 [node name="Body" parent="Model/BodySlot" index="0"]
-material_override = SubResource("StandardMaterial3D_icrtr")
+material_override = SubResource("StandardMaterial3D_wwbnf")
 
 [node name="Head" parent="Model/HeadSlot" index="0"]
-material_override = SubResource("StandardMaterial3D_kawlq")
+material_override = SubResource("StandardMaterial3D_r0ybt")
 
 [node name="grandma glasses" parent="Model/HeadSlot" index="1" instance=ExtResource("3_wiegt")]
 transform = Transform3D(5.28485e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, 5.28485e-08, 0.420866, 2.93162, -0.0103583)
@@ -125,8 +126,8 @@ skeleton = NodePath("../..")
 
 [node name="LeftArm" parent="Model/ArmRoot/LeftArmSlot" index="0"]
 transform = Transform3D(0.3, -1.83892e-09, -6.25537e-09, 1.52819e-09, 0.361, 3.89191e-09, 6.11274e-09, -4.57649e-09, 0.307, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_ovc7c")
+material_override = SubResource("StandardMaterial3D_kdqr2")
 
 [node name="RightArm" parent="Model/ArmRoot/RightArmSlot" index="0"]
 transform = Transform3D(0.3, 0, 0, 0, 0.361, 0, 0, 0, 0.307, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_hbf77")
+material_override = SubResource("StandardMaterial3D_eyibq")

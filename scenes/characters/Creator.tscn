@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b5ll7f2vkg1rv" path="res://models/meeples/meeple_meeple happy 1-05.png" id="3_8bs23"]
 [ext_resource type="Texture2D" uid="uid://cspfua57bj5x1" path="res://models/meeples/characters/creator1_creator face-08.png" id="4_fxeg3"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77s36"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e1x78"]
 resource_name = "Material.001"
 cull_mode = 2
 diffuse_mode = 3
@@ -52,7 +52,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h71yw")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_48bv0"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhu33"]
 resource_name = "Material.002"
 cull_mode = 2
 diffuse_mode = 3
@@ -493,7 +493,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ctl7n")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e6kgd"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6q4nm"]
 resource_name = "Material"
 cull_mode = 2
 diffuse_mode = 1
@@ -540,7 +540,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_t1uem")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wfyqm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oi1hx"]
 resource_name = "Material.003"
 cull_mode = 2
 diffuse_mode = 3
@@ -592,13 +592,14 @@ shadow_mesh = SubResource("ArrayMesh_5l21l")
 
 [node name="DialogueInteractable" parent="." index="0"]
 _dialogueResource = ExtResource("2_dmdt7")
+_voice = "F_LOW"
 
 [node name="Model" parent="." index="5"]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, -0.049735, 0)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0.0131804, 0)
 
 [node name="Body" parent="Model/BodySlot" index="0"]
 visible = false
-material_override = SubResource("StandardMaterial3D_77s36")
+material_override = SubResource("StandardMaterial3D_e1x78")
 mesh = SubResource("ArrayMesh_3nccy")
 
 [node name="Cylinder_004" type="MeshInstance3D" parent="Model/BodySlot" index="1"]
@@ -608,7 +609,7 @@ skeleton = NodePath("")
 
 [node name="Head" parent="Model/HeadSlot" index="0"]
 visible = false
-material_override = SubResource("StandardMaterial3D_48bv0")
+material_override = SubResource("StandardMaterial3D_xhu33")
 
 [node name="Sphere" type="MeshInstance3D" parent="Model/HeadSlot" index="1"]
 transform = Transform3D(0.669405, 0, -1.17042e-07, 0, 0.669405, 0, 1.17042e-07, 0, 0.669405, -0.0465976, 2.87595, 0.0013705)
@@ -667,7 +668,7 @@ skeleton = NodePath("")
 
 [node name="LeftArm" parent="Model/ArmRoot/LeftArmSlot" index="0"]
 visible = false
-material_override = SubResource("StandardMaterial3D_e6kgd")
+material_override = SubResource("StandardMaterial3D_6q4nm")
 
 [node name="Model_LeftArmSlot#Cylinder_005" type="MeshInstance3D" parent="Model/ArmRoot/LeftArmSlot" index="1"]
 transform = Transform3D(0.365658, 0, 0, 0, 0.440785, 0, 0, 0, 0.374671, 0, 0, 0)
@@ -676,7 +677,7 @@ skeleton = NodePath("")
 
 [node name="RightArm" parent="Model/ArmRoot/RightArmSlot" index="0"]
 visible = false
-material_override = SubResource("StandardMaterial3D_wfyqm")
+material_override = SubResource("StandardMaterial3D_oi1hx")
 
 [node name="Model_RightArmSlot#Cylinder_006" type="MeshInstance3D" parent="Model/ArmRoot/RightArmSlot" index="1"]
 transform = Transform3D(0.365664, 0, 0, 0, 0.440787, 0, 0, 0, 0.374662, 0, 0, 0)

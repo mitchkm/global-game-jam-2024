@@ -130,6 +130,10 @@ public partial class CalineCharacter : Character {
 
 }
 
+public partial class BarristaCharacter : Character {
+
+}
+
 public partial class GameState : Node {
   public int RunsMade;
   public int TutorialIndex;
@@ -144,6 +148,7 @@ public partial class GameState : Node {
   // Side Characters
   public DumpsterCharacter Dumpster = new();
   public CalineCharacter Caline = new();
+  public BarristaCharacter Barrista = new();
 
   // Dialogue hooks
   public event Action RunEndEvent;
@@ -175,6 +180,7 @@ public partial class GameState : Node {
       { nameof(Samson), Samson.GetSaveData() },
       { nameof(Dumpster), Dumpster.GetSaveData() },
       { nameof(Caline), Caline.GetSaveData() },
+      { nameof(Barrista), Barrista.GetSaveData() },
     };
 
   private void LoadSave(Godot.Collections.Dictionary<string, Variant> data) {
