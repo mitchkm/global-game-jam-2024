@@ -736,10 +736,27 @@
 				</AuxBus>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="4165272615" Type="User" Language="SFX" Hash="{BD5796F4-ED57-06FA-7D9E-0CA1EAB33F36}">
+		<SoundBank Id="4165272615" Type="User" Language="SFX" Hash="{B640C301-72A6-93E7-E4C8-FA71B8B53FC2}">
 			<ShortName>BGM_SoundBank</ShortName>
 			<Path>BGM_SoundBank.bnk</Path>
+			<Media>
+				<File Id="301868561" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM_SFX.wav</ShortName>
+					<CachePath>SFX/BGM_SFX_818F3B66.wem</CachePath>
+				</File>
+				<File Id="504631662" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGMCheck_Louder.wav</ShortName>
+					<CachePath>SFX/BGMCheck_Louder_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="804258696" Name="Play_BGM_SFX">
+					<MediaRefs>
+						<MediaRef Id="301868561"/>
+					</MediaRefs>
+				</Event>
+			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E71BEA56-3D9E-8EF9-AB4C-F7DDB1B42A75}</FileHash>
+	<FileHash>{3618C795-701A-5FF6-C5A8-9025A6A22C0A}</FileHash>
 </SoundBanksInfo>
