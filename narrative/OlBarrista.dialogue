@@ -1,0 +1,89 @@
+using GameState
+~ start
+do Barrista.TallyConvo()
+if Barrista.Progress == 0
+	=> ConvoA
+elif Barrista.Progress == 1
+	=> ConvoB
+elif Barrista.Progress == 2
+	=> ConvoC
+elif Barrista.Progress == 3
+	=> ConvoD
+elif Barrista.Progress == 4
+	=> ConvoEnd
+else
+	=> END
+
+~ ConvoA
+Barrista: Hello and welcome to Admiral Snackbar where everything is a delicious trap! What can I get you today?
+- Yes
+	do Barrista.TallyYes()
+	Barrista: Yes? I'm sorry, but we only serve coffee and tea beverages. Yes is not on the menu at this time.
+	do Barrista.ProgressConvo()
+- No
+	do Barrista.TallyNo()
+	Barrista: Very well, come again!
+	do Barrista.ProgressConvo()
+- SLAP
+	do Barrista.TallySlap()
+	Barrista: I'm sorry sir or madam, but we do not accept slaps as acceptable currency. However, I'd like to offer you this espresso, on the house. 
+	do Barrista.ProgressConvo()
+=> END
+
+~ ConvoB
+Barrista: You've returned! Lemme guess, you look like you could use a Dirty Chai Latte with two shots of espresso?
+- Yes
+	do Barrista.TallyYes()
+	Barrista: Fantastic! Enjoy!
+	set HasDirtyChaiLatte = true
+	do Barrista.ProgressConvo()
+- No
+	do Barrista.TallyNo()
+	Barrista: Alright, do please come again.
+- SLAP
+	do Barrista.TallySlap()
+	Barrista: I regret to inform you that we do not accept slaps as acceptable currency. However, I'd like to offer you this espresso, on the house.
+=> END
+
+~ ConvoC
+Barrista: Oh, you liked the drink? Would you care for another?
+- Yes
+	do Barrista.TallyYes()
+	Barrista: Right away! Please enjoy.
+	set HasDirtyChaiLatte = true
+	do Barrista.ProgressConvo()
+- No
+	do Barrista.TallyNo()
+	Barrista: Fair enough. Have a fantastic day!
+- SLAP
+	do Barrista.TallySlap()
+	Barrista: I regret to inform you that we do not accept slaps as acceptable currency. However, I'd like to offer you this espresso, on the house.
+=> END
+
+~ ConvoD
+Barrista: Wow, you must be super thirsty. Would you like another dirty chai latte?
+- Yes
+	do Barrista.TallyYes()
+	Barrista: Whoo hoo, I'm rich!
+	set HasDirtyChaiLatte = true
+	do Barrista.ProgressConvo()
+- No
+	do Barrista.TallyNo()
+	Barrista: Very well, come again!
+- SLAP
+	do Barrista.TallySlap()
+	Barrista: This slap is not a legal form of tender. Take this espresso however for the inconvenience.
+=> END
+
+~ ConvoEnd
+Barrista: Thank you, but we're closed. Please come again!
+- Yes
+	do Barrista.TallyYes()
+	Barrista: Good Day.
+- No
+	do Barrista.TallyNo()
+	Barrista: Bye!
+- SLAP
+	do Barrista.TallySlap()
+	Barrista: Sorry for the inconvenience, but please enjoy this complimentary espresso.
+=> END

@@ -11,6 +11,8 @@ elif HasCornDog == true
 	=> ConvoCornDog
 elif Dumpster.Progress == 2
 	=> ConvoC
+elif Dumpster.Progress == 3
+	=> ConvoEnd
 else
 	=> END
 
@@ -51,12 +53,15 @@ Dumpster: Again you come to make a deposit to the Queen, oui?
 - Yes
 	do Dumpster.TallyYes()
 	Le Grande Garbage: Miam miam!
+	do Dumpster.ProgressConvo()
 - No
 	do Dumpster.TallyNo()
 	Le Grande Garbage: This is the last time, you buffoon!
+	do Dumpster.ProgressConvo()
 - SLAP
 	do Dumpster.TallySlap()
 	Le Grande Garbage: Crétin!
+	do Dumpster.ProgressConvo()
 => END
 
 ~ ConvoCornDog
@@ -68,6 +73,19 @@ Dumpster: I smell a delectable bread and porky morsel nearby. Will you donate it
 - No
 	do Dumpster.TallyNo()
 	Le Grande Garbage: Vieille bique!
+- SLAP
+	do Dumpster.TallySlap()
+	[i]The dumpster ignores your wallop.[/i]
+=> END
+
+~ ConvoEnd
+Dumpster: Le Grande Garbage must sleep now. Viva la revolution!
+- Yes
+	do Dumpster.TallyYes()
+	Le Grande Garbage: ...
+- No
+	do Dumpster.TallyNo()
+	Le Grande Garbage: ...
 - SLAP
 	do Dumpster.TallySlap()
 	[i]The dumpster ignores your wallop.[/i]

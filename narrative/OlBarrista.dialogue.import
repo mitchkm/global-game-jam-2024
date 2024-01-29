@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://spldriiea6rg"
+path="res://.godot/imported/OlBarrista.dialogue-aa65578d06457d7911b8a7881878f941.tres"
+
+[deps]
+
+source_file="res://narrative/OlBarrista.dialogue"
+dest_files=["res://.godot/imported/OlBarrista.dialogue-aa65578d06457d7911b8a7881878f941.tres"]
+
+[params]
+
+defaults=true
