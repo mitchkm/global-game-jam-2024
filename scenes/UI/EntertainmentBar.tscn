@@ -14,6 +14,7 @@ load_path = "res://.godot/imported/ebarover.png-321b1ce00a7be57c886cf2838aaa3468
 load_path = "res://.godot/imported/ebarprogress.png-b201f5e358081c0722d0a6e8708eb0b4.ctex"
 
 [node name="EntertainmentBar" type="ReferenceRect" node_paths=PackedStringArray("_face", "_meter")]
+z_index = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -39,6 +40,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.129412, 0.129412, 0.129412, 1)
@@ -61,14 +66,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -91.7202
-offset_top = -50.0
-offset_right = 91.7202
-offset_bottom = 50.0
+offset_left = -110.0
+offset_top = -75.0
+offset_right = 110.0
+offset_bottom = 75.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_a31kq")
-expand_mode = 3
+expand_mode = 5
 stretch_mode = 5
 
 [node name="Meter" type="ReferenceRect" parent="."]

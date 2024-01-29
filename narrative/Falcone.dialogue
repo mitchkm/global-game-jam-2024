@@ -1,0 +1,104 @@
+using GameState
+~ start
+do Falcone.TallyConvo()
+if Falcone.Progress == 0
+	=> ConvoA
+elif Falcone.Progress == 1
+	=> ConvoB
+if HasChaiLatte == true
+	=> ConvoChai
+elif HasChaiLatte == false
+	=> ConvoC
+elif Falcone.Progress == 2
+	=> ConvoC
+elif Falcone.Progress == 3
+	=> ConvoD
+elif Falcone.Progress == 4
+	=> ConvoE
+else
+	=> END
+
+~ ConvoA
+Det. Falcone: Say now, you're that pawn of the Creator, right? Tell me, do you know where that hooligan is hiding out?
+- Yes
+	do Falcone.TallyYes()
+	Det. Falcone: Spit it out. Is he hiding in a building around here?
+	do Falcone.ProgressConvo()
+- No
+	do Falcone.TallyNo()
+	Det. Falcone: I think you're lying to me... trust me, I have a lot of experience with these situations.
+- SLAP
+	do Falcone.TallySlap()
+	Det. Falcone: Oww, my liver!
+=> END
+
+~ ConvoB
+Det. Falcone: So you think he might be hiding in one of the buildings around here? Possibly, but we'll need evidence to figure out which one. Do you have anything?
+- Yes
+	do Falcone.TallyYes()
+	Det. Falcone: Good. Good. This'll do. One step closer to finding this meshuggener.
+	do Falcone.ProgressConvo()
+- No
+	do Falcone.TallyNo()
+	Det. Falcone: No? Well I think you need to try harder then champ.
+- SLAP
+	do Falcone.TallySlap()
+	Det. Falcone: Oof, my spleen!
+=> END
+
+~ ConvoC
+Det. Falcone: Before coffee, I’m up and walkin around but I’m not awake. Have anything to drink?
+- Yes
+	do Falcone.TallyYes()
+	Det. Falcone: I'm afraid not champ. I need something with a lot more pick-me-up. Try again.
+- No
+	do Falcone.TallyNo()
+	Det. Falcone: Well this mystery will remain unsolved until I'm able to think clearly then.
+- SLAP
+	do Falcone.TallySlap()
+	Det. Falcone: Well I guess that'll do as well champ... wow.
+	do Falcone.ProgressConvo()
+=> END
+
+~ ConvoChai
+Det. Falcone: Before coffee, I’m up and walkin around but I’m not awake. Have anything to drink?
+- Yes
+	do Falcone.TallyYes()
+	Det. Falcone: Oh, that hits the spot.
+	do Falcone.ProgressConvo()
+- No
+	do Falcone.TallyNo()
+	Det. Falcone: Well this mystery will remain unsolved until I'm able to think clearly then.
+- SLAP
+	do Falcone.TallySlap()
+	Det. Falcone: Well I guess that'll do as well champ... wow.
+	do Falcone.ProgressConvo()
+=> END
+
+~ ConvoD
+Det. Falcone: I gotta take off this coat. I can’t think in this coat…THE COAT, I can’t think in the coat. Can you help me?
+- Yes
+	do Falcone.TallyYes()
+	Det. Falcone: Whew. Much better. Oh, I see you found more evidence regarding your master's location. Perfect.
+	do Falcone.ProgressConvo()
+- No
+	do Falcone.TallyNo()
+	Det. Falcone: I must say I find you disappointing; I mean your incompetence.
+- SLAP
+	do Falcone.TallySlap()
+	Det. Falcone: Well that's one way to remove it... oof.
+	do Falcone.ProgressConvo()
+=> END
+
+~ ConvoE
+Det. Falcone: Almost there champ. Just need one more piece of evidence to nail this guy.
+- Yes
+	do Falcone.TallyYes()
+	Det. Falcone: I’m not a magician. I’m just a regular cop. But this. This is evidence! Now let's go get that rascal.
+- No
+	do Falcone.TallyNo()
+	Det. Falcone: No. We're so close. I need you to focus!
+- SLAP
+	do Falcone.TallySlap()
+	Det. Falcone: Why ya gotta be like this, kid?
+=> END

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dpbuhkhm3g5pq"
+path="res://.godot/imported/Falcone.dialogue-92bf3f376645e8680ea419b4554f3dec.tres"
+
+[deps]
+
+source_file="res://narrative/Falcone.dialogue"
+dest_files=["res://.godot/imported/Falcone.dialogue-92bf3f376645e8680ea419b4554f3dec.tres"]
+
+[params]
+
+defaults=true

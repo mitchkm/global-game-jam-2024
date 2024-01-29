@@ -1,0 +1,7 @@
+Event	ID	Name			Wwise Object Path	Notes
+	804258696	Play_BGM_SFX			\Default Work Unit\Play_BGM_SFX	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	301868561	BGM_SFX	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\BGM_SFX_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\BGM_SFX		6390436
+	504631662	BGMCheck_Louder	D:\Users\Megan Washburn\Documents\WwiseProjects\YesNoSlap\.cache\Linux\SFX\BGMCheck_Louder_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGMCheck_Louder\BGMCheck_Louder		6390436
+
