@@ -95,6 +95,9 @@ public partial class Character : GodotObject  {
 }
 
 // Main Characters
+public partial class CreatorCharacter : Character {
+}
+
 public partial class MatildaCharacter : Character {
 }
 
@@ -129,9 +132,12 @@ public partial class CalineCharacter : Character {
 
 public partial class GameState : Node {
   public int RunsMade;
+  public int TutorialIndex;
+  public int InteractionTutorialIndex;
   public bool HasCornDog;
 
   // Main Characters
+  public CreatorCharacter Creator = new();
   public MatildaCharacter Matilda = new();
   public SamsonCharacter Samson = new();
 
@@ -143,10 +149,14 @@ public partial class GameState : Node {
   public event Action RunEndEvent;
   public event Action<int> EntertainmentModifyEvent;
 
+  public event Action<string, bool> CreatorCommentEvent;
 
   public void EndRun() => RunEndEvent.Invoke();
 
   public void ModifyEntertainment(int i) => EntertainmentModifyEvent.Invoke(i);
+
+  public void CreatorComment(string comment) => CreatorCommentEvent.Invoke(comment, false);
+  public void CreatorBlockingComment(string comment) => CreatorCommentEvent.Invoke(comment, true);
 
   public void ResetForNewRun() {
     Matilda.RunReset();
@@ -157,7 +167,10 @@ public partial class GameState : Node {
     new()
     {
       { nameof(RunsMade), RunsMade },
+      { nameof(TutorialIndex), TutorialIndex },
+      { nameof(InteractionTutorialIndex), InteractionTutorialIndex },
       { nameof(HasCornDog), HasCornDog },
+      { nameof(Creator), Creator.GetSaveData() },
       { nameof(Matilda), Matilda.GetSaveData() },
       { nameof(Samson), Samson.GetSaveData() },
       { nameof(Dumpster), Dumpster.GetSaveData() },
@@ -169,6 +182,12 @@ public partial class GameState : Node {
 
     data.TryGetValue(nameof(RunsMade), out value);
     RunsMade = (int)value;
+
+    data.TryGetValue(nameof(TutorialIndex), out value);
+    TutorialIndex = (int)value;
+
+    data.TryGetValue(nameof(InteractionTutorialIndex), out value);
+    InteractionTutorialIndex = (int)value;
 
     data.TryGetValue(nameof(HasCornDog), out value);
     HasCornDog = (bool)value;
