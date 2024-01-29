@@ -221,10 +221,14 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="2842600557" Type="User" Language="SFX" Hash="{86D5573C-677B-B220-07C9-DE64C7E24252}">
+		<SoundBank Id="2842600557" Type="User" Language="SFX" Hash="{973D42E8-C811-7349-CEC4-7293A3AE5034}">
 			<ShortName>Dialogue_SoundBank</ShortName>
 			<Path>Dialogue_SoundBank.bnk</Path>
 			<Media>
+				<File Id="4714877" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>n_mitch.wav</ShortName>
+					<CachePath>SFX/n_mitch_818F3B66.wem</CachePath>
+				</File>
 				<File Id="12235801" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>k_megan.wav</ShortName>
 					<CachePath>SFX/k_megan_818F3B66.wem</CachePath>
@@ -232,6 +236,14 @@
 				<File Id="40040291" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>e_megan.wav</ShortName>
 					<CachePath>SFX/e_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="40125089" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>e_mitch.wav</ShortName>
+					<CachePath>SFX/e_mitch_818F3B66.wem</CachePath>
+				</File>
+				<File Id="46888619" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>g_mitch.wav</ShortName>
+					<CachePath>SFX/g_mitch_818F3B66.wem</CachePath>
 				</File>
 				<File Id="52591147" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>u_megan.wav</ShortName>
@@ -249,6 +261,18 @@
 					<ShortName>n_megan.wav</ShortName>
 					<CachePath>SFX/n_megan_818F3B66.wem</CachePath>
 				</File>
+				<File Id="142438750" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>h_mitch.wav</ShortName>
+					<CachePath>SFX/h_mitch_818F3B66.wem</CachePath>
+				</File>
+				<File Id="146227684" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>m_mitch.wav</ShortName>
+					<CachePath>SFX/m_mitch_818F3B66.wem</CachePath>
+				</File>
+				<File Id="210035596" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>x_mitch.wav</ShortName>
+					<CachePath>SFX/x_mitch_818F3B66.wem</CachePath>
+				</File>
 				<File Id="210835020" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>oh_megan.wav</ShortName>
 					<CachePath>SFX/oh_megan_818F3B66.wem</CachePath>
@@ -257,9 +281,21 @@
 					<ShortName>f_megan.wav</ShortName>
 					<CachePath>SFX/f_megan_818F3B66.wem</CachePath>
 				</File>
+				<File Id="271726127" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>w_mitch.wav</ShortName>
+					<CachePath>SFX/w_mitch_818F3B66.wem</CachePath>
+				</File>
 				<File Id="350299003" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>j_megan.wav</ShortName>
 					<CachePath>SFX/j_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="350939553" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>a_mitch.wav</ShortName>
+					<CachePath>SFX/a_mitch_818F3B66.wem</CachePath>
+				</File>
+				<File Id="356241097" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>u_mitch.wav</ShortName>
+					<CachePath>SFX/u_mitch_818F3B66.wem</CachePath>
 				</File>
 				<File Id="361464786" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>t_megan.wav</ShortName>
@@ -281,13 +317,29 @@
 					<ShortName>b_megan.wav</ShortName>
 					<CachePath>SFX/b_megan_818F3B66.wem</CachePath>
 				</File>
+				<File Id="430436501" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>c_mitch.wav</ShortName>
+					<CachePath>SFX/c_mitch_818F3B66.wem</CachePath>
+				</File>
 				<File Id="499908441" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>eih_megan.wav</ShortName>
 					<CachePath>SFX/eih_megan_818F3B66.wem</CachePath>
 				</File>
+				<File Id="513318723" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>k_mitch.wav</ShortName>
+					<CachePath>SFX/k_mitch_818F3B66.wem</CachePath>
+				</File>
+				<File Id="513817548" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>t_mitch.wav</ShortName>
+					<CachePath>SFX/t_mitch_818F3B66.wem</CachePath>
+				</File>
 				<File Id="516533453" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>g_megan.wav</ShortName>
 					<CachePath>SFX/g_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="588937729" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>l_mitch.wav</ShortName>
+					<CachePath>SFX/l_mitch_818F3B66.wem</CachePath>
 				</File>
 				<File Id="613076512" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>y_megan.wav</ShortName>
@@ -301,9 +353,21 @@
 					<ShortName>p_megan.wav</ShortName>
 					<CachePath>SFX/p_megan_818F3B66.wem</CachePath>
 				</File>
+				<File Id="657673150" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>j_mitch.wav</ShortName>
+					<CachePath>SFX/j_mitch_818F3B66.wem</CachePath>
+				</File>
 				<File Id="661016684" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>r_megan.wav</ShortName>
 					<CachePath>SFX/r_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="668074850" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>p_mitch.wav</ShortName>
+					<CachePath>SFX/p_mitch_818F3B66.wem</CachePath>
+				</File>
+				<File Id="679676583" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>r_mitch.wav</ShortName>
+					<CachePath>SFX/r_mitch_818F3B66.wem</CachePath>
 				</File>
 				<File Id="690573889" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>eh_megan.wav</ShortName>
@@ -313,13 +377,25 @@
 					<ShortName>m_megan.wav</ShortName>
 					<CachePath>SFX/m_megan_818F3B66.wem</CachePath>
 				</File>
+				<File Id="720625830" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>d_mitch.wav</ShortName>
+					<CachePath>SFX/d_mitch_818F3B66.wem</CachePath>
+				</File>
 				<File Id="736144779" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>d_megan.wav</ShortName>
 					<CachePath>SFX/d_megan_818F3B66.wem</CachePath>
 				</File>
+				<File Id="762297302" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>z_mitch.wav</ShortName>
+					<CachePath>SFX/z_mitch_818F3B66.wem</CachePath>
+				</File>
 				<File Id="766000253" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>w_megan.wav</ShortName>
 					<CachePath>SFX/w_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="770377353" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>f_mitch.wav</ShortName>
+					<CachePath>SFX/f_mitch_818F3B66.wem</CachePath>
 				</File>
 				<File Id="795998169" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>v_megan.wav</ShortName>
@@ -329,9 +405,21 @@
 					<ShortName>h_megan.wav</ShortName>
 					<CachePath>SFX/h_megan_818F3B66.wem</CachePath>
 				</File>
+				<File Id="900529734" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>v_mitch.wav</ShortName>
+					<CachePath>SFX/v_mitch_818F3B66.wem</CachePath>
+				</File>
+				<File Id="901982066" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>o_mitch.wav</ShortName>
+					<CachePath>SFX/o_mitch_818F3B66.wem</CachePath>
+				</File>
 				<File Id="928972394" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>z_megan.wav</ShortName>
 					<CachePath>SFX/z_megan_818F3B66.wem</CachePath>
+				</File>
+				<File Id="930518848" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>i_mitch.wav</ShortName>
+					<CachePath>SFX/i_mitch_818F3B66.wem</CachePath>
 				</File>
 				<File Id="936671885" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>x_megan.wav</ShortName>
@@ -341,6 +429,10 @@
 					<ShortName>oo_megan.wav</ShortName>
 					<CachePath>SFX/oo_megan_818F3B66.wem</CachePath>
 				</File>
+				<File Id="978131356" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>q_mitch.wav</ShortName>
+					<CachePath>SFX/q_mitch_818F3B66.wem</CachePath>
+				</File>
 				<File Id="1016938993" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>o_megan.wav</ShortName>
 					<CachePath>SFX/o_megan_818F3B66.wem</CachePath>
@@ -349,11 +441,203 @@
 					<ShortName>i_megan.wav</ShortName>
 					<CachePath>SFX/i_megan_818F3B66.wem</CachePath>
 				</File>
+				<File Id="1042284291" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>s_mitch.wav</ShortName>
+					<CachePath>SFX/s_mitch_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1064214653" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>y_mitch.wav</ShortName>
+					<CachePath>SFX/y_mitch_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1065608787" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>b_mitch.wav</ShortName>
+					<CachePath>SFX/b_mitch_818F3B66.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
 				<Event Id="2931723581" Name="Play_eih_megan">
 					<MediaRefs>
 						<MediaRef Id="499908441"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2471308434" Name="Play_Play_Random_Letter_F">
+					<MediaRefs>
+						<MediaRef Id="12235801"/>
+						<MediaRef Id="40040291"/>
+						<MediaRef Id="52591147"/>
+						<MediaRef Id="87486596"/>
+						<MediaRef Id="94640774"/>
+						<MediaRef Id="114362915"/>
+						<MediaRef Id="269919247"/>
+						<MediaRef Id="350299003"/>
+						<MediaRef Id="361464786"/>
+						<MediaRef Id="382171952"/>
+						<MediaRef Id="417377378"/>
+						<MediaRef Id="425639171"/>
+						<MediaRef Id="516533453"/>
+						<MediaRef Id="613076512"/>
+						<MediaRef Id="646705627"/>
+						<MediaRef Id="646918195"/>
+						<MediaRef Id="661016684"/>
+						<MediaRef Id="716693592"/>
+						<MediaRef Id="736144779"/>
+						<MediaRef Id="766000253"/>
+						<MediaRef Id="795998169"/>
+						<MediaRef Id="831065516"/>
+						<MediaRef Id="928972394"/>
+						<MediaRef Id="936671885"/>
+						<MediaRef Id="1016938993"/>
+						<MediaRef Id="1032276599"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4071706653" Name="Play_Play_Random_Letter_F_High">
+					<MediaRefs>
+						<MediaRef Id="12235801"/>
+						<MediaRef Id="40040291"/>
+						<MediaRef Id="52591147"/>
+						<MediaRef Id="87486596"/>
+						<MediaRef Id="94640774"/>
+						<MediaRef Id="114362915"/>
+						<MediaRef Id="269919247"/>
+						<MediaRef Id="350299003"/>
+						<MediaRef Id="361464786"/>
+						<MediaRef Id="382171952"/>
+						<MediaRef Id="417377378"/>
+						<MediaRef Id="425639171"/>
+						<MediaRef Id="516533453"/>
+						<MediaRef Id="613076512"/>
+						<MediaRef Id="646705627"/>
+						<MediaRef Id="646918195"/>
+						<MediaRef Id="661016684"/>
+						<MediaRef Id="716693592"/>
+						<MediaRef Id="736144779"/>
+						<MediaRef Id="766000253"/>
+						<MediaRef Id="795998169"/>
+						<MediaRef Id="831065516"/>
+						<MediaRef Id="928972394"/>
+						<MediaRef Id="936671885"/>
+						<MediaRef Id="1016938993"/>
+						<MediaRef Id="1032276599"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="823209833" Name="Play_Play_Random_Letter_F_Low">
+					<MediaRefs>
+						<MediaRef Id="12235801"/>
+						<MediaRef Id="40040291"/>
+						<MediaRef Id="52591147"/>
+						<MediaRef Id="87486596"/>
+						<MediaRef Id="94640774"/>
+						<MediaRef Id="114362915"/>
+						<MediaRef Id="269919247"/>
+						<MediaRef Id="350299003"/>
+						<MediaRef Id="361464786"/>
+						<MediaRef Id="382171952"/>
+						<MediaRef Id="417377378"/>
+						<MediaRef Id="425639171"/>
+						<MediaRef Id="516533453"/>
+						<MediaRef Id="613076512"/>
+						<MediaRef Id="646705627"/>
+						<MediaRef Id="646918195"/>
+						<MediaRef Id="661016684"/>
+						<MediaRef Id="716693592"/>
+						<MediaRef Id="736144779"/>
+						<MediaRef Id="766000253"/>
+						<MediaRef Id="795998169"/>
+						<MediaRef Id="831065516"/>
+						<MediaRef Id="928972394"/>
+						<MediaRef Id="936671885"/>
+						<MediaRef Id="1016938993"/>
+						<MediaRef Id="1032276599"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2471308441" Name="Play_Play_Random_Letter_M">
+					<MediaRefs>
+						<MediaRef Id="4714877"/>
+						<MediaRef Id="40125089"/>
+						<MediaRef Id="46888619"/>
+						<MediaRef Id="142438750"/>
+						<MediaRef Id="146227684"/>
+						<MediaRef Id="210035596"/>
+						<MediaRef Id="271726127"/>
+						<MediaRef Id="350939553"/>
+						<MediaRef Id="356241097"/>
+						<MediaRef Id="430436501"/>
+						<MediaRef Id="513318723"/>
+						<MediaRef Id="513817548"/>
+						<MediaRef Id="588937729"/>
+						<MediaRef Id="657673150"/>
+						<MediaRef Id="668074850"/>
+						<MediaRef Id="679676583"/>
+						<MediaRef Id="720625830"/>
+						<MediaRef Id="762297302"/>
+						<MediaRef Id="770377353"/>
+						<MediaRef Id="900529734"/>
+						<MediaRef Id="901982066"/>
+						<MediaRef Id="930518848"/>
+						<MediaRef Id="978131356"/>
+						<MediaRef Id="1042284291"/>
+						<MediaRef Id="1064214653"/>
+						<MediaRef Id="1065608787"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2233431296" Name="Play_Play_Random_Letter_M_High">
+					<MediaRefs>
+						<MediaRef Id="4714877"/>
+						<MediaRef Id="40125089"/>
+						<MediaRef Id="46888619"/>
+						<MediaRef Id="142438750"/>
+						<MediaRef Id="146227684"/>
+						<MediaRef Id="210035596"/>
+						<MediaRef Id="271726127"/>
+						<MediaRef Id="350939553"/>
+						<MediaRef Id="356241097"/>
+						<MediaRef Id="430436501"/>
+						<MediaRef Id="513318723"/>
+						<MediaRef Id="513817548"/>
+						<MediaRef Id="588937729"/>
+						<MediaRef Id="657673150"/>
+						<MediaRef Id="668074850"/>
+						<MediaRef Id="679676583"/>
+						<MediaRef Id="720625830"/>
+						<MediaRef Id="762297302"/>
+						<MediaRef Id="770377353"/>
+						<MediaRef Id="900529734"/>
+						<MediaRef Id="901982066"/>
+						<MediaRef Id="930518848"/>
+						<MediaRef Id="978131356"/>
+						<MediaRef Id="1042284291"/>
+						<MediaRef Id="1064214653"/>
+						<MediaRef Id="1065608787"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="110175594" Name="Play_Play_Random_Letter_M_Low">
+					<MediaRefs>
+						<MediaRef Id="4714877"/>
+						<MediaRef Id="40125089"/>
+						<MediaRef Id="46888619"/>
+						<MediaRef Id="142438750"/>
+						<MediaRef Id="146227684"/>
+						<MediaRef Id="210035596"/>
+						<MediaRef Id="271726127"/>
+						<MediaRef Id="350939553"/>
+						<MediaRef Id="356241097"/>
+						<MediaRef Id="430436501"/>
+						<MediaRef Id="513318723"/>
+						<MediaRef Id="513817548"/>
+						<MediaRef Id="588937729"/>
+						<MediaRef Id="657673150"/>
+						<MediaRef Id="668074850"/>
+						<MediaRef Id="679676583"/>
+						<MediaRef Id="720625830"/>
+						<MediaRef Id="762297302"/>
+						<MediaRef Id="770377353"/>
+						<MediaRef Id="900529734"/>
+						<MediaRef Id="901982066"/>
+						<MediaRef Id="930518848"/>
+						<MediaRef Id="978131356"/>
+						<MediaRef Id="1042284291"/>
+						<MediaRef Id="1064214653"/>
+						<MediaRef Id="1065608787"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="712332466" Name="Play_Random_Letter">
@@ -458,5 +742,5 @@
 			<Path>BGM_SoundBank.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{648877E6-E34C-31FE-359A-7321F310F3A5}</FileHash>
+	<FileHash>{605EA049-4E4E-0E05-4615-285F89C67CEE}</FileHash>
 </SoundBanksInfo>
