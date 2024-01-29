@@ -1,17 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://dc5h7v3p5se70"]
+[gd_scene load_steps=10 format=3 uid="uid://dc5h7v3p5se70"]
 
 [ext_resource type="PackedScene" uid="uid://di530mmvbgpyt" path="res://scenes/characters/InteractableMeeple.tscn" id="1_uti56"]
 [ext_resource type="Texture2D" uid="uid://b5ll7f2vkg1rv" path="res://models/meeples/meeple_meeple happy 1-05.png" id="2_jt01x"]
+[ext_resource type="Resource" uid="uid://0tom4hwtdv82" path="res://narrative/GrandmaMatilda.dialogue" id="2_kprj4"]
 [ext_resource type="PackedScene" uid="uid://bbd3oje0riws7" path="res://models/meeples/props/grandma glasses.glb" id="3_wiegt"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvdkh"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a6eru"]
 resource_name = "Material.001"
 cull_mode = 2
 diffuse_mode = 3
 specular_mode = 1
 albedo_color = Color(0.694118, 0.545098, 1, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hcqgl"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvymo"]
 resource_name = "Material.002"
 cull_mode = 2
 diffuse_mode = 3
@@ -21,7 +22,7 @@ albedo_texture = ExtResource("2_jt01x")
 
 [sub_resource type="SphereMesh" id="SphereMesh_ptgmo"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r14q1"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ewyn5"]
 resource_name = "Material"
 cull_mode = 2
 diffuse_mode = 1
@@ -29,7 +30,7 @@ specular_mode = 1
 albedo_color = Color(0.694118, 0.545098, 1, 1)
 metallic_specular = 0.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0dwx2"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_htvma"]
 resource_name = "Material.003"
 cull_mode = 2
 diffuse_mode = 3
@@ -45,6 +46,9 @@ HeadColor = Color(0.929412, 0.847059, 0.803922, 1)
 LeftArmColor = Color(0.694118, 0.545098, 1, 1)
 RightArmColor = Color(0.694118, 0.545098, 1, 1)
 
+[node name="DialogueInteractable" parent="." index="0"]
+_dialogueResource = ExtResource("2_kprj4")
+
 [node name="AnimationTree" parent="." index="2"]
 active = false
 
@@ -52,10 +56,10 @@ active = false
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, 0)
 
 [node name="Body" parent="Model/BodySlot" index="0"]
-material_override = SubResource("StandardMaterial3D_qvdkh")
+material_override = SubResource("StandardMaterial3D_a6eru")
 
 [node name="Head" parent="Model/HeadSlot" index="0"]
-material_override = SubResource("StandardMaterial3D_hcqgl")
+material_override = SubResource("StandardMaterial3D_qvymo")
 
 [node name="grandma glasses" parent="Model/HeadSlot" index="1" instance=ExtResource("3_wiegt")]
 transform = Transform3D(5.28485e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, 5.28485e-08, 0.420866, 2.93162, -0.0103583)
@@ -127,11 +131,11 @@ transform = Transform3D(0.997677, -0.0271361, -0.0624801, 0.0208389, 0.994837, -
 
 [node name="LeftArm" parent="Model/ArmRoot/LeftArmSlot" index="0"]
 transform = Transform3D(0.3, -1.83892e-09, -6.25537e-09, 1.52819e-09, 0.361, 3.89191e-09, 6.11274e-09, -4.57649e-09, 0.307, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_r14q1")
+material_override = SubResource("StandardMaterial3D_ewyn5")
 
 [node name="RightArmSlot" parent="Model/ArmRoot" index="1"]
 transform = Transform3D(-0.998395, 0.0259392, 0.0503408, 0.0208389, 0.994837, -0.0993197, -0.0526572, -0.0981113, -0.993781, -0.073, 1.417, 1.127)
 
 [node name="RightArm" parent="Model/ArmRoot/RightArmSlot" index="0"]
 transform = Transform3D(0.3, 0, 0, 0, 0.361, 0, 0, 0, 0.307, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_0dwx2")
+material_override = SubResource("StandardMaterial3D_htvma")

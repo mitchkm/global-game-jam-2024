@@ -171,10 +171,10 @@ transitions = ["Start", "Idle-Hover", SubResource("AnimationNodeStateMachineTran
 graph_offset = Vector2(-249, -101)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r7r2g"]
-radius = 1.0
+radius = 0.6
 height = 3.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wk01j"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uo0ex"]
 resource_name = "Material.001"
 cull_mode = 2
 diffuse_mode = 3
@@ -221,7 +221,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_recsl")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1t5bd"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_51c2h"]
 resource_name = "Material.002"
 cull_mode = 2
 diffuse_mode = 3
@@ -269,7 +269,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3njw1")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_klydx"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_trri0"]
 resource_name = "Material"
 cull_mode = 2
 diffuse_mode = 1
@@ -317,7 +317,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_1sn7w")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mqp5b"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_arlcs"]
 resource_name = "Material.003"
 cull_mode = 2
 diffuse_mode = 3
@@ -419,13 +419,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 shape = SubResource("CapsuleShape3D_r7r2g")
 
 [node name="Model" type="Node3D" parent="."]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, -0.0361745, 0)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, -0.049846, 0)
 
 [node name="BodySlot" type="Node3D" parent="Model"]
 
 [node name="Body" type="MeshInstance3D" parent="Model/BodySlot"]
 transform = Transform3D(1, 0, 0, 0, 0.903634, 0, 0, 0, 0.903634, 0, 1.39494, 0)
-material_override = SubResource("StandardMaterial3D_wk01j")
+material_override = SubResource("StandardMaterial3D_uo0ex")
 mesh = SubResource("ArrayMesh_g6tky")
 skeleton = NodePath("")
 
@@ -433,7 +433,7 @@ skeleton = NodePath("")
 
 [node name="Head" type="MeshInstance3D" parent="Model/HeadSlot"]
 transform = Transform3D(0.52128, 2.69455e-05, 2.92948e-05, -2.69328e-05, 0.52128, -0.000130539, -2.93065e-05, 0.000130536, 0.52128, 0, 2.84017, 0)
-material_override = SubResource("StandardMaterial3D_1t5bd")
+material_override = SubResource("StandardMaterial3D_51c2h")
 mesh = SubResource("ArrayMesh_f3ayf")
 skeleton = NodePath("")
 
@@ -445,16 +445,16 @@ transform = Transform3D(0.997677, -0.0271361, -0.0624801, 0.0208389, 0.994837, -
 
 [node name="LeftArm" type="MeshInstance3D" parent="Model/ArmRoot/LeftArmSlot"]
 transform = Transform3D(0.365658, 0, 7.45058e-09, 1.86265e-09, 0.440785, 8.61473e-09, 7.45058e-09, -5.58794e-09, 0.37467, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_klydx")
+material_override = SubResource("StandardMaterial3D_trri0")
 mesh = SubResource("ArrayMesh_vg8ua")
 skeleton = NodePath("")
 
 [node name="RightArmSlot" type="Node3D" parent="Model/ArmRoot"]
-transform = Transform3D(-0.998395, 0.0259392, 0.0503408, 0.0208389, 0.994837, -0.0993198, -0.0526572, -0.0981113, -0.993781, -0.073, 1.417, 1.127)
+transform = Transform3D(-0.998395, 0.0259392, 0.0503408, 0.0208389, 0.994837, -0.0993197, -0.0526572, -0.0981113, -0.993781, -0.073, 1.417, 1.127)
 
 [node name="RightArm" type="MeshInstance3D" parent="Model/ArmRoot/RightArmSlot"]
 transform = Transform3D(0.365664, 0, 0, 0, 0.440787, 0, 0, 0, 0.374662, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_mqp5b")
+material_override = SubResource("StandardMaterial3D_arlcs")
 mesh = SubResource("ArrayMesh_rhf4g")
 skeleton = NodePath("")
 
