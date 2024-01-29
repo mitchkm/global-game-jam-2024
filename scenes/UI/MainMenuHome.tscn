@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/UI/MainMenuHome.cs" id="1_fb1nc"]
 [ext_resource type="Theme" uid="uid://cs1230nowva0a" path="res://themes/Main.tres" id="2_p8oec"]
-[ext_resource type="Texture2D" uid="uid://cqoc0ud615fus" path="res://images/UI/Logo.png" id="2_tly7b"]
+[ext_resource type="Texture2D" uid="uid://papdgfy1qfah" path="res://images/UI/Logo.png" id="2_tly7b"]
 
 [node name="MainMenuHome" type="VBoxContainer"]
 offset_right = 262.0
