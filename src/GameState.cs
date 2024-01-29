@@ -138,7 +138,10 @@ public partial class GameState : Node {
   public int RunsMade;
   public int TutorialIndex;
   public int InteractionTutorialIndex;
+
+  // Items
   public bool HasCornDog;
+  public bool HasDirtyChaiLatte;
 
   // Main Characters
   public CreatorCharacter Creator = new();
@@ -174,7 +177,6 @@ public partial class GameState : Node {
       { nameof(RunsMade), RunsMade },
       { nameof(TutorialIndex), TutorialIndex },
       { nameof(InteractionTutorialIndex), InteractionTutorialIndex },
-      { nameof(HasCornDog), HasCornDog },
       { nameof(Creator), Creator.GetSaveData() },
       { nameof(Matilda), Matilda.GetSaveData() },
       { nameof(Samson), Samson.GetSaveData() },
@@ -194,9 +196,6 @@ public partial class GameState : Node {
 
     data.TryGetValue(nameof(InteractionTutorialIndex), out value);
     InteractionTutorialIndex = (int)value;
-
-    data.TryGetValue(nameof(HasCornDog), out value);
-    HasCornDog = (bool)value;
 
     data.TryGetValue(nameof(Matilda), out value);
     Matilda.LoadSave((Godot.Collections.Dictionary<string, Variant>) value);

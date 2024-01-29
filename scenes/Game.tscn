@@ -28,8 +28,10 @@ duration = 0.7
 transition = 4
 ease = 2
 
-[node name="Game" type="Node3D"]
+[node name="Game" type="Node3D" node_paths=PackedStringArray("_player", "_entertainmentBar")]
 script = ExtResource("1_eeo50")
+_player = NodePath("Player")
+_entertainmentBar = NodePath("UI Layer/EntertainmentBar")
 
 [node name="LevelMainCity" parent="." instance=ExtResource("2_ivuo1")]
 

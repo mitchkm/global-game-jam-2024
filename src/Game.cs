@@ -15,6 +15,7 @@ public partial class Game : Node {
 
   private GameState MyGameState;
   private double TutorialTimer;
+  private int EntertainmentChangeThreshold;
 
 
 	// Called when the node enters the scene tree for the first time.
@@ -70,6 +71,15 @@ public partial class Game : Node {
 
   private void ModifyEntertainmentHandler(int i) {
     _entertainmentBar.ModifyEntertainment(i);
+    EntertainmentChangeThreshold += i;
+    if (EntertainmentChangeThreshold > 15) {
+      PlayCreatorDialogue("GettingInteresting");
+      EntertainmentChangeThreshold = 0;
+    }
+    else if (EntertainmentChangeThreshold < -15) {
+      PlayCreatorDialogue("GettingBored");
+      EntertainmentChangeThreshold = 0;
+    }
   }
 
   private void PlayCreatorDialogue(string startNode, bool blockPlayerInput = false) {
