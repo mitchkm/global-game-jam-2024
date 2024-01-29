@@ -1,5 +1,46 @@
+using GameState
 ~ start
+do Creator.TallyConvo()
+if Creator.Progress == 0
+	=> ConvoA
+else
+	=> END
 
+~ StartOfRun
+if RunsMade == 1
+	Creator: Is this thing working...? [wait=0.4] Ah here we go! [next=0.3]
+% Creator: You! I am your [b]Creator[/b] Entertain me! Now!! [next=0.4]
+% Creator: I command you! Entertain me! [i]Time to get slap happy![/i] [next=0.4]
+% Creator: You! I am your [b]Creator[/b] Go forth and bring me entertainment! [next=0.4]
+if RunsMade == 1
+	=> TutorialMove
+=> END
+
+~ TutorialMove
+Creator: Use your "WASD" protocol to navigate the city. [next=0.6]
+=> END
+
+~ TutorialCamera
+Creator: Ah you must be wondering why you can see yourself?... [next=0.4]
+Creator: I have rerouted your optical sensors to a drone in sky! For the optimal viewing experience. Mine not yours. [next=0.3]
+Creator: Using your "Q" and "E" protocols will allow you to change your view angle. [next=0.4]
+Creator: You can even zoom in/out with your "mouse_wheel" protocol! [next=0.3]
+=> END
+
+~ TutorialInteract
+Creator: Oh looks like someone is interested in talking! [next=0.3]
+Creator: Use your "F" protocol to talk to them. Make it interesting! [next=0.5]
+=> END
+
+~ YesNoSlapComment
+Creator: You must have noticed you only have [i]yes[/i], [i]no[/i], and [i]SLAP[/i] routines. [next=0.4]
+Creator: As you were just a little pet-project of mine, that was all I had time for... [next=0.3]
+Creator: I digress! DO what I made you for! "make me laugh" [next=0.2]
+=> END
+
+~ ConvoA
 Creator: You see nothing you insignificant nanobot! BEGONE!!!!!
+=> END
+
 
 => END
