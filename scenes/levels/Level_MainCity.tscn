@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cgfkg27ywt5la"]
+[gd_scene load_steps=11 format=3 uid="uid://cgfkg27ywt5la"]
 
 [ext_resource type="MeshLibrary" uid="uid://dtfg238m3frqw" path="res://addons/kaykit_city_builder_bits/Assets/kaykit_buildings_and_ground.tres" id="1_41s55"]
 [ext_resource type="MeshLibrary" uid="uid://1bbkn4r8dfw" path="res://addons/kaykit_city_builder_bits/Assets/kaykit_decorations.tres" id="2_cjdhx"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dc5h7v3p5se70" path="res://scenes/characters/Matilda.tscn" id="6_20smg"]
 [ext_resource type="PackedScene" uid="uid://doemlfcwkh5vs" path="res://scenes/characters/Falcone.tscn" id="7_usku7"]
 [ext_resource type="PackedScene" uid="uid://c3biotlfbklso" path="res://scenes/characters/Meeple.tscn" id="8_eglpg"]
+[ext_resource type="PackedScene" uid="uid://croqu41og4pvp" path="res://scenes/characters/Caline.tscn" id="9_ibu2q"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3mfpx"]
 size = Vector3(6.65967, 7, 6.71301)
@@ -269,3 +270,6 @@ RightArmColor = Color(0.996078, 0.74902, 0.321569, 1)
 
 [node name="Meeple26" parent="Interactables/Meeples/Extras" instance=ExtResource("8_eglpg")]
 transform = Transform3D(-0.0911405, 0, 0.0855477, 0, 0.125, 0, -0.0855477, 0, -0.0911405, -8.09567, 0.195416, 7.98415)
+
+[node name="Caline" parent="." instance=ExtResource("9_ibu2q")]
+transform = Transform3D(0.217255, 0, -0.206882, 0, 0.3, 0, 0.206882, 0, 0.217255, 15.8991, 0.103117, 7.50379)
