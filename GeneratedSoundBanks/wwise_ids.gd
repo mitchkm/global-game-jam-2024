@@ -18,6 +18,7 @@ class EVENTS:
 	const PLAY_PLAY_RANDOM_LETTER_M_LOW = 110175594
 	const PLAY_PLAY_RANDOM_LETTER_F_LOW = 823209833
 	const PLAY_PLAY_RANDOM_LETTER_F_HIGH = 4071706653
+	const PLAY_BGM_SFX = 804258696
 
 	const _dict = {
 		"Play_eih_megan": PLAY_EIH_MEGAN,
@@ -35,7 +36,8 @@ class EVENTS:
 		"Play_Play_Random_Letter_M_High": PLAY_PLAY_RANDOM_LETTER_M_HIGH,
 		"Play_Play_Random_Letter_M_Low": PLAY_PLAY_RANDOM_LETTER_M_LOW,
 		"Play_Play_Random_Letter_F_Low": PLAY_PLAY_RANDOM_LETTER_F_LOW,
-		"Play_Play_Random_Letter_F_High": PLAY_PLAY_RANDOM_LETTER_F_HIGH
+		"Play_Play_Random_Letter_F_High": PLAY_PLAY_RANDOM_LETTER_F_HIGH,
+		"Play_BGM_SFX": PLAY_BGM_SFX
 	}
 
 class STATES:

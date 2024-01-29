@@ -29,10 +29,8 @@ duration = 0.7
 transition = 4
 ease = 2
 
-[node name="Game" type="Node3D" node_paths=PackedStringArray("_player", "_entertainmentBar")]
+[node name="Game" type="Node3D"]
 script = ExtResource("1_eeo50")
-_player = NodePath("Player")
-_entertainmentBar = NodePath("UI Layer/EntertainmentBar")
 
 [node name="LevelMainCity" parent="." instance=ExtResource("2_ivuo1")]
 
@@ -157,3 +155,11 @@ HeadColor = Color(0.501961, 0.352941, 0.278431, 1)
 
 [node name="PauseMenu" parent="UI Layer" instance=ExtResource("10_donla")]
 visible = false
+
+[node name="AkEvent3D_PlaceholderBGM" type="AkEvent3D" parent="."]
+event = {
+"id": 804258696,
+"name": "Play_BGM_SFX"
+}
+trigger_on = 1
+stop_on = 3
