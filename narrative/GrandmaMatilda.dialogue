@@ -31,7 +31,7 @@ Grandma Matilda: Hey sunny, you're skin and bones! Let grandma whip up a delicio
 - Yes
 	do Matilda.TallyYes()
 	[i]You're not sure how to eat it, but you now have a corndog.[/i]
-	set HasCornDog = true
+	set GameState.HasCornDog = true
 	do Matilda.ProgressConvo()
 - No
 	do Matilda.TallyNo()

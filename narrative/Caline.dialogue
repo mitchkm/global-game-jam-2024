@@ -25,7 +25,7 @@ Caline: Arf! [i]The dog looks at you expectantly.[/i]
 Caline: Arf! [i]The dog looks at the corn dog expectantly.[/i]
 - Yes
 	do Caline.TallyYes()
-	set HasCornDog = false
+	set GameState.HasCornDog = false
 	[i]You find yourself compelled to feed the doggo.[/i]
 - No
 	do Caline.TallyNo()
