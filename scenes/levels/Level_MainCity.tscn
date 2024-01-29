@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cgfkg27ywt5la"]
+[gd_scene load_steps=9 format=3 uid="uid://cgfkg27ywt5la"]
 
 [ext_resource type="MeshLibrary" uid="uid://dtfg238m3frqw" path="res://addons/kaykit_city_builder_bits/Assets/kaykit_buildings_and_ground.tres" id="1_41s55"]
 [ext_resource type="MeshLibrary" uid="uid://1bbkn4r8dfw" path="res://addons/kaykit_city_builder_bits/Assets/kaykit_decorations.tres" id="2_cjdhx"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bbkk5xil4i358" path="res://scenes/characters/Creator.tscn" id="4_rqk1n"]
 [ext_resource type="PackedScene" uid="uid://rtdi2v7vbfng" path="res://scenes/characters/Samson.tscn" id="5_s7bs1"]
 [ext_resource type="PackedScene" uid="uid://dc5h7v3p5se70" path="res://scenes/characters/Matilda.tscn" id="6_20smg"]
+[ext_resource type="PackedScene" uid="uid://doemlfcwkh5vs" path="res://scenes/characters/Falcone.tscn" id="7_usku7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3mfpx"]
 size = Vector3(6.65967, 7, 6.71301)
@@ -84,3 +85,6 @@ transform = Transform3D(0.000678056, 0, -0.174999, 0, 0.175, 0, 0.174999, 0, 0.0
 
 [node name="Matilda" parent="Interactables/Meeples" instance=ExtResource("6_20smg")]
 transform = Transform3D(-0.0752679, 0, 0.0658387, 0, 0.1, 0, -0.0658387, 0, -0.0752679, 2.33338, 0.166392, 1.68167)
+
+[node name="Falcone" parent="Interactables/Meeples" instance=ExtResource("7_usku7")]
+transform = Transform3D(-0.0343308, 0, 0.114984, 0, 0.12, 0, -0.114984, 0, -0.0343308, -6.21296, 0.103117, 2.47398)
